@@ -1,0 +1,74 @@
+body{
+	background-color: #1A191E;
+}
+p {
+	color: #FFFFFF;
+}
+h1 {
+	color: #FFFFFF;
+}
+h2 {
+	color: #FFFFFF;
+}
+div.menuBar {
+	position: absolute;
+	top: 20px;
+	width: 99%;
+	height: 50px;
+	background-color: lightslategrey;
+}
+div.logoText {
+	position: absolute;
+	text-decoration-color: darkolivegreen;
+	text-shadow: #1A191E;
+	height: 45px;
+	width: 30%;
+	font-family: Cand;
+	font-size: 40px;
+	vertical-align: center;
+}
+div.signIn {
+	position: relative;
+	cursor: pointer;
+	float: right;
+	height: 45px;
+	padding-left: 5px;
+	padding-right: 15px;
+	font-family: Serif;
+	font-size: 40px;
+	vertical-align: center;
+}
+div.signUp {
+	position: relative;
+	cursor: pointer;
+	float: right;
+	height: 45px;
+	padding-left: 5px;
+	padding-right: 50px;
+	font-family: Serif;
+	font-size: 40px;
+	vertical-align: center;
+}
+div.commonSpace {
+	position: absolute;
+	left: 15%;
+	top: 15%;
+	width: 70%;
+	padding: 1%;
+}
+div.text {
+}
+div.template {
+	float: left;
+	width: 49%;
+	border-width: thin;
+	border-style: dashed;
+	border-color: white;
+}
+div.result {
+	float: right;
+	width: 49%;
+	border-width: thin;
+	border-style: dashed;
+	border-color: white;
+}
