@@ -39,15 +39,35 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        CharacterEncodingFilter filter = new CharacterEncodingFilter();
-        filter.setEncoding("UTF-8");
-        filter.setForceEncoding(true);
+//        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+//        filter.setEncoding("UTF-8");
+//        filter.setForceEncoding(true);
+//
+//        http.authorizeRequests()
+//                .antMatchers("/accountMainPage/**").access("hasRole('ROLE_USER')")
+//                .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
+//                .and().formLogin().defaultSuccessUrl("/accountMainPage", false);
+//        http.addFilterBefore(filter, CsrfFilter.class);
 
         http.authorizeRequests()
-                .antMatchers("/accountMainPage/**").access("hasRole('ROLE_USER')")
-                .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
-                .and().formLogin().defaultSuccessUrl("/accountMainPage", false);
-        http.addFilterBefore(filter, CsrfFilter.class);
+                .antMatchers("/login")
+                .permitAll()
+                .antMatchers("/accountMainPage/**")
+                .hasAnyRole("ADMIN", "USER")
+                .and()
+//                .formLogin()
+//                .loginPage("/login")
+//                .defaultSuccessUrl("/accountMainPage")
+//                .failureUrl("/login?error=true")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutSuccessUrl("/login?logout=true")
+//                .invalidateHttpSession(true)
+//                .permitAll()
+//                .and()
+                .csrf()
+                .disable();
 
     }
 }

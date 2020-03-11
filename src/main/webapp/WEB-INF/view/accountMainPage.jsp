@@ -13,5 +13,6 @@
 <body>
 <h1>THIS IS A MAIN ACCOUNT PAGE</h1>
 <h2>WICH CANT BE ACCESSIBLE WITHOUT USER_ROLE PERMISSIONS</h2>
+<h3>HELLO ${username}</h3>
 </body>
 </html>
