@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: fch
+  organization: fch
   Date: 09.03.2020
   Time: 18:00
   To change this template use File | Settings | File Templates.
@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>THIS IS A MAIN ACCOUNT PAGE</h1>
-<h2>WICH CANT BE ACCESSIBLE WITHOUT USER_ROLE PERMISSIONS</h2>
+<h2>WICH CANT BE ACCESSIBLE WITHOUT organization_ROLE PERMISSIONS</h2>
+<h3>HELLO ${organizationName}</h3>
 </body>
 </html>

@@ -7,20 +7,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script>
         function check(e){
-            var username = document.getElementById("username");
+            var organization = document.getElementById("organizationName");
             var pas1 = document.getElementById("password");
             var pas2 = document.getElementById("repeatPassword");
-            if (pas1.value === pas2.value && validateCred(username, pas1)) {
-                document.forms['user'].submit();
+            var email = document.getElementById("email");
+            if (pas1.value === pas2.value && validateCred(organization, pas1)
+            && validateEmail(email)) {
+                document.forms['organization'].submit();
             }
             else {
                 e.preventDefault();
-                alert("Check credentials")
             }
         }
-        function validateCred(user, pas){
+        function validateEmail(email) {
+            var pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+            if(email.value.match(pattern)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function validateCred(organization, pas){
             var pattern = /^[A-Za-z]\w{2,14}$/;
-            return !!(pas.value.match(pattern) && user.value.match(pattern));
+            if(pas.value.match(pattern) && organization.value.match(pattern)){
+                return true;
+            } else {
+                return false;
+            }
         }
         function showPas(){
             var pas1 = document.getElementById("password");
@@ -36,11 +49,15 @@
     </script>
 </head>
 <body>
-    <form:form action="/registration" method="POST" modelAttribute="user">
+    <form:form action="/registration" method="POST" modelAttribute="organization">
         <table>
             <tr>
-                <td>Username:</td>
-                <td><form:input path="username" required="" /></td>
+                <td>Organization name:</td>
+                <td><form:input path="organizationName" required="" /></td>
+            </tr>
+            <tr>
+                <td>Organization email:</td>
+                <td><form:input path="email" required="" /></td>
             </tr>
             <tr>
                 <td>Password:</td>

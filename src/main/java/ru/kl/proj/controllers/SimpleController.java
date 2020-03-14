@@ -1,16 +1,17 @@
 package ru.kl.proj.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.*;
-import ru.kl.proj.dao.UserDao;
-import ru.kl.proj.entity.User;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
+import ru.kl.proj.dao.OrganizationDao;
+import ru.kl.proj.entity.Organization;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,7 @@ public class SimpleController {
     private HttpServletRequest request;
 
     @Autowired
-    private UserDao userDao;
+    private OrganizationDao organizationDao;
 
     @GetMapping("/")
     public String showHome(){
@@ -40,43 +41,62 @@ public class SimpleController {
         return "index";
     }
 
-//    @GetMapping("/{username}")
-//    public String getAccountMP(@PathVariable("username") String username, Model model){
-//        model.addAttribute("user", userDao.readUser(username));
+//    @GetMapping("/{organizationname}")
+//    public String getAccountMP(@PathVariable("organizationname") String organizationname, Model model){
+//        model.addAttribute("organization", organizationDao.readorganization(organizationname));
 //        return "accountMainPage";
 //    }
 
     @PostMapping("/login")
-    public String logining(@ModelAttribute("user") User user, Model model){
-        String username = user.getUsername();
-        model.addAttribute("username", username);
-        System.out.println(user.getUsername());
-        return "accountMainPage";
+    public ModelAndView logining(@ModelAttribute("organization") Organization organization, Model model,
+                           HttpServletRequest request){
+
+        System.out.println(organization.getOrganizationName() + " " + organization.getPassword());
+        try {
+            request.login(organization.getOrganizationName(), organization.getPassword());
+        } catch (ServletException e) {
+            System.out.println("exception <---" + e.getMessage());
+        }
+        model.addAttribute("organization", organization);
+
+
+        String message = organization.getOrganizationName();
+        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
+                message);
+
+//        return "redirect:/accountMainPage";
     }
 
     @GetMapping("/accountMainPage")
-    public String getAccountMP(){
+    public String getAccountMP(@ModelAttribute("organizationName") String organizationName, Model model){
+
+        model.addAttribute("organizationName", organizationName);
+        System.out.println(organizationName);
         return "accountMainPage";
     }
 
     @GetMapping("/registration")
     public String showForm(Model model) {
-        model.addAttribute("user", new User()); //what if user do not create. garbage collector?
+        model.addAttribute("organization", new Organization()); //what if organization do not create. garbage collector?
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String addUser(@ModelAttribute("user") User user, HttpServletRequest request, Model model){
-        System.out.println("in post registration " + user.getUsername() + " " + user.getPassword());
-        userDao.createUser(user);
+    public ModelAndView addOrganization(@ModelAttribute("organization") Organization organization,
+                                  HttpServletRequest request, Model model){
+        System.out.println("in post registration " + organization.getOrganizationName() + " "
+                + organization.getPassword());
+        organizationDao.createOrganization(organization);
         try {
-            request.login(user.getUsername(), user.getPassword());
+            request.login(organization.getOrganizationName(), organization.getPassword());
         } catch (ServletException e) {
             System.out.println("exception <---" + e.getMessage());
         }
-        String username = user.getUsername();
-        model.addAttribute("username", username);
-        return "accountMainPage";
+
+        model.addAttribute("organization", organization.getOrganizationName());
+        String message = organization.getOrganizationName();
+        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
+                message);
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -85,7 +105,7 @@ public class SimpleController {
                             Model model) {
         String errorMessge = null;
         if(error != null) {
-            errorMessge = "Username or Password is incorrect !!";
+            errorMessge = "organization or Password is incorrect !!";
         }
         if(logout != null) {
             errorMessge = "You have been successfully logged out !!";

@@ -3,19 +3,11 @@ package ru.kl.proj.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
-import org.springframework.security.web.csrf.CsrfFilter;
-import org.springframework.web.filter.CharacterEncodingFilter;
-import ru.kl.proj.dao.UserDao;
-import ru.kl.proj.dao.UserDaoImpl;
 
 import javax.sql.DataSource;
 
@@ -30,10 +22,10 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, enabled"
-                        + " from public.users where username=?")
-                .authoritiesByUsernameQuery("select username, authority "
-                        + "from public.authorities where username=?")
+                .usersByUsernameQuery("select organization, password, enabled"
+                        + " from public.organizations where organization=?")
+                .authoritiesByUsernameQuery("select organization, authority "
+                        + "from public.organizations where organization=?")
                 .passwordEncoder(NoOpPasswordEncoder.getInstance());
     }
 
@@ -44,7 +36,7 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
 //        filter.setForceEncoding(true);
 //
 //        http.authorizeRequests()
-//                .antMatchers("/accountMainPage/**").access("hasRole('ROLE_USER')")
+//                .antMatchers("/accountMainPage/**").access("hasRole('ROLE_organization')")
 //                .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
 //                .and().formLogin().defaultSuccessUrl("/accountMainPage", false);
 //        http.addFilterBefore(filter, CsrfFilter.class);
@@ -53,7 +45,7 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login")
                 .permitAll()
                 .antMatchers("/accountMainPage/**")
-                .hasAnyRole("ADMIN", "USER")
+                .hasAnyRole("ADMIN", "ORGANIZATION")
                 .and()
 //                .formLogin()
 //                .loginPage("/login")
