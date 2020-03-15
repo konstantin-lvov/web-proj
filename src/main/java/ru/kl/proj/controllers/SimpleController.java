@@ -79,6 +79,7 @@ public class SimpleController {
         System.out.println(pageMarker);
         model.addAttribute("pageMarker", pageMarker);
         model.addAttribute("organization", organization);
+        model.addAttribute("orgName", organization.getOrganizationName());
         return "accountMainPage";
     }
 

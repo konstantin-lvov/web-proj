@@ -10,50 +10,82 @@ h1 {
 h2 {
 	color: #FFFFFF;
 }
+h3 {
+	color: #FFFFFF;
+}
+h4 {
+	color: #FFFFFF;
+}
+h5 {
+	color: #FFFFFF;
+}
 div.menuBar {
 	position: absolute;
 	top: 20px;
 	width: 99%;
-	height: 30px;
+	height: 40px;
 	background-color: lightslategrey;
 }
 div.logoText {
-	position: absolute;
+	cursor: pointer;
 	text-decoration-color: darkolivegreen;
 	text-shadow: #1A191E;
 	height: 30px;
-	width: 30%;
+	width: 20%;
 	font-family: Cand, serif;
 	font-size: 30px;
 	vertical-align: center;
 }
+
+div.logoText {
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+	0% {
+		text-shadow: 0 0 10px rgba(255,255,255,.8),
+		0 0 20px rgba(255,255,255,.8),
+		0 0 22px  rgba(255,255,255,.8),
+		0 0 40px  rgba(66,220,219,.8),
+		0 0 60px  rgba(66,220,219,.8),
+		0 0 80px  rgba(66,220,219,.5),
+		0 0 100px rgba(66,220,219,.5),
+		0 0 140px rgba(66,220,219,.5),
+		0 0 200px rgba(66,220,219,.5);
+	}
+	100% {
+		text-shadow: 0 0 2px rgba(255,255,255,.8),
+		0 0 8px rgba(255,255,255,.8),
+		0 0 10px rgba(255,255,255,.8),
+		0 0 20px rgba(66,220,219,.8),
+		0 0 30px rgba(66,220,219,.8),
+		0 0 40px rgba(66,220,219,.8),
+		0 0 50px rgba(66,220,219,.5),
+		0 0 80px rgba(66,220,219,.5);
+	}
+}
+
+
 div.signIn {
-	position: relative;
 	cursor: pointer;
-	float: right;
 	height: 30px;
-	padding-left: 5px;
-	padding-right: 15px;
 	font-family: Serif, serif;
-	font-size: 28px;
-	vertical-align: center;
+	font-size: 2vw;
+	vertical-align: top;
 }
 div.signUp {
-	position: relative;
 	cursor: pointer;
-	float: right;
 	height: 30px;
-	padding-left: 5px;
-	padding-right: 50px;
 	font-family: Serif, serif;
-	font-size: 28px;
-	vertical-align: center;
+	font-size: 2vw;
+	vertical-align: top;
 }
 div.commonSpace {
-	position: absolute;
-	left: 15%;
-	top: 10%;
-	width: 70%;
+	width: 80%;
+	margin: 100px auto 0;
 	padding: 1%;
 }
 div.text {
@@ -71,4 +103,20 @@ div.result {
 	border-width: thin;
 	border-style: dashed;
 	border-color: white;
+}
+div.leftSideBarSpace {
+	background-color: lightslategrey;
+	height: available;
+	width: 300px;
+}
+div.leftSideBarElement {
+	cursor: pointer;
+	height: 30px;
+	width: 300px;
+	font-family: Serif, serif;
+	font-size: 2vw;
+}
+div.leftSideBarElement:hover {
+	background-color: cornflowerblue;
+	TEXT-DECORATION: none;
 }

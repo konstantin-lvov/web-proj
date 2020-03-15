@@ -13,20 +13,7 @@
 		<link href='<spring:url value="/resource/styles.css"/>' rel="stylesheet" />
 	</head>
 	<body>
-		<div class="menuBar">
-            <table width="100%">
-                <tr>
-                    <td width="80%"><div class="logoText">SUMMARY</div></td>
-                    <% if ( request.getAttribute("orgName") == null ) {%>
-                    <td><div class="signIn" onclick="window.location='/login';">Sign In</div></td>
-                    <td><div class="signUp" onclick="window.location='/registration';">Sign Up</div></td>
-                    <%} else {%>
-                    <td><div class="signIn" onclick="window.location='/accountMainPage';">Account</div></td>
-                    <td><div class="signUp" onclick="window.location='/logout';">Logout</div></td>
-                    <%}%>
-                </tr>
-            </table>
-        </div>
+        <jsp:include page="menuBar.jsp" />
 		<div class="commonSpace">
 			<div class="text">
 			<p>Summary - это программный продукт представляющий вам возможность доставить важную информацию до ваших клентов не задумываясь каждый раз о том что, как и кому сообщить. Система summary позволяет автоматизировать процесс повторного информирования клиентов о важной информации полученой ими в процессе телефонного разговора.</p>
