@@ -12,7 +12,7 @@ public class OrganizationMapper implements RowMapper<Organization> {
     public Organization mapRow(ResultSet resultSet, int i) throws SQLException {
         Organization organization = new Organization();
         organization.setOid(resultSet.getInt("oid"));
-        organization.setOrganizationName(resultSet.getString("organizationName"));
+        organization.setOrganizationName(resultSet.getString("organization"));
         organization.setEmail(resultSet.getString("email"));
         organization.setPassword(resultSet.getString("password"));
         organization.setEnabled(resultSet.getBoolean("enabled"));

@@ -11,8 +11,26 @@
     <title>Title</title>
 </head>
 <body>
-<h1>THIS IS A MAIN ACCOUNT PAGE</h1>
-<h2>WICH CANT BE ACCESSIBLE WITHOUT organization_ROLE PERMISSIONS</h2>
-<h3>HELLO ${organizationName}</h3>
+<div class="commonSpace">
+    <table>
+        <tr>
+            <td>
+                <div class="leftSideBarSpace">
+                    <jsp:include page="leftSideBar.jsp" />
+                </div>
+            </td>
+            <td>
+                <div class="rightSideCommonSpace">
+                    <% if (request.getParameter("pageMarker").equals("orgInfo")) {%>
+                    <jsp:include page="organizationInfo.jsp" />
+                    <%}%>
+                    <% if (request.getParameter("pageMarker").equals("orgSettings")) {%>
+                    <jsp:include page="organizationSettings.jsp" />
+                    <%}%>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

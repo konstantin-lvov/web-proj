@@ -55,23 +55,35 @@ public class SimpleController {
         try {
             request.login(organization.getOrganizationName(), organization.getPassword());
         } catch (ServletException e) {
-            System.out.println("exception <---" + e.getMessage());
+            String error = e.getMessage();
+            System.out.println("exception <---" + error);
+            return new ModelAndView("redirect:" + "login", "error",
+                    error);
+
         }
+
         model.addAttribute("organization", organization);
-
-
-        String message = organization.getOrganizationName();
-        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
-                message);
+        String marker = "orgInfo";
+        return new ModelAndView("redirect:" + "accountMainPage", "pageMarker",
+                marker);
 
 //        return "redirect:/accountMainPage";
     }
 
     @GetMapping("/accountMainPage")
-    public String getAccountMP(@ModelAttribute("organizationName") String organizationName, Model model){
-
-        model.addAttribute("organizationName", organizationName);
-        System.out.println(organizationName);
+    public String getAccountMP(HttpServletRequest request, Model model,
+                               @RequestParam(value = "pageMarker", required = false) String pageMarker){
+        Organization organization;
+        organization = organizationDao.readOrganization(request.getRemoteUser());
+        System.out.println(organization.getOid() + " " +
+                organization.getOrganizationName() + " " +
+                organization.getPassword() + " " +
+                organization.getEmail() + " " +
+                organization.isEnabled() + " " +
+                organization.getAuthority());
+        System.out.println(pageMarker);
+        model.addAttribute("pageMarker", pageMarker);
+        model.addAttribute("organization", organization);
         return "accountMainPage";
     }
 
@@ -105,7 +117,7 @@ public class SimpleController {
                             Model model) {
         String errorMessge = null;
         if(error != null) {
-            errorMessge = "organization or Password is incorrect !!";
+            errorMessge = "Authentication failed! --> " + error;
         }
         if(logout != null) {
             errorMessge = "You have been successfully logged out !!";
