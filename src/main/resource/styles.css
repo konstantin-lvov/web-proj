@@ -14,40 +14,30 @@ div.menuBar {
 	position: absolute;
 	top: 20px;
 	width: 99%;
-	height: 30px;
+	height: 40px;
 	background-color: lightslategrey;
 }
 div.logoText {
-	position: absolute;
 	text-decoration-color: darkolivegreen;
 	text-shadow: #1A191E;
 	height: 30px;
-	width: 30%;
 	font-family: Cand, serif;
 	font-size: 30px;
 	vertical-align: center;
 }
 div.signIn {
-	position: relative;
 	cursor: pointer;
-	float: right;
 	height: 30px;
-	padding-left: 5px;
-	padding-right: 15px;
 	font-family: Serif, serif;
-	font-size: 28px;
-	vertical-align: center;
+	font-size: 2vw;
+	vertical-align: top;
 }
 div.signUp {
-	position: relative;
 	cursor: pointer;
-	float: right;
 	height: 30px;
-	padding-left: 5px;
-	padding-right: 50px;
 	font-family: Serif, serif;
-	font-size: 28px;
-	vertical-align: center;
+	font-size: 2vw;
+	vertical-align: top;
 }
 div.commonSpace {
 	position: absolute;

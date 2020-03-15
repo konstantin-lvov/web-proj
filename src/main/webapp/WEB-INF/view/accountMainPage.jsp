@@ -21,10 +21,9 @@
             </td>
             <td>
                 <div class="rightSideCommonSpace">
-                    <% if (request.getParameter("pageMarker").equals("orgInfo")) {%>
+                    <% if (request.getParameter("pageMarker") == null) {%>
                     <jsp:include page="organizationInfo.jsp" />
-                    <%}%>
-                    <% if (request.getParameter("pageMarker").equals("orgSettings")) {%>
+                    <%} else if (request.getParameter("pageMarker").equals("orgSettings")) {%>
                     <jsp:include page="organizationSettings.jsp" />
                     <%}%>
                 </div>

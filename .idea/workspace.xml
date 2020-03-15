@@ -7,11 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/OrganizationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/OrganizationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/OrganizationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/OrganizationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/OrganizationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/OrganizationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -327,7 +333,7 @@
       <workItem from="1583859988150" duration="599000" />
       <workItem from="1583946658993" duration="7744000" />
       <workItem from="1584197250509" duration="16697000" />
-      <workItem from="1584269943508" duration="7393000" />
+      <workItem from="1584269943508" duration="15223000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -357,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584214927235</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="accountMainPage - include other pages style. fix login error page.">
+      <created>1584277658668</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584277658669</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +394,7 @@
     <MESSAGE value="some warning fix" />
     <MESSAGE value="add custom login&#10;passing user data in accountPage&#10;..." />
     <MESSAGE value="create necessary table&#10;replace User model to Organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="create necessary table&#10;replace User model to Organization" />
+    <MESSAGE value="accountMainPage - include other pages style. fix login error page." />
+    <option name="LAST_COMMIT_MESSAGE" value="accountMainPage - include other pages style. fix login error page." />
   </component>
 </project>

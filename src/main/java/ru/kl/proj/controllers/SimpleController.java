@@ -22,13 +22,10 @@ import javax.servlet.http.HttpServletResponse;
 public class SimpleController {
 
     @Autowired
-    private HttpServletRequest request;
-
-    @Autowired
     private OrganizationDao organizationDao;
 
     @GetMapping("/")
-    public String showHome(){
+    public String showHome(HttpServletRequest request, Model model){
         String remoteAddr = "";
 
         if (request != null) {
@@ -37,6 +34,7 @@ public class SimpleController {
                 remoteAddr = request.getRemoteAddr();
             }
         }
+        model.addAttribute("orgName", request.getRemoteUser());
         System.out.println(remoteAddr);
         return "index";
     }
@@ -59,15 +57,12 @@ public class SimpleController {
             System.out.println("exception <---" + error);
             return new ModelAndView("redirect:" + "login", "error",
                     error);
-
         }
+//        String marker = "orgInfo";
+//        return new ModelAndView("redirect:" + "accountMainPage", "pageMarker",
+//                marker);
 
-        model.addAttribute("organization", organization);
-        String marker = "orgInfo";
-        return new ModelAndView("redirect:" + "accountMainPage", "pageMarker",
-                marker);
-
-//        return "redirect:/accountMainPage";
+        return new ModelAndView("redirect:" + "/");
     }
 
     @GetMapping("/accountMainPage")
@@ -105,33 +100,32 @@ public class SimpleController {
             System.out.println("exception <---" + e.getMessage());
         }
 
-        model.addAttribute("organization", organization.getOrganizationName());
-        String message = organization.getOrganizationName();
-        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
-                message);
+//        model.addAttribute("organization", organization.getOrganizationName());
+//        String message = organization.getOrganizationName();
+//        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
+//                message);
+        return new ModelAndView("redirect:" + "/");
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(@RequestParam(value = "error", required = false) String error,
-                            @RequestParam(value = "logout", required = false) String logout,
                             Model model) {
         String errorMessge = null;
         if(error != null) {
             errorMessge = "Authentication failed! --> " + error;
         }
-        if(logout != null) {
-            errorMessge = "You have been successfully logged out !!";
-        }
         model.addAttribute("errorMessge", errorMessge);
         return "login";
     }
 
-    @RequestMapping(value="/logout", method = RequestMethod.GET)
-    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        return "redirect:/login?logout=true";
-    }
+//    @RequestMapping(value="/logout", method = RequestMethod.GET)
+//    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+//        System.out.println("logout");
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        if (auth != null){
+//            new SecurityContextLogoutHandler().logout(request, response, auth);
+//        }
+//        System.out.println("logout");
+//        return "/";
+//    }
 }
