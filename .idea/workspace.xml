@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -327,7 +327,7 @@
       <workItem from="1583946658993" duration="7744000" />
       <workItem from="1584197250509" duration="16697000" />
       <workItem from="1584269943508" duration="21988000" />
-      <workItem from="1584459006637" duration="5680000" />
+      <workItem from="1584459006637" duration="6389000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -385,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584293597157</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="massive style changes">
+      <created>1584465461878</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584465461879</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

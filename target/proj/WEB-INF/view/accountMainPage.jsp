@@ -12,12 +12,12 @@
 <div class="commonSpace">
     <table>
         <tr>
-            <td>
+            <td valign="top" width="350px">
                 <div class="leftSideBarSpace">
                     <jsp:include page="leftSideBar.jsp" />
                 </div>
             </td>
-            <td>
+            <td valign="top">
                 <div class="rightSideCommonSpace">
                     <% if (request.getParameter("pageMarker") == null) {%>
                     <jsp:include page="organizationInfo.jsp" />

@@ -24,7 +24,7 @@ div.menuBar {
 	top: 20px;
 	width: 99%;
 	height: 40px;
-	background-color: lightslategrey;
+	background-color:  darkslategray;
 }
 div.logoText {
 	cursor: pointer;
@@ -105,18 +105,27 @@ div.result {
 	border-color: white;
 }
 div.leftSideBarSpace {
-	background-color: lightslategrey;
+    position: sticky;
+    top: 0px;
+    left: 100px;
 	height: available;
 	width: 300px;
 }
 div.leftSideBarElement {
 	cursor: pointer;
-	height: 30px;
+	height: 40px;
 	width: 300px;
 	font-family: Serif, serif;
 	font-size: 2vw;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    background-color:  darkslategray;
 }
 div.leftSideBarElement:hover {
-	background-color: cornflowerblue;
+	background-color: gray;
 	TEXT-DECORATION: none;
+}
+div.rightSideCommonSpace {
+    top: 50px;
+    left: 350px;
 }
