@@ -6,12 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +322,7 @@
       <workItem from="1583946658993" duration="7744000" />
       <workItem from="1584197250509" duration="16697000" />
       <workItem from="1584269943508" duration="21988000" />
-      <workItem from="1584459006637" duration="6389000" />
+      <workItem from="1584459006637" duration="6416000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -392,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584465461879</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="style changes">
+      <created>1584465935649</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584465935649</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +421,7 @@
     <MESSAGE value="accountMainPage - include other pages style. fix login error page." />
     <MESSAGE value="fix logout links. change accountMainPage information tab link. add dynamic generated menubar index.jsp..." />
     <MESSAGE value="massive style changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="massive style changes" />
+    <MESSAGE value="style changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="style changes" />
   </component>
 </project>
