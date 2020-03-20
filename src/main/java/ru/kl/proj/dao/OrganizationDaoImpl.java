@@ -4,23 +4,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import ru.kl.proj.Mappers.OrganizationMapper;
 import ru.kl.proj.entity.Organization;
+import ru.kl.proj.entity.Settings;
 
 import java.util.List;
 
-public class OrganizationDaoImpl implements OrganizationDao {
+public class OrganizationDaoImpl implements Dao<Organization> {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    OrganizationDaoImpl organizationDao;
+
+    @Autowired
+    SettingsDaoImpl settingsDao;
+
     @Override
-    public List<Organization> getAllOrganizations() {
+    public List<Organization> getAll() {
         String sql = "select * from public.organizations";
         return jdbcTemplate.query(sql, new OrganizationMapper());
     }
 
 
     @Override
-    public void createOrganization(Organization organization) {
+    public void create(Organization organization) {
+
         if(organization.getAuthority()==null){
             organization.setAuthority("ROLE_ORGANIZATION");
         }
@@ -39,16 +47,21 @@ public class OrganizationDaoImpl implements OrganizationDao {
                 organization.getAuthority());
 
         System.out.println(tmpa + " first query");
+
+        organization = organizationDao.read(organization.getOrganizationName());
+
+        Settings settings = new Settings(organization.getOid(), 0, 0, 0);
+        settingsDao.create(settings);
     }
 
     @Override
-    public Organization readOrganization(String organization) {
+    public Organization read(String organization) {
         String sql = "select * from public.organizations where organization = ? ";
         return jdbcTemplate.queryForObject(sql, new OrganizationMapper(), organization);
     }
 
     @Override
-    public void updateOrganization(Organization organization) {
+    public void update(Organization organization) {
         String sql = "update public.organizations set password = ?, email = ?" +
                 " where organization = ?";
         jdbcTemplate.update(sql, organization.getPassword(), organization.getEmail(),
@@ -56,7 +69,7 @@ public class OrganizationDaoImpl implements OrganizationDao {
     }
 
     @Override
-    public void deleteOrganization(String organization) {
+    public void delete(String organization) {
         String sql = "delete from public.organizations where organization = ?";
         jdbcTemplate.update(sql, organization);
     }

@@ -11,7 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import ru.kl.proj.dao.OrganizationDao;
+import ru.kl.proj.dao.OrganizationDaoImpl;
+import ru.kl.proj.dao.SettingsDaoImpl;
+import ru.kl.proj.entity.EntityBucket;
 import ru.kl.proj.entity.Organization;
+import ru.kl.proj.entity.Settings;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +26,10 @@ import javax.servlet.http.HttpServletResponse;
 public class SimpleController {
 
     @Autowired
-    private OrganizationDao organizationDao;
+    private OrganizationDaoImpl organizationDao;
+
+    @Autowired
+    private SettingsDaoImpl settingsDao;
 
     @GetMapping("/")
     public String showHome(HttpServletRequest request, Model model){
@@ -33,9 +40,16 @@ public class SimpleController {
             if (remoteAddr == null || "".equals(remoteAddr)) {
                 remoteAddr = request.getRemoteAddr();
             }
+            if (request.getRemoteUser() != null){
+                Organization organization = organizationDao.read(request.getRemoteUser());
+                Settings settings = new Settings();
+                EntityBucket entityBucket = new EntityBucket(organization, settings);
+                model.addAttribute("entityBucket", entityBucket);
+            }
+            System.out.println(remoteAddr);
         }
-        model.addAttribute("orgName", request.getRemoteUser());
-        System.out.println(remoteAddr);
+
+
         return "index";
     }
 
@@ -69,17 +83,15 @@ public class SimpleController {
     public String getAccountMP(HttpServletRequest request, Model model,
                                @RequestParam(value = "pageMarker", required = false) String pageMarker){
         Organization organization;
-        organization = organizationDao.readOrganization(request.getRemoteUser());
-        System.out.println(organization.getOid() + " " +
-                organization.getOrganizationName() + " " +
-                organization.getPassword() + " " +
-                organization.getEmail() + " " +
-                organization.isEnabled() + " " +
-                organization.getAuthority());
-        System.out.println(pageMarker);
+        organization = organizationDao.read(request.getRemoteUser());
+
+        String oid = String.valueOf(organization.getOid());
+        Settings settings = settingsDao.read(oid);
+
+        EntityBucket entityBucket = new EntityBucket(organization, settings);
         model.addAttribute("pageMarker", pageMarker);
-        model.addAttribute("organization", organization);
-        model.addAttribute("orgName", organization.getOrganizationName());
+        model.addAttribute("entityBucket", entityBucket);
+
         return "accountMainPage";
     }
 
@@ -94,7 +106,7 @@ public class SimpleController {
                                   HttpServletRequest request, Model model){
         System.out.println("in post registration " + organization.getOrganizationName() + " "
                 + organization.getPassword());
-        organizationDao.createOrganization(organization);
+        organizationDao.create(organization);
         try {
             request.login(organization.getOrganizationName(), organization.getPassword());
         } catch (ServletException e) {

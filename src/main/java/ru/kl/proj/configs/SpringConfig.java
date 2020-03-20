@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import ru.kl.proj.dao.OrganizationDao;
 import ru.kl.proj.dao.OrganizationDaoImpl;
+import ru.kl.proj.dao.SettingsDaoImpl;
 
 import javax.sql.DataSource;
 
@@ -28,8 +29,13 @@ public class SpringConfig {
     }
 
     @Bean
-    public OrganizationDao getorganizationDao(){
+    public OrganizationDaoImpl getorganizationDao(){
         return new OrganizationDaoImpl();
+    }
+
+    @Bean
+    public SettingsDaoImpl getSettingsDaoImpl(){
+        return new SettingsDaoImpl();
     }
 
 }
