@@ -107,7 +107,6 @@ div.result {
 }
 div.leftSideBarSpace {
     position: sticky;
-    top: 0px;
     left: 100px;
 	height: available;
 	width: 300px;

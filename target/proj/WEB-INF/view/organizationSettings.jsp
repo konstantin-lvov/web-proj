@@ -7,11 +7,4 @@
         <form:input path="organization.email" required="" />
         <form:input path="settings.deferred" required="" />
     </form:form>
-<br>
-<form:form action="/settings" method="POST" modelAttribute="entityList">
-    <form:input path="organization.organizationName" required="" />
-    <form:input path="organization.password" required="" />
-    <form:input path="organization.email" required="" />
-    <form:input path="settings.deferred" required="" />
-</form:form>
 

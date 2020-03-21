@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import ru.kl.proj.dao.OrganizationDao;
 import ru.kl.proj.dao.OrganizationDaoImpl;
 import ru.kl.proj.dao.SettingsDaoImpl;
 
