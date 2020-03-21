@@ -107,7 +107,6 @@ div.result {
 }
 div.leftSideBarSpace {
     position: sticky;
-    top: 0px;
     left: 100px;
 	height: available;
 	width: 300px;
@@ -118,7 +117,7 @@ div.leftSideBarElement {
 	width: 300px;
 	font-family: Serif, serif;
 	font-size: 2vw;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     padding-left: 5px;
     background-color:  darkslategray;
 	box-shadow: -50px 30px 10px rgba(0,0,0,0.5);

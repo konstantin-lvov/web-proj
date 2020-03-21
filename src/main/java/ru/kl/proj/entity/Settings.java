@@ -1,11 +1,11 @@
 package ru.kl.proj.entity;
 
-public class Settings {
+public class Settings extends Entity{
 
-    int oid;
-    int deferred;
-    int quantity;
-    int interval;
+    private int oid;
+    private int deferred;
+    private int quantity;
+    private int interval;
 
     public Settings(int oid, int deferred, int quantity, int interval) {
         this.oid = oid;

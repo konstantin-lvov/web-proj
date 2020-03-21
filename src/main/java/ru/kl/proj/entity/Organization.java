@@ -1,13 +1,13 @@
 package ru.kl.proj.entity;
 
-public class Organization {
+public class Organization extends Entity{
 
-    int oid;
-    String organizationName;
-    String email;
-    String password;
-    boolean enabled;
-    String authority;
+    private int oid;
+    private String organizationName;
+    private String email;
+    private String password;
+    private boolean enabled;
+    private String authority;
 
 
     public Organization() {

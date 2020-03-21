@@ -1,12 +1,23 @@
 package ru.kl.proj.entity;
 
-public class EntityBucket {
-    private Organization organization;
-    private Settings settings;
+import java.util.ArrayList;
 
-    public EntityBucket(Organization organization, Settings settings) {
-        this.organization = organization;
-        this.settings = settings;
+public class EntityBucket {
+    private Organization organization = new Organization();
+    private Settings settings = new Settings();
+
+    public EntityBucket(ArrayList<Entity> list) {
+        System.out.println(list.isEmpty());
+        for (Entity e: list){
+            System.out.println(e.getClass());
+            System.out.println(organization.getClass());
+            if(e.getClass() == organization.getClass()){
+                this.organization = (Organization) e;
+            }
+            if(e.getClass() == settings.getClass()){
+                this.settings = (Settings) e;
+            }
+        }
     }
 
     public Organization getOrganization() {
