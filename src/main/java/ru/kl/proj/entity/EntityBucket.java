@@ -7,10 +7,7 @@ public class EntityBucket {
     private Settings settings = new Settings();
 
     public EntityBucket(ArrayList<Entity> list) {
-        System.out.println(list.isEmpty());
         for (Entity e: list){
-            System.out.println(e.getClass());
-            System.out.println(organization.getClass());
             if(e.getClass() == organization.getClass()){
                 this.organization = (Organization) e;
             }

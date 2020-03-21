@@ -7,10 +7,11 @@
 	request.setCharacterEncoding("UTF-8");
 	response.setCharacterEncoding("UTF-8");
 %>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<title>Summary</title>
 		<link href='<spring:url value="/resource/styles.css"/>' rel="stylesheet" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	</head>
 	<body>
         <jsp:include page="menuBar.jsp" />

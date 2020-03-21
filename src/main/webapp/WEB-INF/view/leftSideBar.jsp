@@ -1,6 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="leftSideBarElement" onclick="window.location='/accountMainPage';">
-    Go to info page
+    Информация
 </div>
 <div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=orgSettings';">
-    Go to settings page
+    Настройки
 </div>

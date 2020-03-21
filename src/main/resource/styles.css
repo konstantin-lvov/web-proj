@@ -69,7 +69,6 @@ div.logoText {
 	}
 }
 
-
 div.signIn {
 	cursor: pointer;
 	height: 30px;
@@ -77,6 +76,7 @@ div.signIn {
 	font-size: 2vw;
 	vertical-align: top;
 }
+
 div.signUp {
 	cursor: pointer;
 	height: 30px;
@@ -110,6 +110,7 @@ div.leftSideBarSpace {
     left: 100px;
 	height: available;
 	width: 300px;
+    margin-top: 50px;
 }
 div.leftSideBarElement {
 	cursor: pointer;

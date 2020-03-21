@@ -1,8 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ page contentType="text/html;encoding=UTF-8" %>
 <html>
 <head>
     <title>Sign Up</title>
@@ -53,26 +53,27 @@
 </head>
 <body>
 <div class="commonSpace" align="center">
+    <h1>Регистрация</h1>
     <form:form action="/registration" method="POST" modelAttribute="organization">
         <table>
             <tr>
-                <td><h3>Organization name:</h3></td>
+                <td><h3>Название организации:</h3></td>
                 <td><form:input path="organizationName" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Organization email:</h3></td>
+                <td><h3>Почта:</h3></td>
                 <td><form:input path="email" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Password:</h3></td>
+                <td><h3>Пароль:</h3></td>
                 <td><form:input path="password" type="password" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Repeat password:</h3></td>
+                <td><h3>Повторите пароль:</h3></td>
                 <td><input id="repeatPassword" type="password" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Show password</h3></td>
+                <td><h3>Показать пароль</h3></td>
                 <td><input type="checkbox" onclick="showPas()" /></td>
             </tr>
             <tr>
