@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/")
 public class SimpleController {
 
+    @GetMapping("/admin")
+    public String getAdminPage(){
+        System.out.println("get admin");
+        return "admin";
+    }
+
 
 //    @RequestMapping(value="/logout", method = RequestMethod.GET)
 //    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {

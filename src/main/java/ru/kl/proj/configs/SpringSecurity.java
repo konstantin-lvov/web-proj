@@ -46,12 +46,17 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/accountMainPage/**")
                 .hasAnyRole("ADMIN", "ORGANIZATION")
+                .antMatchers("/admin")
+                .hasRole("ADMIN")
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
                 .and()
                 .csrf()
-                .disable();
+                .disable()
+        .exceptionHandling().accessDeniedPage("/accessDenied")
+        .and().sessionManagement().invalidSessionUrl("/");
+
 //                .formLogin()
 //                .loginPage("/login")
 //                .defaultSuccessUrl("/accountMainPage")
