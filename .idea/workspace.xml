@@ -7,22 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/SettingsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/SettingsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menuBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/menuBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/menuBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/menuBar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationSettings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationSettings.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -367,6 +354,7 @@
       <workItem from="1584790056770" duration="4732000" />
       <workItem from="1584795889205" duration="5086000" />
       <workItem from="1584849600594" duration="32298000" />
+      <workItem from="1584891336619" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
