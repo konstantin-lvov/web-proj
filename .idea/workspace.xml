@@ -8,8 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -354,7 +355,7 @@
       <workItem from="1584790056770" duration="4732000" />
       <workItem from="1584795889205" duration="5086000" />
       <workItem from="1584849600594" duration="32298000" />
-      <workItem from="1584891336619" duration="1720000" />
+      <workItem from="1584891336619" duration="2739000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -440,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584795067709</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="make controller for each request">
+      <created>1584893259452</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1584893259452</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,6 +478,7 @@
     <MESSAGE value="style changes" />
     <MESSAGE value="add settings entity. change style of model access" />
     <MESSAGE value="add Entity abstract class for type safety and EntityBucket class for easier transfer entities to jsp. some style change." />
-    <option name="LAST_COMMIT_MESSAGE" value="add Entity abstract class for type safety and EntityBucket class for easier transfer entities to jsp. some style change." />
+    <MESSAGE value="make controller for each request" />
+    <option name="LAST_COMMIT_MESSAGE" value="make controller for each request" />
   </component>
 </project>

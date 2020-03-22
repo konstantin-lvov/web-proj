@@ -38,7 +38,7 @@ div.menuBar {
 	width: 99%;
 	height: 40px;
 	background-color:  darkslategray;
-	box-shadow: -50px 30px 10px rgba(0,0,0,0.5);
+	box-shadow: -5px 15px 5px rgba(0,0,0,0.5);
     display: table;
 }
 
@@ -149,7 +149,7 @@ div.leftSideBarElement {
     margin-bottom: 25px;
     padding-left: 5px;
     background-color:  darkslategray;
-	box-shadow: -50px 30px 10px rgba(0,0,0,0.5);
+	box-shadow: -5px 15px 5px rgba(0,0,0,0.5);
 }
 div.leftSideBarElement:hover {
 	background-color: gray;
