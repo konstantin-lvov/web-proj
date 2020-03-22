@@ -1,7 +1,11 @@
 package ru.kl.proj.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.jaas.SecurityContextLoginModule;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
@@ -15,15 +19,17 @@ import ru.kl.proj.entity.EntityBucket;
 import ru.kl.proj.entity.Organization;
 import ru.kl.proj.entity.Settings;
 
+import javax.security.auth.login.LoginException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.List;
+import javax.servlet.http.HttpSession;
+import java.util.*;
 
 @Controller
 @RequestMapping("/")
 public class SimpleController {
+
 
     @Autowired
     private OrganizationDaoImpl organizationDao;
@@ -33,7 +39,7 @@ public class SimpleController {
 
     @GetMapping("/")
     public String showHome(HttpServletRequest request, Model model){
-
+        System.out.println("get /");
         String remoteAddr;
 
         if (request != null) {
@@ -86,6 +92,7 @@ public class SimpleController {
     @GetMapping("/accountMainPage")
     public String getAccountMP(HttpServletRequest request, Model model,
                                @RequestParam(value = "pageMarker", required = false) String pageMarker){
+
         Organization organization;
         organization = organizationDao.read(request.getRemoteUser());
 
@@ -110,7 +117,7 @@ public class SimpleController {
 
     @PostMapping("/registration")
     public ModelAndView addOrganization(@ModelAttribute("organization") Organization organization,
-                                  HttpServletRequest request, Model model){
+                                  HttpServletRequest request){
         System.out.println("in post registration " + organization.getOrganizationName() + " "
                 + organization.getPassword());
         organizationDao.create(organization);
@@ -125,6 +132,39 @@ public class SimpleController {
 //        return new ModelAndView("redirect:" + "accountMainPage", "organizationName",
 //                message);
         return new ModelAndView("redirect:" + "/");
+    }
+
+    @PostMapping("/settings")
+    public String changeSettings(@ModelAttribute("entityBucket") EntityBucket entityBucket,
+                                 HttpServletRequest request, HttpServletResponse response) throws LoginException {
+
+        Organization organization = entityBucket.getOrganization();
+
+        System.out.println("post /settings");
+
+        System.out.println(organization.getOid() + " " +
+                organization.getOrganizationName() + " " +
+                organization.getEmail() + " " +
+                organization.getPassword() + " " +
+                organization.getAuthority() + " " +
+                organization.isEnabled());
+        organizationDao.update(organization);
+        Settings settings = entityBucket.getSettings();
+        settings.setOid(organization.getOid());
+        System.out.println(settings.getOid() + " " +
+                settings.getDeferred() + " " +
+                settings.getQuantity() + " " +
+                settings.getInterval());
+        settingsDao.update(settings);
+        if (!request.getRemoteUser().equals(organization.getOrganizationName())) {
+            System.out.println("organizationName was changed");
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            if (auth != null){
+                new SecurityContextLogoutHandler().logout(request, response, auth);
+                return "index";
+            }
+        }
+        return "accountMainPage";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

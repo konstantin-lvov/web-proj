@@ -7,16 +7,17 @@
     }
 %>
 <div class="menuBar">
-    <table width="100%">
-        <tr>
-            <td width="80%"><div class="logoText" onclick="window.location='/';">SUMMARY</div></td>
-            <% if ( entityBucket == null ) {%>
-            <td><div class="signIn" onclick="window.location='/login';">Войти</div></td>
-            <td><div class="signUp" onclick="window.location='/registration';">Зарегистрироваться</div></td>
-            <%} else {%>
-            <td><div class="signIn" onclick="window.location='/accountMainPage';">Аккаунт</div></td>
-            <td><div class="signUp" onclick="window.location='/logout';">Выйти</div></td>
-            <%}%>
-        </tr>
-    </table>
+    <div class="logoText" onclick="window.location='/';">SUMMARY</div>
+    <div class="freeSpaceMenuBar"></div>
+    <% if ( entityBucket == null ) {%>
+    <div class="rightSideMenuBarCommonSpace">
+        <div class="signIn" onclick="window.location='/login';">Войти</div>
+        <div class="signUp" onclick="window.location='/registration';">Создать аккаунт</div>
+    </div>
+    <%} else {%>
+    <div class="rightSideMenuBarCommonSpace">
+        <div class="signIn" onclick="window.location='/accountMainPage';">Личный кабинет</div>
+        <div class="signUp" onclick="window.location='/logout';">Выйти</div>
+    </div>
+    <%}%>
 </div>

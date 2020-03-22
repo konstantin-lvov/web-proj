@@ -41,7 +41,7 @@ public class SettingsDaoImpl implements Dao<Settings>{
     @Override
     public void update(Settings entity) {
         String sql = "update public.settings set deferred_sms = ?," +
-                " quantity_sms = ?, interval = ? where oid = ?";
+                " quantity_sms = ?, interval = ? where oid = ?;";
         jdbcTemplate.update(sql,
                 entity.getDeferred(),
                 entity.getQuantity(),

@@ -62,10 +62,13 @@ public class OrganizationDaoImpl implements Dao<Organization> {
 
     @Override
     public void update(Organization organization) {
-        String sql = "update public.organizations set password = ?, email = ?" +
-                " where organization = ?";
-        jdbcTemplate.update(sql, organization.getPassword(), organization.getEmail(),
-                organization.getOrganizationName());
+        String sql = "update public.organizations set organization = ?, password = ?, email = ?" +
+                " where oid = ?";
+        jdbcTemplate.update(sql,
+                organization.getOrganizationName(),
+                organization.getPassword(),
+                organization.getEmail(),
+                organization.getOid());
     }
 
     @Override

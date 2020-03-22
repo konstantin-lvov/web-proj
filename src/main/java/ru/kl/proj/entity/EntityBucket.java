@@ -17,6 +17,9 @@ public class EntityBucket {
         }
     }
 
+    public EntityBucket() {
+    }
+
     public Organization getOrganization() {
         return organization;
     }

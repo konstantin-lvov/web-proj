@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="button" value="Save Changes" onclick="check(event)"/>
+                    <input type="button" class="button" value="Отправить" onclick="check(event)"/>
                 </td>
             </tr>
         </table>

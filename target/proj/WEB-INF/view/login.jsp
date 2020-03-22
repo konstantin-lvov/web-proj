@@ -24,7 +24,7 @@
                 <td><input type='password' name='password' /></td>
             </tr>
             <tr>
-                <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
+                <td colspan='2'><input name="submit" class="button" type="submit" value="Войти" /></td>
             </tr>
         </table>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
