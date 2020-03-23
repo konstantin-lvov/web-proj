@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import ru.kl.proj.controllers.CustomAccessDeniedHandler;
 
 import javax.sql.DataSource;
 
@@ -18,6 +20,9 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private DataSource dataSource;
+
+    @Autowired
+    private AccessDeniedHandler customAccessDeniedHandler;
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -54,8 +59,11 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf()
                 .disable()
-        .exceptionHandling().accessDeniedPage("/accessDenied")
-        .and().sessionManagement().invalidSessionUrl("/");
+                .exceptionHandling().accessDeniedHandler(customAccessDeniedHandler)
+                .and().sessionManagement()
+                .invalidSessionUrl("/")
+                .and().sessionManagement()
+                .maximumSessions(1).expiredUrl("/someTrouble?kindOfTrouble=expired");
 
 //                .formLogin()
 //                .loginPage("/login")

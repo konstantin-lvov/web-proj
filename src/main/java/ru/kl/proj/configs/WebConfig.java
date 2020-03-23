@@ -4,12 +4,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.CacheControl;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.resource.PathResourceResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import ru.kl.proj.controllers.CustomAccessDeniedHandler;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 @ComponentScan("ru.kl.proj.controllers")
 public class WebConfig implements WebMvcConfigurer {
+
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -30,6 +34,10 @@ public class WebConfig implements WebMvcConfigurer {
 //                .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
     }
 
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler(){
+        return new CustomAccessDeniedHandler();
+    }
 
     @Bean
     public ViewResolver viewResolver() {

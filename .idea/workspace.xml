@@ -6,7 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="" />
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="...">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accessDenied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/someTrouble.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accessDenied.jsp" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +106,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -351,6 +365,7 @@
       <workItem from="1584795889205" duration="5086000" />
       <workItem from="1584849600594" duration="32298000" />
       <workItem from="1584891336619" duration="8580000" />
+      <workItem from="1584973818567" duration="6048000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -497,6 +512,7 @@
     <MESSAGE value="make controller for each request" />
     <MESSAGE value="change shadow" />
     <MESSAGE value="accessDenied page begin. admin page begin create...." />
-    <option name="LAST_COMMIT_MESSAGE" value="accessDenied page begin. admin page begin create...." />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>
