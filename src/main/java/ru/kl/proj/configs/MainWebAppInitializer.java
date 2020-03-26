@@ -1,5 +1,6 @@
 package ru.kl.proj.configs;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -20,8 +21,10 @@ public class MainWebAppInitializer implements WebApplicationInitializer {
         // Passes servlet context to context instance
         ctx.setServletContext(servletContext);
 
+        DispatcherServlet dispatcherServlet = new DispatcherServlet(ctx);
+
         //Registers dispatch servlet and passes context instance
-        ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
+        ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", dispatcherServlet);
 
         //Maps URL pattern
         servlet.addMapping("/");

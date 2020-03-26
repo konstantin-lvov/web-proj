@@ -6,10 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.kl.proj.dao.OrganizationDaoImpl;
-import ru.kl.proj.entity.Entity;
-import ru.kl.proj.entity.EntityBucket;
-import ru.kl.proj.entity.Organization;
-import ru.kl.proj.entity.Settings;
+import ru.kl.proj.entity.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;

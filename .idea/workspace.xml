@@ -6,20 +6,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/CustomAccessDeniedHandler.java" afterDir="false" />
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="implemented all remaining entities and mappers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/CallsInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/EndlineTemplatesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/KeywordsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/SmsTemlatesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EndlineTemplates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Keywords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/SmsTemplates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SimpleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accessDenied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/someTrouble.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accessDenied.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +95,7 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="organizations: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="calls_info: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -96,7 +105,17 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="settings: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="endline_template: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="keywords: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -365,7 +384,9 @@
       <workItem from="1584795889205" duration="5086000" />
       <workItem from="1584849600594" duration="32298000" />
       <workItem from="1584891336619" duration="8580000" />
-      <workItem from="1584973818567" duration="6048000" />
+      <workItem from="1584973818567" duration="6372000" />
+      <workItem from="1585147523962" duration="3670000" />
+      <workItem from="1585235104096" duration="7285000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -513,6 +534,7 @@
     <MESSAGE value="change shadow" />
     <MESSAGE value="accessDenied page begin. admin page begin create...." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="implemented all remaining entities and mappers" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented all remaining entities and mappers" />
   </component>
 </project>
