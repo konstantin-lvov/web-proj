@@ -6,30 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="implemented all remaining entities and mappers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/CallsInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/EndlineTemplatesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/KeywordsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/SmsTemlatesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EndlineTemplates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Keywords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/SmsTemplates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/MainWebAppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/MainWebAppInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,7 +363,7 @@
       <workItem from="1584891336619" duration="8580000" />
       <workItem from="1584973818567" duration="6372000" />
       <workItem from="1585147523962" duration="3670000" />
-      <workItem from="1585235104096" duration="7285000" />
+      <workItem from="1585235104096" duration="7901000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -500,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584899935254</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="implemented all remaining entities and mappers">
+      <created>1585242413515</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585242413515</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
