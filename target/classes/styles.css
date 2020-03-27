@@ -38,7 +38,7 @@ div.menuBar {
 	width: 99%;
 	height: 40px;
 	background-color:  darkslategray;
-	box-shadow: -5px 15px 5px rgba(0,0,0,0.5);
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
     display: table;
 }
 
@@ -94,25 +94,34 @@ div.rightSideMenuBarCommonSpace{
 }
 div.signIn {
     position: relative;
-    margin-top: 7px;
-    cursor: pointer;
-    height: 30px;
+	cursor: pointer;
+    height: available;
     font-size: 20px;
     display: inline-block;
-    margin-right: 25px;
-    float: left;
+	padding: 7px 25px 9px 5px;
+	float: left;
+}
+
+div.signIn:hover {
+	background-color: forestgreen;
+	TEXT-DECORATION: none;
 }
 
 div.signUp {
     position: relative;
-    margin-top: 7px;
-    margin-right: 25px;
+	padding: 7px 25px 9px 5px;
 	cursor: pointer;
-	height: 30px;
+	height: available;
 	font-size: 20px;
     display: inline-block;
     float: left;
 }
+
+div.signUp:hover {
+	background-color: forestgreen;
+	TEXT-DECORATION: none;
+}
+
 div.commonSpace {
 	width: 80%;
 	margin: 100px auto 0;
@@ -148,11 +157,12 @@ div.leftSideBarElement {
 	font-size: 25px;
     margin-bottom: 25px;
     padding-left: 5px;
+	padding-top: 3px;
     background-color:  darkslategray;
-	box-shadow: -5px 15px 5px rgba(0,0,0,0.5);
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
 }
 div.leftSideBarElement:hover {
-	background-color: gray;
+	background-color: forestgreen;
 	TEXT-DECORATION: none;
 }
 div.rightSideCommonSpace {
