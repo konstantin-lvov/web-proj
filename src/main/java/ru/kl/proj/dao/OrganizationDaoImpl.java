@@ -54,7 +54,9 @@ public class OrganizationDaoImpl implements Dao<Organization> {
     @Override
     public Organization read(String organization) {
         String sql = "select * from public.organizations where organization = ? ";
-        return jdbcTemplate.queryForObject(sql, new OrganizationMapper(), organization);
+        return jdbcTemplate.queryForObject(sql,
+                new OrganizationMapper(),
+                organization);
     }
 
     @Override

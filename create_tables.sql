@@ -23,7 +23,7 @@ create table settings
 	oid int not null
 		constraint settings_organizations_oid_fk
 			references organizations,
-	deffered_sms int default 0 not null,
+	deferred_sms int default 0 not null,
 	quantity_sms int default 0 not null,
 	interval int default 0 not null
 );
@@ -65,10 +65,16 @@ create table calls_info
 	oid int not null
 		constraint calls_info_organizations_oid_fk
 			references organizations,
+	conv_id serial not null 
 	conversation_date date not null,
-	phone_number varchar(50) not null,
-	parsed_sms varchar(50) not null
+	phone_number varchar(50) not null
+		constraint calls_info_contacts_phone_number_fk
+			references contacts,
+	parsed_conv varchar(50) not null
 );
+
+create unique index calls_info_conv_id_uindex
+	on calls_info (conv_id);
 
 create table contacts
 (

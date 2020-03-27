@@ -3,18 +3,19 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>12.2</ServerVersion>
-      <StartupTime>1585290871</StartupTime>
+      <StartupTime>1585318196</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13408</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>870</IntrospectionStateNumber>
+      <IntrospectionStateNumber>879</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16385|16387|1
 sequence|table|24589|24591|1
 sequence|table|24612|24614|2
 sequence|table|24632|24634|2
+sequence|table|24663|24645|5
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -66,7 +67,7 @@ sequence|table|24632|24634|2
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>871</IntrospectionStateNumber>
+      <IntrospectionStateNumber>880</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <schema id="15" parent="2" name="users">
@@ -137,7 +138,15 @@ sequence|table|24632|24634|2
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="24" parent="14" name="endline_template_etid_seq">
+    <sequence id="24" parent="14" name="calls_info_conv_id_seq">
+      <ObjectId>24663</ObjectId>
+      <StateNumber>876</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="25" parent="14" name="endline_template_etid_seq">
       <ObjectId>24632</ObjectId>
       <StateNumber>740</StateNumber>
       <Owner>postgres</Owner>
@@ -145,7 +154,7 @@ sequence|table|24632|24634|2
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="25" parent="14" name="organizations_oid_seq">
+    <sequence id="26" parent="14" name="organizations_oid_seq">
       <ObjectId>24589</ObjectId>
       <StateNumber>724</StateNumber>
       <Owner>postgres</Owner>
@@ -153,7 +162,7 @@ sequence|table|24632|24634|2
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="26" parent="14" name="sms_templates_tid_seq">
+    <sequence id="27" parent="14" name="sms_templates_tid_seq">
       <ObjectId>24612</ObjectId>
       <StateNumber>733</StateNumber>
       <Owner>postgres</Owner>
@@ -161,70 +170,98 @@ sequence|table|24632|24634|2
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="27" parent="14" name="calls_info">
+    <table id="28" parent="14" name="calls_info">
       <ObjectId>24645</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>744</StateNumber>
+      <StateNumber>876</StateNumber>
     </table>
-    <table id="28" parent="14" name="contacts">
+    <table id="29" parent="14" name="contacts">
       <ObjectId>24653</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>747</StateNumber>
     </table>
-    <table id="29" parent="14" name="endline_template">
+    <table id="30" parent="14" name="endline_template">
       <ObjectId>24634</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>740</StateNumber>
     </table>
-    <table id="30" parent="14" name="keywords">
+    <table id="31" parent="14" name="keywords">
       <ObjectId>24624</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>737</StateNumber>
     </table>
-    <table id="31" parent="14" name="organizations">
+    <table id="32" parent="14" name="organizations">
       <ObjectId>24591</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>730</StateNumber>
     </table>
-    <table id="32" parent="14" name="settings">
+    <table id="33" parent="14" name="settings">
       <ObjectId>24601</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>730</StateNumber>
     </table>
-    <table id="33" parent="14" name="sms_templates">
+    <table id="34" parent="14" name="sms_templates">
       <ObjectId>24614</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>733</StateNumber>
     </table>
-    <column id="34" parent="27" name="oid">
+    <column id="35" parent="28" name="oid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>744</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="35" parent="27" name="conversation_date">
+    <column id="36" parent="28" name="conversation_date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>744</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="36" parent="27" name="phone_number">
+    <column id="37" parent="28" name="phone_number">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="27" name="parsed_sms">
+    <column id="38" parent="28" name="parsed_sms">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>744</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="38" parent="27" name="calls_info_organizations_oid_fk">
+    <column id="39" parent="28" name="conv_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>876</StateNumber>
+      <DefaultExpression>nextval(&apos;calls_info_conv_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="40" parent="28" name="calls_info_conv_id_uindex">
+      <ObjectId>24669</ObjectId>
+      <StateNumber>877</StateNumber>
+      <ColNames>conv_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="28" name="calls_info_pk">
+      <ObjectId>24670</ObjectId>
+      <StateNumber>878</StateNumber>
+      <ColNames>conv_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="42" parent="28" name="calls_info_pk">
+      <ObjectId>24671</ObjectId>
+      <StateNumber>878</StateNumber>
+      <ColNames>conv_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>calls_info_pk</UnderlyingIndexName>
+    </key>
+    <foreign-key id="43" parent="28" name="calls_info_organizations_oid_fk">
       <ObjectId>24648</ObjectId>
       <StateNumber>744</StateNumber>
       <ColNames>oid</ColNames>
@@ -234,81 +271,42 @@ sequence|table|24632|24634|2
       <RefKeyName>organizations_pk</RefKeyName>
       <RefColNames>oid</RefColNames>
     </foreign-key>
-    <column id="39" parent="28" name="oid">
+    <column id="44" parent="29" name="oid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>747</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="40" parent="28" name="name">
+    <column id="45" parent="29" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>747</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="28" name="second_name">
+    <column id="46" parent="29" name="second_name">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>747</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="28" name="third_name">
+    <column id="47" parent="29" name="third_name">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>747</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="28" name="phone_number">
+    <column id="48" parent="29" name="phone_number">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>747</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="44" parent="28" name="contacts_organizations_oid_fk">
+    <foreign-key id="49" parent="29" name="contacts_organizations_oid_fk">
       <ObjectId>24656</ObjectId>
       <StateNumber>747</StateNumber>
-      <ColNames>oid</ColNames>
-      <RefTableId>24591</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>organizations</RefTableName>
-      <RefKeyName>organizations_pk</RefKeyName>
-      <RefColNames>oid</RefColNames>
-    </foreign-key>
-    <column id="45" parent="29" name="oid">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>740</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="46" parent="29" name="etid">
-      <Position>2</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>740</StateNumber>
-      <DefaultExpression>nextval(&apos;endline_template_etid_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="47" parent="29" name="endline_template">
-      <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>740</StateNumber>
-      <DefaultExpression>&apos;.&apos;::character varying</DefaultExpression>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="48" parent="29" name="endline_template_etid_uindex">
-      <ObjectId>24644</ObjectId>
-      <StateNumber>741</StateNumber>
-      <ColNames>etid</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <foreign-key id="49" parent="29" name="endline_template_organizations_oid_fk">
-      <ObjectId>24639</ObjectId>
-      <StateNumber>740</StateNumber>
       <ColNames>oid</ColNames>
       <RefTableId>24591</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -320,17 +318,56 @@ sequence|table|24632|24634|2
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
+      <StateNumber>740</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="30" name="etid">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>740</StateNumber>
+      <DefaultExpression>nextval(&apos;endline_template_etid_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="30" name="endline_template">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>740</StateNumber>
+      <DefaultExpression>&apos;.&apos;::character varying</DefaultExpression>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="53" parent="30" name="endline_template_etid_uindex">
+      <ObjectId>24644</ObjectId>
+      <StateNumber>741</StateNumber>
+      <ColNames>etid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <foreign-key id="54" parent="30" name="endline_template_organizations_oid_fk">
+      <ObjectId>24639</ObjectId>
+      <StateNumber>740</StateNumber>
+      <ColNames>oid</ColNames>
+      <RefTableId>24591</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>organizations</RefTableName>
+      <RefKeyName>organizations_pk</RefKeyName>
+      <RefColNames>oid</RefColNames>
+    </foreign-key>
+    <column id="55" parent="31" name="oid">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
       <StateNumber>737</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="30" name="keyword">
+    <column id="56" parent="31" name="keyword">
       <Position>2</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="52" parent="30" name="keywords_organizations_oid_fk">
+    <foreign-key id="57" parent="31" name="keywords_organizations_oid_fk">
       <ObjectId>24627</ObjectId>
       <StateNumber>737</StateNumber>
       <ColNames>oid</ColNames>
@@ -340,7 +377,7 @@ sequence|table|24632|24634|2
       <RefKeyName>organizations_pk</RefKeyName>
       <RefColNames>oid</RefColNames>
     </foreign-key>
-    <column id="53" parent="31" name="oid">
+    <column id="58" parent="32" name="oid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -348,73 +385,73 @@ sequence|table|24632|24634|2
       <DefaultExpression>nextval(&apos;organizations_oid_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="54" parent="31" name="organization">
+    <column id="59" parent="32" name="organization">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>724</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="55" parent="31" name="email">
+    <column id="60" parent="32" name="email">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>724</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="56" parent="31" name="password">
+    <column id="61" parent="32" name="password">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>724</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="57" parent="31" name="enabled">
+    <column id="62" parent="32" name="enabled">
       <Position>5</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>765</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="58" parent="31" name="authority">
+    <column id="63" parent="32" name="authority">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>766</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="59" parent="31" name="organizations_oid_uindex">
+    <index id="64" parent="32" name="organizations_oid_uindex">
       <ObjectId>24597</ObjectId>
       <StateNumber>725</StateNumber>
       <ColNames>oid</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="60" parent="31" name="organizations_pk">
+    <index id="65" parent="32" name="organizations_pk">
       <ObjectId>24599</ObjectId>
       <StateNumber>727</StateNumber>
       <ColNames>oid</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="61" parent="31" name="organizations_organization_uindex">
+    <index id="66" parent="32" name="organizations_organization_uindex">
       <ObjectId>24598</ObjectId>
       <StateNumber>726</StateNumber>
       <ColNames>organization</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="31" name="organizations_pk">
+    <key id="67" parent="32" name="organizations_pk">
       <ObjectId>24600</ObjectId>
       <StateNumber>727</StateNumber>
       <ColNames>oid</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>organizations_pk</UnderlyingIndexName>
     </key>
-    <column id="63" parent="32" name="oid">
+    <column id="68" parent="33" name="oid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>730</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="64" parent="32" name="deferred_sms">
+    <column id="69" parent="33" name="deferred_sms">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -422,7 +459,7 @@ sequence|table|24632|24634|2
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="65" parent="32" name="quantity_sms">
+    <column id="70" parent="33" name="quantity_sms">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -430,7 +467,7 @@ sequence|table|24632|24634|2
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="66" parent="32" name="interval">
+    <column id="71" parent="33" name="interval">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -438,7 +475,7 @@ sequence|table|24632|24634|2
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="67" parent="32" name="settings_organizations_oid_fk">
+    <foreign-key id="72" parent="33" name="settings_organizations_oid_fk">
       <ObjectId>24607</ObjectId>
       <StateNumber>730</StateNumber>
       <ColNames>oid</ColNames>
@@ -448,14 +485,14 @@ sequence|table|24632|24634|2
       <RefKeyName>organizations_pk</RefKeyName>
       <RefColNames>oid</RefColNames>
     </foreign-key>
-    <column id="68" parent="33" name="oid">
+    <column id="73" parent="34" name="oid">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>733</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="69" parent="33" name="tid">
+    <column id="74" parent="34" name="tid">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -463,20 +500,20 @@ sequence|table|24632|24634|2
       <DefaultExpression>nextval(&apos;sms_templates_tid_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="70" parent="33" name="template">
+    <column id="75" parent="34" name="template">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>733</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="71" parent="33" name="sms_templates_tid_uindex">
+    <index id="76" parent="34" name="sms_templates_tid_uindex">
       <ObjectId>24623</ObjectId>
       <StateNumber>734</StateNumber>
       <ColNames>tid</ColNames>
       <Unique>1</Unique>
     </index>
-    <foreign-key id="72" parent="33" name="sms_templates_organizations_oid_fk">
+    <foreign-key id="77" parent="34" name="sms_templates_organizations_oid_fk">
       <ObjectId>24618</ObjectId>
       <StateNumber>733</StateNumber>
       <ColNames>oid</ColNames>

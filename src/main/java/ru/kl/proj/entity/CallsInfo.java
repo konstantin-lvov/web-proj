@@ -3,6 +3,7 @@ package ru.kl.proj.entity;
 public class CallsInfo extends Entity {
 
     private int oid;
+    private int conv_id;
     private String date;
     private String phoneNumber;
     private String parsedSms;
@@ -25,6 +26,14 @@ public class CallsInfo extends Entity {
 
     public void setOid(int oid) {
         this.oid = oid;
+    }
+
+    public int getConv_id() {
+        return conv_id;
+    }
+
+    public void setConv_id(int conv_id) {
+        this.conv_id = conv_id;
     }
 
     public String getDate() {
