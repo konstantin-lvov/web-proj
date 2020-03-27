@@ -2,6 +2,7 @@ package ru.kl.proj.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import ru.kl.proj.Mappers.SettingsMapper;
 import ru.kl.proj.entity.Settings;
 
@@ -31,7 +32,7 @@ public class SettingsDaoImpl implements Dao<Settings>{
 
     @Override
     public Settings read(String entityProp) {
-        int oid = Integer.valueOf(entityProp);
+        int oid = Integer.parseInt(entityProp);
         String sql = "select * from public.settings where oid = ?;";
         return jdbcTemplate.queryForObject(sql,
                 new SettingsMapper(),

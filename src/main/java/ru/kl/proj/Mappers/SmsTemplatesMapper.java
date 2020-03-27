@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class SmsTemlatesMapper implements RowMapper<SmsTemplates> {
+public class SmsTemplatesMapper implements RowMapper<SmsTemplates> {
 
     @Override
     public SmsTemplates mapRow(ResultSet resultSet, int i) throws SQLException {

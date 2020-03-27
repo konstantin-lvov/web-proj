@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.stereotype.Component;
 import ru.kl.proj.dao.OrganizationDaoImpl;
 import ru.kl.proj.dao.SettingsDaoImpl;
 
@@ -28,7 +29,7 @@ public class SpringConfig {
     }
 
     @Bean
-    public OrganizationDaoImpl getorganizationDao(){
+    public OrganizationDaoImpl getOrganizationDao(){
         return new OrganizationDaoImpl();
     }
 

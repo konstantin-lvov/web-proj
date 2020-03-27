@@ -14,9 +14,6 @@ public class OrganizationDaoImpl implements Dao<Organization> {
     JdbcTemplate jdbcTemplate;
 
     @Autowired
-    OrganizationDaoImpl organizationDao;
-
-    @Autowired
     SettingsDaoImpl settingsDao;
 
     @Override
@@ -48,7 +45,7 @@ public class OrganizationDaoImpl implements Dao<Organization> {
 
         System.out.println(tmpa + " first query");
 
-        organization = organizationDao.read(organization.getOrganizationName());
+        organization = this.read(organization.getOrganizationName());
 
         Settings settings = new Settings(organization.getOid(), 0, 0, 0);
         settingsDao.create(settings);

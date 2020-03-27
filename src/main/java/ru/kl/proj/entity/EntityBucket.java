@@ -14,34 +14,29 @@ public class EntityBucket {
 
 
     public EntityBucket(ArrayList<Entity> list) {
-        try {
             for (Entity e: list){
-                if(e.getClass().getName().equals("Organization")){
+                if(e.getClass().getName().contains("Organization")){
                     this.organization = (Organization) e;
                 }
-                if(e.getClass().getName().equals("Settings")){
+                if(e.getClass().getName().contains("Settings")){
                     this.settings = (Settings) e;
                 }
-                if(e.getClass().getName().equals("SmsTemplates")){
+                if(e.getClass().getName().contains("SmsTemplates")){
                     this.smsTemplates = (SmsTemplates) e;
                 }
-                if(e.getClass().getName().equals("Keywords")){
+                if(e.getClass().getName().contains("Keywords")){
                     this.keywords = (Keywords) e;
                 }
-                if(e.getClass().getName().equals("EndlineTemplates")){
+                if(e.getClass().getName().contains("EndlineTemplates")){
                     this.endlineTemplates = (EndlineTemplates) e;
                 }
-                if(e.getClass().getName().equals("Contacts")){
+                if(e.getClass().getName().contains("Contacts")){
                     this.contacts = (Contacts) e;
                 }
-                if(e.getClass().getName().equals("CallsInfo")){
+                if(e.getClass().getName().contains("CallsInfo")){
                     this.callsInfo = (CallsInfo) e;
                 }
             }
-        } catch (ClassCastException ex){
-            System.out.println(ex.fillInStackTrace());
-        }
-
     }
 
     public EntityBucket() {
