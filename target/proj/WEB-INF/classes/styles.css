@@ -98,7 +98,7 @@ div.signIn {
     height: available;
     font-size: 20px;
     display: inline-block;
-	padding: 7px 25px 9px 5px;
+	padding: 7px 25px 9px 25px;
 	float: left;
 }
 
@@ -109,7 +109,7 @@ div.signIn:hover {
 
 div.signUp {
     position: relative;
-	padding: 7px 25px 9px 5px;
+	padding: 7px 25px 9px 25px;
 	cursor: pointer;
 	height: available;
 	font-size: 20px;
@@ -157,7 +157,7 @@ div.leftSideBarElement {
 	font-size: 25px;
     margin-bottom: 25px;
     padding-left: 5px;
-	padding-top: 3px;
+	padding-top: 6px;
     background-color:  darkslategray;
 	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
 }
