@@ -6,21 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="create SmsTemplatesDaoImpl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/services/DatasetFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/smsTemplates.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6ba5f636-72e1-424f-a098-3339dcd9ce24/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/CallsInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/CallsInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/SmsTemplatesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/SmsTemplatesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/EntityBucket.java" afterDir="false" />
-    </list>
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,6 +339,7 @@
       <workItem from="1585314356501" duration="5248000" />
       <workItem from="1585327459581" duration="5628000" />
       <workItem from="1585390347459" duration="9517000" />
+      <workItem from="1585400850670" duration="76000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -480,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585298520559</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="create dataset dactory">
+      <created>1585400900568</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1585400900569</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,6 +510,7 @@
     <MESSAGE value="..." />
     <MESSAGE value="implemented all remaining entities and mappers" />
     <MESSAGE value="create SmsTemplatesDaoImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="create SmsTemplatesDaoImpl" />
+    <MESSAGE value="create dataset dactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="create dataset dactory" />
   </component>
 </project>
