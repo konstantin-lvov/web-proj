@@ -1,12 +1,12 @@
 package ru.kl.proj.entity;
 
-import java.security.Key;
 import java.util.ArrayList;
+import java.util.List;
 
 public class EntityBucket {
     private Organization organization;
     private Settings settings;
-    private SmsTemplates smsTemplates;
+    private List <SmsTemplates> smsTemplates;
     private Keywords keywords;
     private EndlineTemplates endlineTemplates;
     private Contacts contacts;
@@ -22,7 +22,7 @@ public class EntityBucket {
                     this.settings = (Settings) e;
                 }
                 if(e.getClass().getName().contains("SmsTemplates")){
-                    this.smsTemplates = (SmsTemplates) e;
+                    this.smsTemplates.add((SmsTemplates) e);
                 }
                 if(e.getClass().getName().contains("Keywords")){
                     this.keywords = (Keywords) e;
@@ -58,12 +58,15 @@ public class EntityBucket {
         this.settings = settings;
     }
 
-    public SmsTemplates getSmsTemplates() {
+    public List<SmsTemplates> getSmsTemplates() {
         return smsTemplates;
     }
 
-    public void setSmsTemplates(SmsTemplates smsTemplates) {
-        this.smsTemplates = smsTemplates;
+    public void addSmsTemplates(SmsTemplates smsTemplates) {
+
+        if(!this.smsTemplates.contains(smsTemplates)){
+            this.smsTemplates.add(smsTemplates);
+        };
     }
 
     public Keywords getKeywords() {

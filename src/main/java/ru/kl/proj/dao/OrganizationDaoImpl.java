@@ -13,9 +13,6 @@ public class OrganizationDaoImpl implements Dao<Organization> {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    SettingsDaoImpl settingsDao;
-
     @Override
     public List<Organization> getAll() {
         String sql = "select * from public.organizations";
@@ -25,12 +22,6 @@ public class OrganizationDaoImpl implements Dao<Organization> {
 
     @Override
     public void create(Organization organization) {
-
-        if(organization.getAuthority()==null){
-            organization.setAuthority("ROLE_ORGANIZATION");
-        }
-        organization.setEnabled(true);
-
         System.out.println(organization.getOrganizationName() + " " + organization.getPassword() + " " +
                 organization.getAuthority() + " " + organization.isEnabled());
 
@@ -45,10 +36,6 @@ public class OrganizationDaoImpl implements Dao<Organization> {
 
         System.out.println(tmpa + " first query");
 
-        organization = this.read(organization.getOrganizationName());
-
-        Settings settings = new Settings(organization.getOid(), 0, 0, 0);
-        settingsDao.create(settings);
     }
 
     @Override

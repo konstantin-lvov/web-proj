@@ -12,7 +12,7 @@ public class CallsInfoMapper implements RowMapper<CallsInfo> {
         CallsInfo callsInfo = new CallsInfo();
         callsInfo.setOid(resultSet.getInt("oid"));
         callsInfo.setConv_id(resultSet.getInt("conv_id"));
-        callsInfo.setDate(resultSet.getString("date"));
+        callsInfo.setDate(resultSet.getDate("date"));
         callsInfo.setPhoneNumber(resultSet.getString("phoneNumber"));
         callsInfo.setParsedSms(resultSet.getString("parsedSms"));
         return callsInfo;

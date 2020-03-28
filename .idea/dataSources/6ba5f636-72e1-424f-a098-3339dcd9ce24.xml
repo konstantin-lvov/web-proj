@@ -3,13 +3,13 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>12.2</ServerVersion>
-      <StartupTime>1585328615</StartupTime>
+      <StartupTime>1585399219</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13408</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>886</IntrospectionStateNumber>
+      <IntrospectionStateNumber>900</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16385|16387|1
 sequence|table|24589|24591|1
@@ -66,7 +66,7 @@ sequence|table|24663|24645|5
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>887</IntrospectionStateNumber>
+      <IntrospectionStateNumber>901</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <schema id="15" parent="2" name="users">
@@ -164,7 +164,7 @@ sequence|table|24663|24645|5
     <table id="27" parent="14" name="calls_info">
       <ObjectId>24645</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>876</StateNumber>
+      <StateNumber>896</StateNumber>
     </table>
     <table id="28" parent="14" name="contacts">
       <ObjectId>24653</ObjectId>
@@ -194,7 +194,7 @@ sequence|table|24663|24645|5
     <table id="33" parent="14" name="sms_templates">
       <ObjectId>24614</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>733</StateNumber>
+      <StateNumber>899</StateNumber>
     </table>
     <column id="34" parent="27" name="oid">
       <Position>1</Position>
@@ -219,9 +219,9 @@ sequence|table|24663|24645|5
     </column>
     <column id="37" parent="27" name="parsed_sms">
       <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(5000)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>744</StateNumber>
+      <StateNumber>896</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="38" parent="27" name="conv_id">
@@ -492,9 +492,9 @@ sequence|table|24663|24645|5
     </column>
     <column id="74" parent="33" name="template">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>733</StateNumber>
+      <StateNumber>899</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <foreign-key id="75" parent="33" name="sms_templates_organizations_oid_fk">

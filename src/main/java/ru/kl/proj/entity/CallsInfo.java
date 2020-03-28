@@ -1,10 +1,13 @@
 package ru.kl.proj.entity;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 public class CallsInfo extends Entity {
 
     private int oid;
     private int conv_id;
-    private String date;
+    private Date date;
     private String phoneNumber;
     private String parsedSms;
 
@@ -12,7 +15,7 @@ public class CallsInfo extends Entity {
 
     }
 
-    public CallsInfo(int oid, String date,
+    public CallsInfo(int oid, Date date,
                      String phoneNumber, String parsedSms) {
         this.oid = oid;
         this.date = date;
@@ -36,11 +39,11 @@ public class CallsInfo extends Entity {
         this.conv_id = conv_id;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

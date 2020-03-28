@@ -12,9 +12,6 @@ public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    SmsTemplates smsTemplates;
-
     @Override
     public List<SmsTemplates> getAll() {
         String sql = "select * from public.sms_templates;";
