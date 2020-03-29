@@ -37,6 +37,6 @@ public class SmsTemplatesController {
                     smsTemplates.getTemplate());
             smsTemplatesDao.update(smsTemplates);
         }
-        return "accountMainPage";
+        return "redirect:/accountMainPage?pageMarker=smsTemplates&apply=true";
     }
 }

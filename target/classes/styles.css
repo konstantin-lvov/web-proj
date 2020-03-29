@@ -30,7 +30,22 @@ h5 {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+	float: right;
 }
+
+h5.DTransparentText{
+	opacity: 1.0;
+	color: green;
+	float: right;
+	animation: transparentText forwards 4s;
+}
+
+@keyframes transparentText {
+	0%   { opacity: 0; }
+	50%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
 div.menuBar {
 	position: absolute;
     vert-align: middle;
@@ -98,7 +113,7 @@ div.signIn {
     height: available;
     font-size: 20px;
     display: inline-block;
-	padding: 7px 25px 9px 25px;
+	padding: 7px 15px 9px 15px;
 	float: left;
 }
 
@@ -110,7 +125,7 @@ div.signIn:hover {
 
 div.signUp {
     position: relative;
-	padding: 7px 25px 9px 25px;
+	padding: 7px 15px 9px 15px;
 	cursor: pointer;
 	height: available;
 	font-size: 20px;
@@ -156,10 +171,10 @@ div.leftSideBarElement {
 	cursor: pointer;
 	height: 40px;
 	width: 300px;
-	font-size: 25px;
+	font-size: 18px;
     margin-bottom: 25px;
     padding-left: 5px;
-	padding-top: 8px;
+	padding-top: 13px;
     background-color:  darkslategray;
 	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
 }
@@ -167,10 +182,10 @@ div.leftSideBarElement_picked {
 	cursor: pointer;
 	height: 40px;
 	width: 300px;
-	font-size: 25px;
+	font-size: 20px;
 	margin-bottom: 25px;
 	padding-left: 5px;
-	padding-top: 8px;
+	padding-top: 10px;
 	background-color:  cornflowerblue;
 	opacity: 1.0;
 	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
@@ -192,6 +207,7 @@ div.rightSideContentSpace {
     width: 400px;
 	align-content: center;
 }
+
 input.customDisabledField {
 	text-decoration-color: gray;
 	color: gray;

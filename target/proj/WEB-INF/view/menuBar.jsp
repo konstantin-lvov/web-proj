@@ -9,7 +9,7 @@
 <div class="menuBar">
     <div class="logoText" onclick="window.location='/';">SUMMARY</div>
     <div class="freeSpaceMenuBar"></div>
-    <% if ( organization == null ) {%>
+    <% if ( request.getRemoteUser() == null ) {%>
     <div class="rightSideMenuBarCommonSpace">
         <div class="signIn" onclick="window.location='/login';">Войти</div>
         <div class="signUp" onclick="window.location='/registration';">Создать аккаунт</div>

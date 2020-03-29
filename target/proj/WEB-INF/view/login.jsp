@@ -17,13 +17,14 @@
         <table>
             <tr>
                 <td><h3>Название организации:</h3></td>
-                <td><input type='text' name='organizationName' value=''></td>
+                <td><input type='text' name='organizationName' value='' /></td>
             </tr>
             <tr>
                 <td><h3>Пароль:</h3></td>
                 <td><input type='password' name='password' /></td>
             </tr>
             <tr>
+                <td></td>
                 <td colspan='2'><input name="submit" class="button" type="submit" value="Войти" /></td>
             </tr>
         </table>

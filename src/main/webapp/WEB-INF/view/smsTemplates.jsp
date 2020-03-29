@@ -5,7 +5,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <h2 align="center">СМС шаблоны</h2>
 <br>
-<div class="rightSideCommonSpace">
+<div class="rightSideContentSpace">
     <form name="smsTemplates" action="/smsTemplates" method="post">
         <table>
         <%
@@ -17,11 +17,13 @@
                     <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
                 </td>
                 <td>
-                    <input type='text' name='tid' value='<%= t.getTid() %>' class="customDisabledField" readonly="true">
+                    <input type='text' name='tid' value='<%= t.getTid() %>' hidden/>
+                    <h4>Шаблон №<%= t.getTid() %>:</h4>
                 </td>
                 <td>
-                    <input type='text' name='template' value='<%= t.getTemplate()%>' />
+                    <textarea inputmode="true" rows="5" cols="50" name='template' ><%=t.getTemplate()%></textarea>
                 </td>
+                <p> </p>
             </tr>
         <%
             }
@@ -33,17 +35,17 @@
                     <input name="submit" class="button" type="submit" value="Отправить" />
                 </td>
             </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+            </tr>
         </table>
     </form>
-
-<%--   <form:form method="post" action = "edit" modelAttribute="smsTemplates">--%>
-<%--        <table>--%>
-<%--            <c:forEach items="${smsTemplates}" var="currentTemplate" varStatus="tStatus">--%>
-<%--                <tr>--%>
-<%--                    <td>${currentTemplate.tid}</td>--%>
-<%--                    <td><form:input path="smsTemplates[${tStatus.index}].template"></form:input></td>--%>
-<%--                </tr>--%>
-<%--            </c:forEach>--%>
-<%--        </table>--%>
-<%--    </form:form>--%>
 </div>
