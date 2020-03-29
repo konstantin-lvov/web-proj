@@ -1,15 +1,15 @@
+<%@ page import="ru.kl.proj.entity.Organization" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="ru.kl.proj.entity.EntityBucket" %>
 <%
-    EntityBucket entityBucket = null;
+    Organization organization = null;
     if(request.getRemoteUser() != null) {
-        entityBucket = (EntityBucket) request.getAttribute("entityBucket");
+        organization = (Organization) request.getAttribute("organization");
     }
 %>
 <div class="menuBar">
     <div class="logoText" onclick="window.location='/';">SUMMARY</div>
     <div class="freeSpaceMenuBar"></div>
-    <% if ( entityBucket == null ) {%>
+    <% if ( organization == null ) {%>
     <div class="rightSideMenuBarCommonSpace">
         <div class="signIn" onclick="window.location='/login';">Войти</div>
         <div class="signUp" onclick="window.location='/registration';">Создать аккаунт</div>

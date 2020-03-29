@@ -57,7 +57,7 @@ public class DatasetFactory {
         }
         organization.setEnabled(true);
         organizationDao.create(organization);
-        organization = organizationDao.read(organization.getOrganizationName());
+        organization = organizationDao.read(organization.getOid());
         this.oid = organization.getOid();
 
         settings = new Settings(oid, 0, 0, 0);
@@ -69,6 +69,13 @@ public class DatasetFactory {
                 "Обратится к нам вы можете по телефону:";
         smsTemplates = new SmsTemplates(oid, 1, templateSms);
         smsTemplatesDao.create(smsTemplates);
+        templateSms = "Здравствуйте, #Имя_клиента#!\n" +
+                "Напоминаем Вам о прошлом разговоре:\n" +
+                "#Ключевое_слово##Найденое_совпадение##Окончание_строки#\n" +
+                "Обратится к нам вы можете по телефону:";
+        smsTemplates = new SmsTemplates(oid, 2, templateSms);
+        smsTemplatesDao.create(smsTemplates);
+
 
         String templateEndline = ".";
         endlineTemplates = new EndlineTemplates(oid, 1, templateEndline);

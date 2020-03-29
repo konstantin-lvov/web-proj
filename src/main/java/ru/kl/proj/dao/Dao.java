@@ -8,7 +8,7 @@ public interface Dao<T> {
 
     List<T> getAll();
     void create(T entity);
-    T read(String entityProp);
+    T read(int entityProp);
     void update(T entity);
-    void delete(String entityProp);
+    void delete(int entityProp);
 }

@@ -31,8 +31,7 @@ public class SettingsDaoImpl implements Dao<Settings>{
     }
 
     @Override
-    public Settings read(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public Settings read(int oid) {
         String sql = "select * from public.settings where oid = ?;";
         return jdbcTemplate.queryForObject(sql,
                 new SettingsMapper(),
@@ -51,10 +50,10 @@ public class SettingsDaoImpl implements Dao<Settings>{
     }
 
     @Override
-    public void delete(String entityProp) {
+    public void delete(int oid) {
         String sql = "delete from public.settings where oid = ?;";
         jdbcTemplate.update(sql,
-                entityProp);
+                oid);
 
     }
 }

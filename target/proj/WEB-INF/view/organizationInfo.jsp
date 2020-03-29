@@ -3,16 +3,16 @@
 <h2 align="center">Общая информация</h2>
 </br>
 <div class="rightSideContentSpace">
-    <p>Идентификационный номер: ${entityBucket.organization.oid}</p>
-    <p>Название организации: ${entityBucket.organization.organizationName}</p>
-    <p>Почта: ${entityBucket.organization.email}</p>
+    <p>Идентификационный номер: ${organization.oid}</p>
+    <p>Название организации: ${organization.organizationName}</p>
+    <p>Почта: ${organization.email}</p>
     <p>Включен:
-        <c:if test="${entityBucket.organization.enabled == true}">
+        <c:if test="${organization.enabled == true}">
             <input type="checkbox" size="10px" disabled checked>
         </c:if>
-        <c:if test="${entityBucket.organization.enabled == false}">
+        <c:if test="${organization.enabled == false}">
             <input type="checkbox" size="10px" disabled>
         </c:if></p>
     </p>
-    <p>Аккаунт-роль: ${entityBucket.organization.authority}</p>
+    <p>Аккаунт-роль: ${organization.authority}</p>
 </div>

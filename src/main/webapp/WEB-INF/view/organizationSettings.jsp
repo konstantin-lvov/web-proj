@@ -3,56 +3,56 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <script>
     function submitForm() {
-        document.forms['entityBucket'].submit();
+        document.forms['organization','settings'].submit();
     }
 </script>
 <h2 align="center">Основные настройки профиля</h2>
 <br>
 <div class="rightSideContentSpace">
-    <form:form action="/settings" method="POST" modelAttribute="entityBucket">
+    <form:form action="/settings" method="POST" modelAttribute="list">
         <table valign="center">
             <tr>
                 <td><h4>Идентификационный номер: </h4></td>
-                <td><form:input path="organization.oid" readonly="true" class="customDisabledField"/></td>
+                <td><form:input path="list.organization.oid" readonly="true" class="customDisabledField"/></td>
             </tr>
             <tr>
                 <td><h4>Аккаунт-роль:   </h4></td>
-                <td><form:input path="organization.authority" readonly="true" class="customDisabledField"/></td>
+                <td><form:input path="list.organization.authority" readonly="true" class="customDisabledField"/></td>
             </tr>
             <tr>
                 <td><h4>Включен: </h4></td>
                 <td>
-                    <c:if test="${entityBucket.organization.enabled == true}">
+                    <c:if test="${list.organization.enabled == true}">
                         <h4>Да</h4>
                     </c:if>
-                    <c:if test="${entityBucket.organization.enabled == false}">
+                    <c:if test="${list.organization.enabled == false}">
                         <h4>Нет</h4>
                     </c:if>
                 </td>
             </tr>
             <tr>
                 <td><h4>Название организации: </h4></td>
-                <td><form:input path="organization.organizationName" required="" /></td>
+                <td><form:input path="list.organization.organizationName" required="" /></td>
             </tr>
             <tr>
                 <td><h4>Пароль: </h4></td>
-                <td><form:input path="organization.password" required="" /></td>
+                <td><form:input path="list.organization.password" required="" /></td>
             </tr>
             <tr>
                 <td><h4>Почта: </h4></td>
-                <td><form:input path="organization.email" required="" /></td>
+                <td><form:input path="list.organization.email" required="" /></td>
             </tr>
             <tr>
                 <td><h4>Отложенная смс: </h4></td>
-                <td><form:input path="settings.deferred" required="" /></td>
+                <td><form:input path="list.settings.deferred" required="" /></td>
             </tr>
             <tr>
                 <td><h4>Количество смс: </h4></td>
-                <td><form:input path="settings.quantity" required="" /></td>
+                <td><form:input path="list.settings.quantity" required="" /></td>
             </tr>
             <tr>
                 <td><h4>Интервал: </h4></td>
-                <td><form:input path="settings.interval" required="" /></td>
+                <td><form:input path="list.settings.interval" required="" /></td>
             </tr>
             <tr>
                 <td></td>

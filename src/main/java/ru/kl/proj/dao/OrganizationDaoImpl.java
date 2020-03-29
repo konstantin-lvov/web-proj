@@ -39,11 +39,18 @@ public class OrganizationDaoImpl implements Dao<Organization> {
     }
 
     @Override
-    public Organization read(String organization) {
+    public Organization read(int oid) {
+        String sql = "select * from public.organizations where oid = ? ";
+        return jdbcTemplate.queryForObject(sql,
+                new OrganizationMapper(),
+                oid);
+    }
+
+    public Organization readByName(String name) {
         String sql = "select * from public.organizations where organization = ? ";
         return jdbcTemplate.queryForObject(sql,
                 new OrganizationMapper(),
-                organization);
+                name);
     }
 
     @Override
@@ -58,8 +65,8 @@ public class OrganizationDaoImpl implements Dao<Organization> {
     }
 
     @Override
-    public void delete(String organization) {
-        String sql = "delete from public.organizations where organization = ?";
-        jdbcTemplate.update(sql, organization);
+    public void delete(int oid) {
+        String sql = "delete from public.organizations where oid = ?";
+        jdbcTemplate.update(sql, oid);
     }
 }

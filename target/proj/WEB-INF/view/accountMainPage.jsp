@@ -23,6 +23,8 @@
                     <jsp:include page="organizationInfo.jsp" />
                     <%} else if (request.getParameter("pageMarker").equals("orgSettings")) {%>
                     <jsp:include page="organizationSettings.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("smsTemplates")) {%>
+                    <jsp:include page="smsTemplates.jsp" />
                     <%}%>
                 </div>
             </td>

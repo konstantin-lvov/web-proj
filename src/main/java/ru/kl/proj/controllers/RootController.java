@@ -29,13 +29,8 @@ public class RootController {
                 remoteAddr = request.getRemoteAddr();
             }
             if (request.getRemoteUser() != null){
-                Organization organization = organizationDao.read(request.getRemoteUser());
-                Settings settings = new Settings();
-                ArrayList<Entity> list = new ArrayList<>();
-                list.add(organization);
-                list.add(settings);
-                EntityBucket entityBucket = new EntityBucket(list);
-                model.addAttribute("entityBucket", entityBucket);
+                Organization organization = organizationDao.readByName(request.getRemoteUser());
+                model.addAttribute("organization", organization);
             }
             System.out.println(remoteAddr);
         }

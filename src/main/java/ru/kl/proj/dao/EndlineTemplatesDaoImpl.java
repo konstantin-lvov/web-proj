@@ -28,8 +28,7 @@ public class EndlineTemplatesDaoImpl implements Dao<EndlineTemplates> {
     }
 
     @Override
-    public EndlineTemplates read(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public EndlineTemplates read(int oid) {
         String sql = "select * from public.endline_template " +
                 "where oid = ?;";
         return jdbcTemplate.queryForObject(sql,
@@ -48,8 +47,7 @@ public class EndlineTemplatesDaoImpl implements Dao<EndlineTemplates> {
     }
 
     @Override
-    public void delete(String entityProp) {
-        int etid = Integer.parseInt(entityProp);
+    public void delete(int etid) {
         String sql = "delete from public.endline_template where etid = ?;";
         jdbcTemplate.update(sql,
                 etid);

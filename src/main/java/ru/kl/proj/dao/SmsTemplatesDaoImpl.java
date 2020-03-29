@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import ru.kl.proj.Mappers.SmsTemplatesMapper;
 import ru.kl.proj.entity.SmsTemplates;
 
-import javax.persistence.Access;
 import java.util.List;
 
 public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
@@ -29,28 +28,30 @@ public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
     }
 
     @Override
-    public SmsTemplates read(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public SmsTemplates read(int entityProp) {
+        return null;
+    }
+
+
+    public List<SmsTemplates> readAllTemplates(int oid) {
         String sql = "select * from public.sms_templates where oid = ?;";
-        return jdbcTemplate.queryForObject(sql,
+        return jdbcTemplate.query(sql,
                 new SmsTemplatesMapper(),
                 oid);
     }
 
     @Override
     public void update(SmsTemplates entity) {
-        String sql = "update public.sms_templates set tid = ?, " +
-                "template = ? where oid = ?;";
+        String sql = "update public.sms_templates set " +
+                "template = ? where oid = ? and tid = ?;";
         jdbcTemplate.update(sql,
-                new SmsTemplatesMapper(),
-                entity.getTid(),
                 entity.getTemplate(),
-                entity.getOid());
+                entity.getOid(),
+                entity.getTid());
     }
 
     @Override
-    public void delete(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public void delete(int oid) {
         String sql = "delete from public.sms_templates where oid = ?;";
         jdbcTemplate.update(sql,
                 oid);

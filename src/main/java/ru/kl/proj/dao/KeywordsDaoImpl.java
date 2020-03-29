@@ -28,8 +28,7 @@ public class KeywordsDaoImpl implements Dao<Keywords> {
     }
 
     @Override
-    public Keywords read(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public Keywords read(int oid) {
         String sql = "select * from public.keywords where oid = ?";
         return jdbcTemplate.queryForObject(sql,
         new KeywordsMapper(),
@@ -46,8 +45,7 @@ public class KeywordsDaoImpl implements Dao<Keywords> {
     }
 
     @Override
-    public void delete(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public void delete(int oid) {
         String sql = "delete from public.keywords where oid = ?;";
         jdbcTemplate.update(sql,
                 oid);

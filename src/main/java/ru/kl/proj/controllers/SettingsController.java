@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.kl.proj.dao.OrganizationDaoImpl;
 import ru.kl.proj.dao.SettingsDaoImpl;
-import ru.kl.proj.entity.EntityBucket;
+import ru.kl.proj.entity.Entity;
 import ru.kl.proj.entity.Organization;
 import ru.kl.proj.entity.Settings;
 
-import javax.security.auth.login.LoginException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @Controller
 public class SettingsController {
@@ -27,14 +27,23 @@ public class SettingsController {
     private SettingsDaoImpl settingsDao;
 
     @PostMapping("/settings")
-    public String changeSettings(@ModelAttribute("entityBucket") EntityBucket entityBucket,
+    public String changeSettings(@ModelAttribute("list") List<Entity> list,
                                  HttpServletRequest request, HttpServletResponse response) {
         System.out.println("post /settings");
+        Organization organization = null;
+        Settings settings = null;
 
-        Organization organization = entityBucket.getOrganization();
+        for (Entity e: list) {
+            if(e.getClass().getName().contains("Organization")){
+                organization = (Organization) e;
+            }
+            if(e.getClass().getName().contains("Settings")){
+                settings = (Settings) e;
+            }
+        }
+
         organizationDao.update(organization);
 
-        Settings settings = entityBucket.getSettings();
         settings.setOid(organization.getOid());
         settingsDao.update(settings);
 

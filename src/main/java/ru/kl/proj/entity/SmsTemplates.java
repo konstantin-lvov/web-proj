@@ -1,5 +1,8 @@
 package ru.kl.proj.entity;
 
+import org.springframework.context.annotation.Scope;
+
+@Scope("prototype")
 public class SmsTemplates extends Entity {
 
     private int oid;

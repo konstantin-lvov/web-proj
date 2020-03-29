@@ -31,8 +31,7 @@ public class ContactsDaoImpl implements Dao<Contacts> {
     }
 
     @Override
-    public Contacts read(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public Contacts read(int oid) {
         String sql = "select * from public.contacts where oid = ?;";
         return jdbcTemplate.queryForObject(sql,
                 new ContactsMapper(),
@@ -53,8 +52,7 @@ public class ContactsDaoImpl implements Dao<Contacts> {
     }
 
     @Override
-    public void delete(String entityProp) {
-        int oid = Integer.parseInt(entityProp);
+    public void delete(int oid) {
         String sql = "delete from public.contacts where oid = ?;";
         jdbcTemplate.update(sql,
                 oid);

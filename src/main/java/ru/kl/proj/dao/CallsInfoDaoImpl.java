@@ -32,8 +32,7 @@ public class CallsInfoDaoImpl implements Dao<CallsInfo> {
     }
 
     @Override
-    public CallsInfo read(String entityProp) {
-        int conv_id = Integer.parseInt(entityProp);
+    public CallsInfo read(int conv_id) {
         String sql = "select * from public.calls_info where conv_id = ?;";
         return jdbcTemplate.queryForObject(sql,
                 new CallsInfoMapper(),
@@ -52,8 +51,7 @@ public class CallsInfoDaoImpl implements Dao<CallsInfo> {
     }
 
     @Override
-    public void delete(String entityProp) {
-        int conv_id = Integer.parseInt(entityProp);
+    public void delete(int conv_id) {
         String sql = "delete from public.calls_info where conv_id = ?;";
         jdbcTemplate.update(sql,
                 conv_id);

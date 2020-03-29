@@ -1,4 +1,4 @@
 package ru.kl.proj.entity;
 
-abstract public class Entity {
+abstract public class Entity <T> {
 }
