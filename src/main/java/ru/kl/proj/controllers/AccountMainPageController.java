@@ -27,12 +27,13 @@ public class AccountMainPageController {
 
     @GetMapping("/accountMainPage")
     public String getAccountMP(HttpServletRequest request, Model model,
+                               @RequestParam(value = "addForm", required = false) String addForm,
                                @RequestParam(value = "pageMarker", required = false) String pageMarker,
                                @RequestParam(value = "apply", required = false) String apply){
 
         Organization organization = organizationDao.readByName(request.getRemoteUser());
         int oid = organization.getOid();
-
+        System.out.println(addForm + "from accMP");
         if (pageMarker == null){
             model.addAttribute("organization", organization);
         } else if (pageMarker.equals("orgSettings")){
@@ -41,8 +42,15 @@ public class AccountMainPageController {
             model.addAttribute("settings", settings);
         } else if (pageMarker.equals("smsTemplates")){
             SmsTemplatesDaoImpl smsTemplatesDao = applicationContext.getBean(SmsTemplatesDaoImpl.class);
-            List<SmsTemplates> smsTemplates = smsTemplatesDao.readAllTemplates(oid);
-            model.addAttribute("smsTemplates", smsTemplates);
+            List<SmsTemplates> listOfSmsTemplates = smsTemplatesDao.readAllTemplates(oid);
+            if(addForm != null && addForm.equals("true")){
+                SmsTemplates smsTemplate = applicationContext.getBean(SmsTemplates.class);
+                smsTemplate.setOid(listOfSmsTemplates.get(0).getOid());
+                smsTemplate.setTid(listOfSmsTemplates.size()+1);
+                smsTemplate.setTemplate("");
+                listOfSmsTemplates.add(smsTemplate);
+            }
+            model.addAttribute("smsTemplates", listOfSmsTemplates);
         }
 
         model.addAttribute("pageMarker", pageMarker);

@@ -1,3 +1,6 @@
+<%@ page import="java.util.HashMap" %>
+<%@ page import="ru.kl.proj.entity.Entity" %>
+<%@ page import="java.util.Map" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -9,56 +12,84 @@
 <h2 align="center">Основные настройки профиля</h2>
 <br>
 <div class="rightSideContentSpace">
-    <form:form action="/settings" method="POST" modelAttribute="list">
-        <table valign="center">
+    <form name="orgSettings" action="/settings" method="post">
+        <table>
             <tr>
-                <td><h4>Идентификационный номер: </h4></td>
-                <td><form:input path="list.organization.oid" readonly="true" class="customDisabledField"/></td>
-            </tr>
-            <tr>
-                <td><h4>Аккаунт-роль:   </h4></td>
-                <td><form:input path="list.organization.authority" readonly="true" class="customDisabledField"/></td>
-            </tr>
-            <tr>
-                <td><h4>Включен: </h4></td>
                 <td>
-                    <c:if test="${list.organization.enabled == true}">
-                        <h4>Да</h4>
-                    </c:if>
-                    <c:if test="${list.organization.enabled == false}">
-                        <h4>Нет</h4>
-                    </c:if>
+                    <input type="text" name="oid" value="${organization.oid}" hidden/>
                 </td>
             </tr>
             <tr>
-                <td><h4>Название организации: </h4></td>
-                <td><form:input path="list.organization.organizationName" required="" /></td>
+                <td>
+                    <input type="text" name="enabled" value="${organization.enabled}" hidden/>
+                </td>
             </tr>
             <tr>
-                <td><h4>Пароль: </h4></td>
-                <td><form:input path="list.organization.password" required="" /></td>
+                <td>
+                    <input type="text" name="authority" value="${organization.authority}" hidden/>
+                </td>
             </tr>
             <tr>
-                <td><h4>Почта: </h4></td>
-                <td><form:input path="list.organization.email" required="" /></td>
+                <td>
+                    <h4>Название: </h4>
+                </td>
+                <td>
+                    <input type="text" name="organizationName" value="${organization.organizationName}"/>
+                </td>
             </tr>
             <tr>
-                <td><h4>Отложенная смс: </h4></td>
-                <td><form:input path="list.settings.deferred" required="" /></td>
+                <td>
+                    <h4>Емейл: </h4>
+                </td>
+                <td>
+                    <input type="text" name="email" value="${organization.email}"/>
+                </td>
             </tr>
             <tr>
-                <td><h4>Количество смс: </h4></td>
-                <td><form:input path="list.settings.quantity" required="" /></td>
+                <td>
+                    <h4>Пароль: </h4>
+                </td>
+                <td>
+                    <input type="text" name="password" value="${organization.password}"/>
+                </td>
             </tr>
             <tr>
-                <td><h4>Интервал: </h4></td>
-                <td><form:input path="list.settings.interval" required="" /></td>
+                <td>
+                    <h4>Отложенная смс: </h4>
+                </td>
+                <td>
+                    <input type="text" name="deferred" value="${settings.deferred}"/>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td><input type="button" class="button" value="Сохранить" onclick="submitForm()"/></td>
+                <td>
+                    <h4>Количество смс: </h4>
+                </td>
+                <td>
+                    <input type="text" name="quantity" value="${settings.quantity}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Количество смс: </h4>
+                </td>
+                <td>
+                    <input type="text" name="interval" value="${settings.interval}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                    <input name="submit" class="button" type="submit" value="Отправить" />
+                </td>
             </tr>
         </table>
-    </form:form>
+    </form>
     <h5><font color="red">ВНИМАНИЕ!</font> При изменении названия организации Вам потребуется произвести повторную авторизацию.</h5>
 </div>

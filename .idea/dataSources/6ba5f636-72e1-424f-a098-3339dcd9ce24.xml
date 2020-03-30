@@ -3,18 +3,18 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>12.2</ServerVersion>
-      <StartupTime>1585465607</StartupTime>
+      <StartupTime>1585575949</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13408</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>921</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1109</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|24663|24645|5
+      <Relations>sequence|table|16385|16387|1
 sequence|table|24589|24591|1
 sequence|table|24632|24634|2
-sequence|table|16385|16387|1
+sequence|table|24663|24645|5
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -66,7 +66,7 @@ sequence|table|16385|16387|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>922</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1110</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <schema id="15" parent="2" name="users">

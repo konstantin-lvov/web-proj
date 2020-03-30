@@ -34,7 +34,7 @@ public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
 
 
     public List<SmsTemplates> readAllTemplates(int oid) {
-        String sql = "select * from public.sms_templates where oid = ?;";
+        String sql = "select * from public.sms_templates where oid = ? order by tid;";
         return jdbcTemplate.query(sql,
                 new SmsTemplatesMapper(),
                 oid);
@@ -51,9 +51,12 @@ public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
     }
 
     @Override
-    public void delete(int oid) {
-        String sql = "delete from public.sms_templates where oid = ?;";
-        jdbcTemplate.update(sql,
-                oid);
+    public void delete(int entityProp) {
+
+    }
+
+    public void deleteByTid(int oid, int tid) {
+        String sql = "delete from public.sms_templates where oid = ? and tid = ?;";
+        jdbcTemplate.update(sql, oid, tid);
     }
 }
