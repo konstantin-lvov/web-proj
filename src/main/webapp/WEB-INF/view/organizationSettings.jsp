@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Название: </h4>
+                    Название:
                 </td>
                 <td>
                     <input type="text" name="organizationName" value="${organization.organizationName}"/>
@@ -39,7 +39,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Емейл: </h4>
+                    Емейл:
                 </td>
                 <td>
                     <input type="text" name="email" value="${organization.email}"/>
@@ -47,7 +47,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Пароль: </h4>
+                    Пароль:
                 </td>
                 <td>
                     <input type="text" name="password" value="${organization.password}"/>
@@ -55,7 +55,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Отложенная смс: </h4>
+                    Отложенная смс:
                 </td>
                 <td>
                     <input type="text" name="deferred" value="${settings.deferred}"/>
@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Количество смс: </h4>
+                    Количество смс:
                 </td>
                 <td>
                     <input type="text" name="quantity" value="${settings.quantity}"/>
@@ -71,7 +71,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Количество смс: </h4>
+                    Количество смс:
                 </td>
                 <td>
                     <input type="text" name="interval" value="${settings.interval}"/>

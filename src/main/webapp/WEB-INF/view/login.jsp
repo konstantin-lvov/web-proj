@@ -16,11 +16,11 @@
     <form name='organization' action="/login" method='POST'>
         <table>
             <tr>
-                <td><h3>Название организации:</h3></td>
+                <td>Название организации:</td>
                 <td><input type='text' name='organizationName' value='' /></td>
             </tr>
             <tr>
-                <td><h3>Пароль:</h3></td>
+                <td>Пароль:</td>
                 <td><input type='password' name='password' /></td>
             </tr>
             <tr>

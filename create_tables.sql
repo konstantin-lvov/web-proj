@@ -45,8 +45,12 @@ create table keywords
 	oid int not null
 		constraint keywords_organizations_oid_fk
 			references organizations,
+	kid serial not null,
 	keyword varchar(25) not null
 );
+
+create unique index keywords_kid_uindex
+	on keywords (kid);
 
 create table endline_template
 (

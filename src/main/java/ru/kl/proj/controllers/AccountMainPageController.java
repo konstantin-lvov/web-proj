@@ -6,12 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import ru.kl.proj.dao.KeywordsDaoImpl;
 import ru.kl.proj.dao.OrganizationDaoImpl;
 import ru.kl.proj.dao.SettingsDaoImpl;
 import ru.kl.proj.dao.SmsTemplatesDaoImpl;
 import ru.kl.proj.entity.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Key;
 import java.util.List;
 
 @Controller
@@ -51,6 +53,18 @@ public class AccountMainPageController {
                 listOfSmsTemplates.add(smsTemplate);
             }
             model.addAttribute("smsTemplates", listOfSmsTemplates);
+
+        } else if (pageMarker.equals("keywords")){
+            KeywordsDaoImpl keywordsDao = applicationContext.getBean(KeywordsDaoImpl.class);
+            List<Keywords> listOfKeywords = keywordsDao.readAllKeywords(oid);
+            if(addForm != null && addForm.equals("true")){
+                Keywords keywords = applicationContext.getBean(Keywords.class);
+                keywords.setOid(listOfKeywords.get(0).getOid());
+                keywords.setKid(listOfKeywords.size()+1);
+                keywords.setKeyword("");
+                listOfKeywords.add(keywords);
+            }
+            model.addAttribute("keywords", listOfKeywords);
         }
 
         model.addAttribute("pageMarker", pageMarker);

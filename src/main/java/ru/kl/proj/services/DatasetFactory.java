@@ -80,24 +80,31 @@ public class DatasetFactory {
         String templateEndline = ".";
         endlineTemplates = new EndlineTemplates(oid, 1, templateEndline);
         endlineTemplatesDao.create(endlineTemplates);
+        endlineTemplates = new EndlineTemplates(oid, 2, templateEndline);
+        endlineTemplatesDao.create(endlineTemplates);
     }
 
     public void testCreateDataset(Organization organization){
         createDataset(organization);
 
         String keyword = "олово";
-        keywords = new Keywords(oid, keyword);
+        keywords = new Keywords(oid, 1, keyword);
+        keywordsDao.create(keywords);
+        keywords = new Keywords(oid, 1, keyword);
         keywordsDao.create(keywords);
 
         contacts = new Contacts(oid, "Василий", "Петухов",
                 "Вадимович", "85555555555");
         contactsDao.create(contacts);
+        contactsDao.create(contacts);
+
 
         Date date = new Date(System.currentTimeMillis());
         String parsedSms = "Здравстуйте Константин рады вам сообщить что" +
                 "мы обновили цены на ншу продукцию и готовы предложить вам" +
                 "олово по 20 рублей за киллограмм аллюминий 12 рублей за киллограмм...";
         callsInfo = new CallsInfo(oid, date, "85555555555", parsedSms);
+        callsInfoDao.create(callsInfo);
         callsInfoDao.create(callsInfo);
     }
 }

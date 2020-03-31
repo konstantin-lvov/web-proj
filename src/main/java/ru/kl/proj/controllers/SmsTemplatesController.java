@@ -39,7 +39,7 @@ public class SmsTemplatesController {
         for (int i = 0; i < oids.length; i++) {
             String deleteTemplateVar = "deleteField" + (i + 1);
             String tmp = request.getParameter(deleteTemplateVar);
-            if (tmp != null && tmp.equals("-")) {
+            if (tmp != null && tmp.equals("Удалить")) {
                 deleteTemplate = i + 1;
 
             }

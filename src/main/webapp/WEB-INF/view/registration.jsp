@@ -57,23 +57,23 @@
     <form:form action="/registration" method="POST" modelAttribute="organization">
         <table>
             <tr>
-                <td><h3>Название организации:</h3></td>
+                <td>Название организации:</td>
                 <td><form:input path="organizationName" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Почта:</h3></td>
+                <td>Почта:</td>
                 <td><form:input path="email" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Пароль:</h3></td>
+                <td>Пароль:</td>
                 <td><form:input path="password" type="password" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Повторите пароль:</h3></td>
+                <td>Повторите пароль:</td>
                 <td><input id="repeatPassword" type="password" required="" /></td>
             </tr>
             <tr>
-                <td><h3>Показать пароль</h3></td>
+                <td>Показать пароль:</td>
                 <td><input type="checkbox" onclick="showPas()" /></td>
             </tr>
             <tr>

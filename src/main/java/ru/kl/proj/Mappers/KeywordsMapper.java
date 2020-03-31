@@ -11,6 +11,7 @@ public class KeywordsMapper implements RowMapper<Keywords> {
     public Keywords mapRow(ResultSet resultSet, int i) throws SQLException {
         Keywords keywords = new Keywords();
         keywords.setOid(resultSet.getInt("oid"));
+        keywords.setKid(resultSet.getInt("kid"));
         keywords.setKeyword(resultSet.getString("keyword"));
         return keywords;
     }
