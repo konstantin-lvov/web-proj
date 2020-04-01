@@ -12,7 +12,7 @@ public class EndlineTemplatesMapper implements RowMapper<EndlineTemplates> {
         EndlineTemplates endlineTemplates = new EndlineTemplates();
         endlineTemplates.setOid(resultSet.getInt("oid"));
         endlineTemplates.setEtid(resultSet.getInt("etid"));
-        endlineTemplates.setEndlineTemplate(resultSet.getString("endlineTemplate"));
+        endlineTemplates.setEndlineTemplate(resultSet.getString("endline_template"));
         return endlineTemplates;
     }
 }

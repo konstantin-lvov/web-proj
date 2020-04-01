@@ -52,6 +52,11 @@
     </script>
 </head>
 <body>
+<div class="menuBar">
+<div class="logoText" onclick="window.location='/';">SUMMARY</div>
+<div class="freeSpaceMenuBar"></div>
+<div class="rightSideMenuBarCommonSpace"></div>
+</div>
 <div class="commonSpace" align="center">
     <h1>Регистрация</h1>
     <form:form action="/registration" method="POST" modelAttribute="organization">

@@ -5,10 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import ru.kl.proj.dao.*;
-import ru.kl.proj.entity.Keywords;
-import ru.kl.proj.entity.Organization;
-import ru.kl.proj.entity.Settings;
-import ru.kl.proj.entity.SmsTemplates;
+import ru.kl.proj.entity.*;
 import ru.kl.proj.services.DatasetFactory;
 
 import javax.sql.DataSource;
@@ -30,6 +27,9 @@ public class SpringConfig {
         dataSource.setPassword("postgres");
         return dataSource;
     }
+
+    @Bean
+    public EndlineTemplates getEndline(){return  new EndlineTemplates();}
 
     @Bean
     public Keywords getKeywords() {

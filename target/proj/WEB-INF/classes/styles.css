@@ -1,4 +1,10 @@
 body{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	align-content: center;
 	background-color: #1A191E;
 }
 html {
@@ -21,16 +27,28 @@ h4 {
 h5 {
 	color: #FFFFFF;
 }
+table {
+	margin: 0 auto;
+	vertical-align: center;
+}
+td {
+	vertical-align: center;
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 5px;
+}
 .button {
     background-color:  darkslategray; /* Green */
     border: none;
     color: black;
-    padding: 10px 22px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
 	float: right;
+	margin: 5px 0px 5px 5px;
 }
 
 h5.DTransparentText{
@@ -49,12 +67,28 @@ h5.DTransparentText{
 div.menuBar {
 	position: absolute;
     vert-align: middle;
-	top: 20px;
 	width: 99%;
+	left: 5px;
 	height: 40px;
+	margin: 0;
+	padding: 0;
 	background-color:  darkslategray;
 	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
     display: table;
+}
+
+div.footer {
+	position: relative;
+	bottom: 20px;
+	vert-align: middle;
+	width: 99%;
+	left: 5px;
+	height: 40px;
+	padding: 0;
+	margin: 50px 0 0 0;
+	background-color:  darkslategray;
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
+	display: table;
 }
 
 div.logoText {
@@ -118,9 +152,8 @@ div.signIn {
 }
 
 div.signIn:hover {
-	background-color: cornflowerblue;
+	background-color: lightslategrey;
 	TEXT-DECORATION: none;
-	opacity: 0.5;
 }
 
 div.signUp {
@@ -134,12 +167,12 @@ div.signUp {
 }
 
 div.signUp:hover {
-	background-color: cornflowerblue;
+	background-color: lightslategrey;
 	TEXT-DECORATION: none;
-	opacity: 0.5;
 }
 
 div.commonSpace {
+	position: relative;
 	width: 80%;
 	margin: 100px auto 0;
 	padding: 1%;
@@ -152,6 +185,7 @@ div.template {
 	border-width: thin;
 	border-style: dashed;
 	border-color: white;
+	margin-bottom: 50px;
 }
 div.result {
 	float: right;
@@ -159,19 +193,21 @@ div.result {
 	border-width: thin;
 	border-style: dashed;
 	border-color: white;
+	margin-bottom: 50px;
 }
+
 div.leftSideBarSpace {
     position: sticky;
     left: 100px;
-	height: available;
 	width: 300px;
-    margin-top: 50px;
 }
 div.leftSideBarElement {
 	cursor: pointer;
 	height: 40px;
 	width: 300px;
 	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
     margin-bottom: 25px;
     padding-left: 5px;
 	padding-top: 13px;
@@ -183,6 +219,8 @@ div.leftSideBarElement_picked {
 	height: 40px;
 	width: 300px;
 	font-size: 20px;
+	font-weight: normal;
+	color: #000000;
 	margin-bottom: 25px;
 	padding-left: 5px;
 	padding-top: 10px;
@@ -192,20 +230,21 @@ div.leftSideBarElement_picked {
 
 }
 div.leftSideBarElement:hover {
-	background-color: cornflowerblue;
+	background-color: lightslategrey;
 	TEXT-DECORATION: none;
-	opacity: 0.5;
 }
 div.rightSideCommonSpace {
     top: 50px;
     left: 500px;
+	width: available;
     align-content: center;
 }
 div.rightSideContentSpace {
+	position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
 	align-content: center;
+	width: available;
 }
 
 input.customDisabledField {

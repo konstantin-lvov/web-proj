@@ -25,11 +25,21 @@
                     <jsp:include page="organizationSettings.jsp" />
                     <%} else if (request.getParameter("pageMarker").equals("smsTemplates")) {%>
                     <jsp:include page="smsTemplates.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("keywords")) {%>
+                    <jsp:include page="keywords.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("endlines")) {%>
+                    <jsp:include page="endlineTemplates.jsp" />
                     <%}%>
                 </div>
             </td>
         </tr>
     </table>
+</div>
+<div class="footer">
+    <div class="logoText"></div>
+    <div class="freeSpaceMenuBar"></div>
+    <div class="rightSideMenuBarCommonSpace">
+        <div class="signIn" onclick="window.location='/bugs';">Найденные баги</div></div>
 </div>
 </body>
 </html>

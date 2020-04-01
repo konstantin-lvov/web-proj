@@ -28,10 +28,10 @@
 <%}%>
     Ключевые слова
 </div>
-<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("endline")){%>
-<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=endline';">
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("endlines")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=endlines';">
 <%} else {%>
-<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=endline';">
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=endlines';">
 <%}%>
     Шаблоны окончания строк
 </div>

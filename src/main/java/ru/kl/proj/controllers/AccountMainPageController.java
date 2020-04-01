@@ -6,10 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.kl.proj.dao.KeywordsDaoImpl;
-import ru.kl.proj.dao.OrganizationDaoImpl;
-import ru.kl.proj.dao.SettingsDaoImpl;
-import ru.kl.proj.dao.SmsTemplatesDaoImpl;
+import ru.kl.proj.dao.*;
 import ru.kl.proj.entity.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -53,7 +50,6 @@ public class AccountMainPageController {
                 listOfSmsTemplates.add(smsTemplate);
             }
             model.addAttribute("smsTemplates", listOfSmsTemplates);
-
         } else if (pageMarker.equals("keywords")){
             KeywordsDaoImpl keywordsDao = applicationContext.getBean(KeywordsDaoImpl.class);
             List<Keywords> listOfKeywords = keywordsDao.readAllKeywords(oid);
@@ -65,6 +61,17 @@ public class AccountMainPageController {
                 listOfKeywords.add(keywords);
             }
             model.addAttribute("keywords", listOfKeywords);
+        } else if (pageMarker.equals("endlines")){
+            EndlineTemplatesDaoImpl endlineTemplatesDao = applicationContext.getBean(EndlineTemplatesDaoImpl.class);
+            List<EndlineTemplates> listOfEndlines = endlineTemplatesDao.readAllByOid(oid);
+            if(addForm != null && addForm.equals("true")){
+                EndlineTemplates endlineTemplates = applicationContext.getBean(EndlineTemplates.class);
+                endlineTemplates.setOid(listOfEndlines.get(0).getOid());
+                endlineTemplates.setEtid(listOfEndlines.size()+1);
+                endlineTemplates.setEndlineTemplate("");
+                listOfEndlines.add(endlineTemplates);
+            }
+            model.addAttribute("endlines", listOfEndlines);
         }
 
         model.addAttribute("pageMarker", pageMarker);

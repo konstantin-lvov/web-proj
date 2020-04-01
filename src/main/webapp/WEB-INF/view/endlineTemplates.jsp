@@ -1,41 +1,42 @@
-<%@ page import="ru.kl.proj.entity.SmsTemplates" %>
 <%@ page import="java.util.List" %>
+<%@ page import="ru.kl.proj.entity.EndlineTemplates" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<h2 align="center">СМС шаблоны</h2>
+<h2 align="center">Шаблоны окончания строк</h2>
 <br>
 <div class="rightSideContentSpace">
-    <form id="templatesForm" name="smsTemplates" action="/smsTemplates" method="post">
+    <form id="endlines" name="endlines" action="/endlines" method="post">
         <table>
-        <%
-            List <SmsTemplates> listOfTemplates = (List <SmsTemplates>) request.getAttribute("smsTemplates");
-            for (SmsTemplates t: listOfTemplates) {
-        %>
+            <%
+                List <EndlineTemplates> listOfEndline = (List <EndlineTemplates>) request.getAttribute("endlines");
+                for (EndlineTemplates t: listOfEndline) {
+            %>
             <tr>
                 <td>
-                    <input type="text" name="oid" value="<%= t.getOid() %>" hidden/>
-                    <input type="text" name="deleteField<%= t.getTid() %>" hidden/>
-                    <h4>Шаблон №<%= t.getTid() %>:</h4>
+                    <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
+                    <input type="text" name="deleteField<%= t.getEtid() %>" hidden/>
+                    Шаблон №<%= t.getEtid() %>:
                 </td>
                 <td>
-                    <input type='text' name='tid' value='<%= t.getTid() %>' hidden/>
-                    <textarea inputmode="true" rows="5" cols="50" name='template' ><%=t.getTemplate()%></textarea>
+                    <input type='text' name='etid' value='<%= t.getEtid() %>' hidden/>
+                    <textarea inputmode="true" rows="1" cols="20" name='endline' ><%=t.getEndlineTemplate()%></textarea>
                 </td>
                 <td>
-                    <input name="deleteTemplate"  class="button" type="button" value="Удалить" onclick="{document.smsTemplates.deleteField<%= t.getTid() %>.value=this.value;document.smsTemplates.submit();}"/>
+
+                    <input name="deleteField"  class="button" type="button" value="Удалить" onclick="{document.endlines.deleteField<%= t.getEtid() %>.value=this.value;document.endlines.submit();}"/>
                 </td>
                 <p> </p>
             </tr>
-        <%
-            }
-        %>
+            <%
+                }
+            %>
             <tr>
                 <td>
                     <input type="hidden" name="hiddenField" />
                 </td>
                 <td>
-                    <input name="addForm"  class="button" type="button" value="Добавить шаблон" onclick="{document.smsTemplates.hiddenField.value=this.value;document.smsTemplates.submit();}"/>
+                    <input name="addForm"  class="button" type="button" value="Добавить слово" onclick="{document.endlines.hiddenField.value=this.value;document.endlines.submit();}"/>
                 </td>
                 <td>
                     <input name="submitFrom" class="button" type="submit" value="Отправить" />

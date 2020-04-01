@@ -36,6 +36,14 @@ public class EndlineTemplatesDaoImpl implements Dao<EndlineTemplates> {
                 oid);
     }
 
+    public List <EndlineTemplates> readAllByOid(int oid) {
+        String sql = "select * from public.endline_template " +
+                "where oid = ? order by etid;";
+        return jdbcTemplate.query(sql,
+                new EndlineTemplatesMapper(),
+                oid);
+    }
+
     @Override
     public void update(EndlineTemplates entity) {
         String sql = "update public.endline_template " +
@@ -51,5 +59,10 @@ public class EndlineTemplatesDaoImpl implements Dao<EndlineTemplates> {
         String sql = "delete from public.endline_template where etid = ?;";
         jdbcTemplate.update(sql,
                 etid);
+    }
+
+    public void deleteByEtid(int oid, int etid) {
+        String sql = "delete from public.endline_template where oid = ? and etid = ?;";
+        jdbcTemplate.update(sql, oid, etid);
     }
 }

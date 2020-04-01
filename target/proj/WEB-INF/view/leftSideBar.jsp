@@ -21,12 +21,19 @@
 <%}%>
     Смс шаблоны
 </div>
-<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("smsSettings")){%>
-<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=smsSettings';">
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("keywords")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=keywords';">
 <%} else {%>
-<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=smsSettings';">
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=keywords';">
 <%}%>
-    Настройки смс
+    Ключевые слова
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("endlines")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=endlines';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=endlines';">
+<%}%>
+    Шаблоны окончания строк
 </div>
 <% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("contacts")){%>
 <div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=contacts';">
