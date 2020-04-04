@@ -38,17 +38,17 @@ public class ContactsController {
         /*
         Если в параменте находтся символ "-" то надо удалить соответствующее слово
          */
-        int deleteKeyword = 0  ;
-        for (int i = 0; i < oids.length; i++) {
-            String deleteContactVar = "deleteField" + (i + 1);
+        int contactId = 0  ;
+        for (int i = 0; i < cids.length; i++) {
+            String deleteContactVar = "deleteField" + cids[i];
             String tmp = request.getParameter(deleteContactVar);
             if (tmp != null && tmp.equals("Удалить")) {
-                deleteKeyword = Integer.parseInt(cids [i]);
+                contactId = Integer.parseInt(cids [i]);
             }
         }
-        if (deleteKeyword > 0) {
+        if (contactId > 0) {
             int oid = Integer.parseInt(oids[0]);
-            contactsDao.deleteByCid(oid, deleteKeyword);
+            contactsDao.deleteByCid(oid, contactId);
             return "redirect:/accountMainPage?pageMarker=contacts&apply=true";
         }
         /*

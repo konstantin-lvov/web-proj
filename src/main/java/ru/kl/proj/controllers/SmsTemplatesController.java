@@ -36,8 +36,8 @@ public class SmsTemplatesController {
         Если в параменте находтся символ "-" то надо удалить соответствующий шаблон
          */
         int deleteTemplate = 0  ;
-        for (int i = 0; i < oids.length; i++) {
-            String deleteTemplateVar = "deleteField" + (i + 1);
+        for (int i = 0; i < tids.length; i++) {
+            String deleteTemplateVar = "deleteField" + tids;
             String tmp = request.getParameter(deleteTemplateVar);
             if (tmp != null && tmp.equals("Удалить")) {
                 deleteTemplate = i + 1;

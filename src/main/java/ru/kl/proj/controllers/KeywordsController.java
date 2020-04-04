@@ -39,8 +39,8 @@ public class KeywordsController {
         Если в параменте находтся символ "-" то надо удалить соответствующее слово
          */
         int deleteKeyword = 0  ;
-        for (int i = 0; i < oids.length; i++) {
-            String deleteKeywordVar = "deleteField" + (i + 1);
+        for (int i = 0; i < kids.length; i++) {
+            String deleteKeywordVar = "deleteField" + kids[i];
             String tmp = request.getParameter(deleteKeywordVar);
             if (tmp != null && tmp.equals("Удалить")) {
                 deleteKeyword = i + 1;

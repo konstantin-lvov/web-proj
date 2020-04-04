@@ -6,20 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="fixed bug about functionality of adding contacts">
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/contacts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/contacts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/endlineTemplates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/endlineTemplates.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/keywords.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/keywords.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/smsTemplates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/smsTemplates.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/ContactsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/ContactsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Contacts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/ContactsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/ContactsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Contacts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/ContactsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/ContactsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/EndlineTemplatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/EndlineTemplatesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/KeywordsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/KeywordsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SmsTemplatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/SmsTemplatesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationSettings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/organizationSettings.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/smsTemplates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/smsTemplates.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -369,7 +364,8 @@
       <workItem from="1585665437218" duration="13699000" />
       <workItem from="1585758690063" duration="7320000" />
       <workItem from="1585836467247" duration="14832000" />
-      <workItem from="1585976710241" duration="13874000" />
+      <workItem from="1585976710241" duration="14219000" />
+      <workItem from="1585997828496" duration="2204000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -546,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585977557886</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fixed bug about functionality of adding contacts">
+      <created>1585993124044</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1585993124044</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

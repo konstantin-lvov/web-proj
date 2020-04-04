@@ -4,7 +4,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <h2 align="center">СМС шаблоны</h2>
-<br>
 <div class="rightSideContentSpace">
     <form id="templatesForm" name="smsTemplates" action="/smsTemplates" method="post">
         <table>

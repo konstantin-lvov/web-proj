@@ -10,7 +10,6 @@
     }
 </script>
 <h2 align="center">Основные настройки профиля</h2>
-<br>
 <div class="rightSideContentSpace">
     <form name="orgSettings" action="/settings" method="post">
         <table>
