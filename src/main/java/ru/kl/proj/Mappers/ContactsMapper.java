@@ -11,10 +11,11 @@ public class ContactsMapper implements RowMapper<Contacts> {
     public Contacts mapRow(ResultSet resultSet, int i) throws SQLException {
         Contacts contacts = new Contacts();
         contacts.setOid(resultSet.getInt("oid"));
-        contacts.setName(resultSet.getString("name"));
-        contacts.setSecondName(resultSet.getString("secondName"));
-        contacts.setThirdName(resultSet.getString("thirdName"));
-        contacts.setPhoneNumber(resultSet.getString("phoneNumber"));
+        contacts.setCid(resultSet.getInt("cid"));
+        contacts.setContact(resultSet.getString("name") + " " +
+                resultSet.getString("second_name") + " " +
+                resultSet.getString("third_name") + " " +
+                resultSet.getString("phone_number"));
         return contacts;
     }
 }

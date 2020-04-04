@@ -29,6 +29,11 @@ public class SpringConfig {
     }
 
     @Bean
+    public Contacts getContacts () {
+        return new Contacts();
+    }
+
+    @Bean
     public EndlineTemplates getEndline(){return  new EndlineTemplates();}
 
     @Bean

@@ -72,6 +72,21 @@ public class AccountMainPageController {
                 listOfEndlines.add(endlineTemplates);
             }
             model.addAttribute("endlines", listOfEndlines);
+        } else if (pageMarker.equals("contacts")){
+            ContactsDaoImpl contactsDao = applicationContext.getBean(ContactsDaoImpl.class);
+            List<Contacts> listOfContacts = contactsDao.readAllContacts(oid);
+            if(addForm != null && addForm.equals("true")){
+                Contacts contacts = applicationContext.getBean(Contacts.class);
+                contacts.setOid(listOfContacts.get(0).getOid());
+                /*
+                что бы создать новую сущность определяем какой номер у последнего в списке
+                (он же имеет самый большой номер, т.к. из бд получаются в отсортированном виде)
+                 */
+                contacts.setCid(listOfContacts.get(listOfContacts.size()-1).getCid()+1);
+                contacts.setContact("");
+                listOfContacts.add(contacts);
+            }
+            model.addAttribute("contacts", listOfContacts);
         }
 
         model.addAttribute("pageMarker", pageMarker);

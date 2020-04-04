@@ -93,9 +93,9 @@ public class DatasetFactory {
         keywords = new Keywords(oid, 1, keyword);
         keywordsDao.create(keywords);
 
-        contacts = new Contacts(oid, "Василий", "Петухов",
-                "Вадимович", "85555555555");
+        contacts = new Contacts(oid, 1, "ВасилийПетухов Вадимович 85555555555");
         contactsDao.create(contacts);
+        contacts = new Contacts(oid, 2, "ВасилийПетухов Вадимович 85555555555");
         contactsDao.create(contacts);
 
 

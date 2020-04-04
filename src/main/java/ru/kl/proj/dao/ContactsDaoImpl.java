@@ -1,13 +1,19 @@
 package ru.kl.proj.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.JdbcTemplate;
 import ru.kl.proj.Mappers.ContactsMapper;
 import ru.kl.proj.entity.Contacts;
 
 import java.util.List;
 
+@Scope("request")
 public class ContactsDaoImpl implements Dao<Contacts> {
+    @Autowired
+    ApplicationContext applicationContext;
+
     @Autowired
     JdbcTemplate jdbcTemplate;
 
@@ -19,15 +25,22 @@ public class ContactsDaoImpl implements Dao<Contacts> {
 
     @Override
     public void create(Contacts entity) {
+        Contacts contact = applicationContext.getBean(Contacts.class);
+        contact.setOid(entity.getOid());
+        contact.setCid(entity.getCid());
+        contact.parseContact(entity.getContact());
+        System.out.println(contact.getName() + " from contact dao");
         String sql = "insert into public.contacts " +
-                "(oid, name, second_name, third_name, phone_number) " +
-                "values(?, ?, ?, ?, ?);";
+                "(oid, cid, name, second_name, third_name, phone_number) " +
+                "values(?, ?, ?, ?, ?, ?);";
         jdbcTemplate.update(sql,
                 entity.getOid(),
-                entity.getName(),
-                entity.getSecondName(),
-                entity.getThirdName(),
-                entity.getPhoneNumber());
+                entity.getCid(),
+                contact.getName(),
+                contact.getSecondName(),
+                contact.getThirdName(),
+                contact.getPhoneNumber());
+        System.out.println(contact.getPhoneNumber());
     }
 
     @Override
@@ -38,17 +51,29 @@ public class ContactsDaoImpl implements Dao<Contacts> {
                 oid);
     }
 
+    public List <Contacts> readAllContacts(int oid) {
+        String sql = "select * from public.contacts where oid = ? order by cid;";
+        return jdbcTemplate.query(sql,
+                new ContactsMapper(),
+                oid);
+    }
+
     @Override
     public void update(Contacts entity) {
+        Contacts contact = applicationContext.getBean(Contacts.class);
+        contact.setOid(entity.getOid());
+        contact.setCid(entity.getCid());
+        contact.parseContact(entity.getContact());
         String sql = "update public.contacts set name = ?, " +
                 "second_name = ?, third_name = ?, phone_number = ? " +
-                "where oid = ?;";
+                "where oid = ? and cid = ?;";
         jdbcTemplate.update(sql,
-                entity.getName(),
-                entity.getSecondName(),
-                entity.getThirdName(),
-                entity.getPhoneNumber(),
-                entity.getOid());
+                contact.getName(),
+                contact.getSecondName(),
+                contact.getThirdName(),
+                contact.getPhoneNumber(),
+                entity.getOid(),
+                entity.getCid());
     }
 
     @Override
@@ -56,5 +81,10 @@ public class ContactsDaoImpl implements Dao<Contacts> {
         String sql = "delete from public.contacts where oid = ?;";
         jdbcTemplate.update(sql,
                 oid);
+    }
+
+    public void deleteByCid(int oid, int cid) {
+        String sql = "delete from public.contacts where oid = ? and cid = ?;";
+        jdbcTemplate.update(sql, oid, cid);
     }
 }
