@@ -6,45 +6,20 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/ContactsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/contacts.jsp" afterDir="false" />
+    <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="fixed bug about functionality of adding contacts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/Mappers/ContactsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/AccountMainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/AccountMainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/ContactsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/ContactsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Contacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Keywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/Keywords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/SmsTemplates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/SmsTemplates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/services/DatasetFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/services/DatasetFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/contacts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/contacts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/endlineTemplates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/endlineTemplates.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/keywords.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/keywords.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/organizationSettings.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/smsTemplates.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/smsTemplates.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/ContactsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/ContactsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/EndlineTemplatesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/Mappers/EndlineTemplatesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/configs/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/AccountMainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/AccountMainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/ContactsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/ContactsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/EndlineTemplatesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/EndlineTemplatesDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Contacts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Keywords.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/Keywords.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/SmsTemplates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/entity/SmsTemplates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/services/DatasetFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/services/DatasetFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/ContactsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/ContactsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/EndlineTemplatesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/Mappers/EndlineTemplatesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/configs/SpringConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/AccountMainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/AccountMainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/ContactsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/ContactsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/EndlineTemplatesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/EndlineTemplatesDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Contacts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Keywords.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/Keywords.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/SmsTemplates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/entity/SmsTemplates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/services/DatasetFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/services/DatasetFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/accountMainPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/view/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,26 +77,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="contacts: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="endline_template: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -414,7 +369,7 @@
       <workItem from="1585665437218" duration="13699000" />
       <workItem from="1585758690063" duration="7320000" />
       <workItem from="1585836467247" duration="14832000" />
-      <workItem from="1585976710241" duration="551000" />
+      <workItem from="1585976710241" duration="13874000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -584,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585766017354</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add contacts and delete contacts functionality">
+      <created>1585977557886</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1585977557886</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,17 +588,8 @@
     <MESSAGE value="make add template and delete template functionality" />
     <MESSAGE value="add keywords and delete keywords functionality. And some style changes" />
     <MESSAGE value="add endlines and delete endlines functionality. And some style changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add endlines and delete endlines functionality. And some style changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/ContactsDaoImpl.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add contacts and delete contacts functionality" />
+    <MESSAGE value="fixed bug about functionality of adding contacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug about functionality of adding contacts" />
   </component>
 </project>

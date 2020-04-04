@@ -4,7 +4,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <h2 align="center">Шаблоны окончания строк</h2>
-<br>
 <div class="rightSideContentSpace">
     <form id="endlines" name="endlines" action="/endlines" method="post">
         <table>

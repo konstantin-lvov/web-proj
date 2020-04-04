@@ -4,8 +4,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <h2 align="center">Контакты</h2>
-<br>
 <div class="rightSideContentSpace">
+    <h5>Формат записи (через пробелы): <font color="yellow">#Имя# #Фамилия# #Отчество# #Номер телефона(без +)#</font></h5>
     <form id="contacts" name="contacts" action="/contacts" method="post">
         <table>
             <%

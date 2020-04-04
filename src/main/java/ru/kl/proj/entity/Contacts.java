@@ -28,15 +28,14 @@ public class Contacts extends Entity {
         return oid;
     }
 /*
-Если пробелы жестко не присвоить то создастся дубликат
+Если пустые строки не присвоить то создастся дубликат
  */
     public void parseContact(String contact){
-        if(contact.length() < 7){
-            System.out.println("Empty contact string passed to parse");
-            this.name = " ";
-            this.secondName = " ";
-            this.thirdName = " ";
-            this.phoneNumber = " ";
+        if(contact.equals("")){
+            this.name = "";
+            this.secondName = "";
+            this.thirdName = "";
+            this.phoneNumber = "";
         } else {
             String [] parsedTmpStr = contact.split("\\s");
             for (int i = 0; i < parsedTmpStr.length; i++) {
