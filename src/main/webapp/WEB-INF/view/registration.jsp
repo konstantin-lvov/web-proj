@@ -60,6 +60,12 @@
 </div>
 <div class="commonSpace" align="center">
     <h1>Регистрация</h1>
+    <%
+        String errorMessage = request.getParameter("errorMessage");
+    if (errorMessage != null){
+    %>
+    <font color="red"><%=errorMessage%></font>
+    <%}%>
     <form:form action="/registration" method="POST" modelAttribute="organization">
         <table>
             <tr>

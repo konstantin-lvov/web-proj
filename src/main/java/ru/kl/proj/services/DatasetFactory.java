@@ -2,12 +2,15 @@ package ru.kl.proj.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Component;
+import ru.kl.proj.customExceptions.OrganizationExistException;
 import ru.kl.proj.dao.*;
 import ru.kl.proj.entity.*;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 
 @Component
 @Scope("request")
@@ -52,6 +55,14 @@ public class DatasetFactory {
     }
 
     public void createDataset(Organization organization){
+
+        boolean organizationExist = checkOrgExistByName(organization.getOrganizationName());
+        if(organizationExist){
+            throw new OrganizationExistException("Organization "
+                    + organization.getOrganizationName() + " already exist");
+        }
+
+
         if(organization.getAuthority()==null){
             organization.setAuthority("ROLE_ORGANIZATION");
         }
@@ -106,5 +117,15 @@ public class DatasetFactory {
         callsInfo = new CallsInfo(oid, date, "85555555555", parsedSms);
         callsInfoDao.create(callsInfo);
         callsInfoDao.create(callsInfo);
+    }
+
+    public boolean checkOrgExistByName(String name) {
+        Organization checkedOrganization = null;
+        checkedOrganization = organizationDao.readByName(name);
+        if (checkedOrganization != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

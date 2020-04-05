@@ -19,7 +19,6 @@ public class OrganizationDaoImpl implements Dao<Organization> {
         return jdbcTemplate.query(sql, new OrganizationMapper());
     }
 
-
     @Override
     public void create(Organization organization) {
         System.out.println(organization.getOrganizationName() + " " + organization.getPassword() + " " +
