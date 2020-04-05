@@ -11,10 +11,10 @@ public class CallsInfoMapper implements RowMapper<CallsInfo> {
     public CallsInfo mapRow(ResultSet resultSet, int i) throws SQLException {
         CallsInfo callsInfo = new CallsInfo();
         callsInfo.setOid(resultSet.getInt("oid"));
-        callsInfo.setConv_id(resultSet.getInt("conv_id"));
-        callsInfo.setDate(resultSet.getDate("date"));
-        callsInfo.setPhoneNumber(resultSet.getString("phoneNumber"));
-        callsInfo.setParsedSms(resultSet.getString("parsedSms"));
+        callsInfo.setConvId(resultSet.getInt("convid"));
+        callsInfo.setDate(resultSet.getDate("conversation_date"));
+        callsInfo.setPhoneNumber(resultSet.getString("phone_number"));
+        callsInfo.setParsedSms(resultSet.getString("parsed_sms"));
         return callsInfo;
     }
 }

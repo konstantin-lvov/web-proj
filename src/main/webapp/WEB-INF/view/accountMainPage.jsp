@@ -31,17 +31,13 @@
                     <jsp:include page="endlineTemplates.jsp" />
                     <%} else if (request.getParameter("pageMarker").equals("contacts")) {%>
                     <jsp:include page="contacts.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("callsInfo")) {%>
+                    <jsp:include page="callsInfo.jsp" />
                     <%}%>
                 </div>
             </td>
         </tr>
     </table>
-</div>
-<div class="footer">
-    <div class="logoText"></div>
-    <div class="freeSpaceMenuBar"></div>
-    <div class="rightSideMenuBarCommonSpace">
-        <div class="signIn" onclick="window.location='/bugs';">Найденные баги</div></div>
 </div>
 </body>
 </html>

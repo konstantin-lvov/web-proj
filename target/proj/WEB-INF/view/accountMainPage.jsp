@@ -31,6 +31,8 @@
                     <jsp:include page="endlineTemplates.jsp" />
                     <%} else if (request.getParameter("pageMarker").equals("contacts")) {%>
                     <jsp:include page="contacts.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("callsInfo")) {%>
+                    <jsp:include page="callsInfo.jsp" />
                     <%}%>
                 </div>
             </td>

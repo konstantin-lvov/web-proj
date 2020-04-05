@@ -6,7 +6,7 @@ import java.time.LocalDate;
 public class CallsInfo extends Entity {
 
     private int oid;
-    private int conv_id;
+    private int convId;
     private Date date;
     private String phoneNumber;
     private String parsedSms;
@@ -31,12 +31,12 @@ public class CallsInfo extends Entity {
         this.oid = oid;
     }
 
-    public int getConv_id() {
-        return conv_id;
+    public int getConvId() {
+        return convId;
     }
 
-    public void setConv_id(int conv_id) {
-        this.conv_id = conv_id;
+    public void setConvId(int convId) {
+        this.convId = convId;
     }
 
     public Date getDate() {

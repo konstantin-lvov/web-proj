@@ -87,6 +87,10 @@ public class AccountMainPageController {
                 listOfContacts.add(contacts);
             }
             model.addAttribute("contacts", listOfContacts);
+        } else if (pageMarker.equals("callsInfo")){
+            CallsInfoDaoImpl callsInfoDao = applicationContext.getBean(CallsInfoDaoImpl.class);
+            List<CallsInfo> listOfCallsInfo = callsInfoDao.readAllByOid(oid);
+            model.addAttribute("callsInfo", listOfCallsInfo);
         }
 
         model.addAttribute("pageMarker", pageMarker);
