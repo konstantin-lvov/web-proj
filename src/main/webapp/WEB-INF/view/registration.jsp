@@ -20,6 +20,7 @@
             }
             else {
                 e.preventDefault();
+                alert("Некорректные данные - допускаются английские символы, и цифры (не менее 3 символов)")
             }
         }
         function validateEmail(email) {

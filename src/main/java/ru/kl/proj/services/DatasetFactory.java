@@ -57,7 +57,7 @@ public class DatasetFactory {
         }
         organization.setEnabled(true);
         organizationDao.create(organization);
-        organization = organizationDao.read(organization.getOid());
+        organization = organizationDao.readByName(organization.getOrganizationName());
         this.oid = organization.getOid();
 
         settings = new Settings(oid, 0, 0, 0);
@@ -90,12 +90,12 @@ public class DatasetFactory {
         String keyword = "олово";
         keywords = new Keywords(oid, 1, keyword);
         keywordsDao.create(keywords);
-        keywords = new Keywords(oid, 1, keyword);
+        keywords = new Keywords(oid, 2, keyword);
         keywordsDao.create(keywords);
 
-        contacts = new Contacts(oid, 1, "ВасилийПетухов Вадимович 85555555555");
+        contacts = new Contacts(oid, 1, "Василий Васильков Васильевич 85555555555");
         contactsDao.create(contacts);
-        contacts = new Contacts(oid, 2, "ВасилийПетухов Вадимович 85555555555");
+        contacts = new Contacts(oid, 2, "Василий Васильков Васильевич 85555555555");
         contactsDao.create(contacts);
 
 
