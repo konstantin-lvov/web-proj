@@ -19,7 +19,6 @@ public class RootController {
 
     @GetMapping("/")
     public String showHome(HttpServletRequest request, Model model){
-        System.out.println("get /");
 
         String remoteAddr;
 

@@ -35,8 +35,6 @@ public class RegistrationController {
     @PostMapping("/registration")
     public ModelAndView addOrganization(@ModelAttribute("organization") Organization organization,
                                         HttpServletRequest request){
-        System.out.println("in post registration " + organization.getOrganizationName() + " "
-                + organization.getPassword());
         DatasetFactory datasetFactory = applicationContext.getBean(DatasetFactory.class);
 
         try{

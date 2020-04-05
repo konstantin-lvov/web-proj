@@ -21,7 +21,6 @@ public class KeywordsController {
     @PostMapping("/keywords")
     public String changeKeywords(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
-        System.out.println("post /keywords");
         KeywordsDaoImpl keywordsDao = applicationContext.getBean(KeywordsDaoImpl.class);
         String addForm = request.getParameter("hiddenField");
 
@@ -30,10 +29,6 @@ public class KeywordsController {
         String [] oids = request.getParameterValues("oid");
         String [] kids = request.getParameterValues("kid");
         String [] keywords = request.getParameterValues("keyword");
-
-        for (String s : keywords) {
-            System.out.println(s);
-        }
 
         /*
         Если в параменте находтся символ "-" то надо удалить соответствующее слово
@@ -59,7 +54,6 @@ public class KeywordsController {
          */
         List listOfKeywords = keywordsDao.readAllKeywords(Integer.parseInt(oids[0]));
         boolean differenceBtwDbAndWeb = false;
-        System.out.println(listOfKeywords.size() + " " + oids.length);
         if(listOfKeywords.size() < oids.length){
             differenceBtwDbAndWeb = true;
         }
@@ -75,9 +69,6 @@ public class KeywordsController {
             keyword.setOid(Integer.parseInt(oids[iterations]));
             keyword.setKid(Integer.parseInt(kids[iterations]));
             keyword.setKeyword(keywords[iterations]);
-            System.out.println(keyword.getOid() + " " +
-                    keyword.getKid() + " " +
-                    keyword.getKeyword());
             keywordsDao.create(keyword);
         } else {
             iterations = kids.length;
@@ -87,9 +78,6 @@ public class KeywordsController {
             keyword.setOid(Integer.parseInt(oids[i]));
             keyword.setKid(Integer.parseInt(kids[i]));
             keyword.setKeyword(keywords [i]);
-            System.out.println(keyword.getOid() + " " +
-                    keyword.getKid() + " " +
-                    keyword.getKeyword());
             keywordsDao.update(keyword);
         }
 

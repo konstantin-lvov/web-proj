@@ -20,7 +20,6 @@ public class ContactsController {
     @PostMapping("/contacts")
     public String changeKeywords(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
-        System.out.println("post /contacts");
         ContactsDaoImpl contactsDao = applicationContext.getBean(ContactsDaoImpl.class);
         Contacts contact = applicationContext.getBean(Contacts.class);
         String addForm = request.getParameter("hiddenField");
@@ -30,10 +29,6 @@ public class ContactsController {
         String [] oids = request.getParameterValues("oid");
         String [] cids = request.getParameterValues("cid");
         String [] contacts = request.getParameterValues("contact");
-
-        for (String s : contacts) {
-            System.out.println(s);
-        }
 
         /*
         Если в параменте находтся символ "-" то надо удалить соответствующее слово
@@ -58,7 +53,6 @@ public class ContactsController {
          */
         List listOfContacts = contactsDao.readAllContacts(Integer.parseInt(oids[0]));
         boolean differenceBtwDbAndWeb = false;
-        System.out.println(listOfContacts.size() + " " + oids.length);
         if(listOfContacts.size() < oids.length){
             differenceBtwDbAndWeb = true;
         }
@@ -73,9 +67,6 @@ public class ContactsController {
             contact.setOid(Integer.parseInt(oids[iterations]));
             contact.setCid(Integer.parseInt(cids[iterations]));
             contact.setContact(contacts[iterations]);
-            System.out.println(contact.getOid() + " " +
-                    contact.getCid() + " " +
-                    contact.getContact());
             contactsDao.create(contact);
         } else {
             iterations = cids.length;
@@ -84,9 +75,6 @@ public class ContactsController {
             contact.setOid(Integer.parseInt(oids[i]));
             contact.setCid(Integer.parseInt(cids[i]));
             contact.setContact(contacts [i]);
-            System.out.println(contact.getOid() + " " +
-                    contact.getCid() + " " +
-                    contact.getContact());
             contactsDao.update(contact);
         }
 

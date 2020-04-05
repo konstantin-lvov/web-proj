@@ -24,7 +24,6 @@ public class SettingsController {
 
     @PostMapping("/settings")
     public String changeSettings(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("post /settings");
 
         Organization organization = applicationContext.getBean(Organization.class);
         Settings settings = applicationContext.getBean(Settings.class);
@@ -48,7 +47,6 @@ public class SettingsController {
         settingsDao.update(settings);
 
         if (!request.getRemoteUser().equals(organization.getOrganizationName())) {
-            System.out.println("organizationName was changed");
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null){
                 new SecurityContextLogoutHandler().logout(request, response, auth);

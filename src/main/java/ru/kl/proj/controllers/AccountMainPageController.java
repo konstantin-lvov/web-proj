@@ -32,7 +32,6 @@ public class AccountMainPageController {
 
         Organization organization = organizationDao.readByName(request.getRemoteUser());
         int oid = organization.getOid();
-        System.out.println(addForm + "from accMP");
         if (pageMarker == null){
             model.addAttribute("organization", organization);
         } else if (pageMarker.equals("orgSettings")){

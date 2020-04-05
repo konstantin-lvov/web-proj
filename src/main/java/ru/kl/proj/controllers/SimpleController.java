@@ -10,14 +10,12 @@ public class SimpleController {
 
     @GetMapping("/admin")
     public String getAdminPage(){
-        System.out.println("get admin");
         return "admin";
     }
 
     @GetMapping("/someTrouble")
     public String getAccessDenied(@RequestParam(value = "kindOfTrouble", required = true) String kindOfTrouble,
     Model model){
-        System.out.println("get /someTrouble");
         String message = "Упс!";
         if(kindOfTrouble.equals("accessDenied")){
             message = "Недостаточно прав для доступа к запрашиваемой странице.";
@@ -28,16 +26,4 @@ public class SimpleController {
         model.addAttribute("message", message);
         return "someTrouble";
     }
-
-
-//    @RequestMapping(value="/logout", method = RequestMethod.GET)
-//    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
-//        System.out.println("logout");
-//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//        if (auth != null){
-//            new SecurityContextLogoutHandler().logout(request, response, auth);
-//        }
-//        System.out.println("logout");
-//        return "/";
-//    }
 }

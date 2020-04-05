@@ -22,7 +22,6 @@ public class SmsTemplatesController {
     @PostMapping("/smsTemplates")
     public String changeSmsTemplates(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
-        System.out.println("post /smsTemplates");
         SmsTemplatesDaoImpl smsTemplatesDao = applicationContext.getBean(SmsTemplatesDaoImpl.class);
         String addForm = request.getParameter("hiddenField");
 
@@ -56,7 +55,6 @@ public class SmsTemplatesController {
          */
         List listOfSmsTemplates = smsTemplatesDao.readAllTemplates(Integer.parseInt(oids[0]));
         boolean differenceBtwDbAndWeb = false;
-        System.out.println(listOfSmsTemplates.size() + " " + oids.length);
         if(listOfSmsTemplates.size() < oids.length){
             differenceBtwDbAndWeb = true;
         }
@@ -81,9 +79,6 @@ public class SmsTemplatesController {
             smsTemplates.setOid(Integer.parseInt(oids[i]));
             smsTemplates.setTid(Integer.parseInt(tids[i]));
             smsTemplates.setTemplate(templates [i]);
-            System.out.println(smsTemplates.getOid() + " " +
-                    smsTemplates.getTid() + " " +
-                    smsTemplates.getTemplate());
             smsTemplatesDao.update(smsTemplates);
         }
 

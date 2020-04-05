@@ -27,7 +27,6 @@ public class LoginController {
     public ModelAndView logining(@ModelAttribute("organization") Organization organization, Model model,
                                  HttpServletRequest request){
 
-        System.out.println(organization.getOrganizationName() + " " + organization.getPassword());
         try {
             request.login(organization.getOrganizationName(), organization.getPassword());
         } catch (ServletException e) {

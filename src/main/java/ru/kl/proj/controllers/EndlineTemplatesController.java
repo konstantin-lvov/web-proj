@@ -22,19 +22,12 @@ public class EndlineTemplatesController {
     @PostMapping("/endlines")
     public String changeEndlines(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
-        System.out.println("post /endlines");
         EndlineTemplatesDaoImpl endlineTemplatesDao = applicationContext.getBean(EndlineTemplatesDaoImpl.class);
         String addForm = request.getParameter("hiddenField");
-
-//        request.setCharacterEncoding("UTF-8");
 
         String [] oids = request.getParameterValues("oid");
         String [] etids = request.getParameterValues("etid");
         String [] endlines = request.getParameterValues("endline");
-
-        for (String s : endlines) {
-            System.out.println(s);
-        }
 
         /*
         Если в параменте находтся символ "-" то надо удалить соответствующее слово
@@ -60,7 +53,6 @@ public class EndlineTemplatesController {
          */
         List listOfEndlines = endlineTemplatesDao.readAllByOid(Integer.parseInt(oids[0]));
         boolean differenceBtwDbAndWeb = false;
-        System.out.println(listOfEndlines.size() + " " + oids.length);
         if(listOfEndlines.size() < oids.length){
             differenceBtwDbAndWeb = true;
         }
@@ -76,9 +68,6 @@ public class EndlineTemplatesController {
             endlineTemplates.setOid(Integer.parseInt(oids[iterations]));
             endlineTemplates.setEtid(Integer.parseInt(etids[iterations]));
             endlineTemplates.setEndlineTemplate(endlines[iterations]);
-            System.out.println(endlineTemplates.getOid() + " " +
-                    endlineTemplates.getEtid() + " " +
-                    endlineTemplates.getEndlineTemplate());
             endlineTemplatesDao.create(endlineTemplates);
         } else {
             iterations = etids.length;
@@ -88,9 +77,6 @@ public class EndlineTemplatesController {
             endlineTemplates.setOid(Integer.parseInt(oids[i]));
             endlineTemplates.setEtid(Integer.parseInt(etids[i]));
             endlineTemplates.setEndlineTemplate(endlines [i]);
-            System.out.println(endlineTemplates.getOid() + " " +
-                    endlineTemplates.getEtid() + " " +
-                    endlineTemplates.getEndlineTemplate());
             endlineTemplatesDao.update(endlineTemplates);
         }
 
