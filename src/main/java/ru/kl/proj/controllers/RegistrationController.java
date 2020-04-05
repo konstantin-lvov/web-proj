@@ -42,7 +42,6 @@ public class RegistrationController {
         } catch (OrganizationExistException e) {
             return new ModelAndView("redirect:/registration?errorMessage=" + e.getMessage());
         }
-        //        organizationDao.create(organization);
         try {
             request.login(organization.getOrganizationName(), organization.getPassword());
         } catch (ServletException e) {

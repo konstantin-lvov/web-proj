@@ -21,19 +21,14 @@ public class OrganizationDaoImpl implements Dao<Organization> {
 
     @Override
     public void create(Organization organization) {
-        System.out.println(organization.getOrganizationName() + " " + organization.getPassword() + " " +
-                organization.getAuthority() + " " + organization.isEnabled());
-
         String sql = "insert into public.organizations (organization, email, password, enabled, authority) " +
                 "values(?, ?, ?, ?, ?)";
-        int tmpa =jdbcTemplate.update(sql,
+        jdbcTemplate.update(sql,
                 organization.getOrganizationName(),
                 organization.getEmail(),
                 organization.getPassword(),
                 organization.isEnabled(),
                 organization.getAuthority());
-
-        System.out.println(tmpa + " first query");
 
     }
 

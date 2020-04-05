@@ -29,7 +29,7 @@ public class ContactsDaoImpl implements Dao<Contacts> {
         contact.setOid(entity.getOid());
         contact.setCid(entity.getCid());
         contact.parseContact(entity.getContact());
-        System.out.println(contact.getName() + " from contact dao");
+
         String sql = "insert into public.contacts " +
                 "(oid, cid, name, second_name, third_name, phone_number) " +
                 "values(?, ?, ?, ?, ?, ?);";
@@ -40,7 +40,6 @@ public class ContactsDaoImpl implements Dao<Contacts> {
                 contact.getSecondName(),
                 contact.getThirdName(),
                 contact.getPhoneNumber());
-        System.out.println(contact.getPhoneNumber());
     }
 
     @Override

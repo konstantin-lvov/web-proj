@@ -121,7 +121,9 @@ public class DatasetFactory {
 
     public boolean checkOrgExistByName(String name) {
         Organization checkedOrganization = null;
-        checkedOrganization = organizationDao.readByName(name);
+        try{
+            checkedOrganization = organizationDao.readByName(name);
+        } catch (Exception e){}
         if (checkedOrganization != null) {
             return true;
         } else {
