@@ -52,7 +52,7 @@
         }
     </script>
 </head>
-<body>
+<body onload='document.registration.organizationName.focus();'>
 <div class="menuBar">
 <div class="logoText" onclick="window.location='/';">SUMMARY</div>
 <div class="freeSpaceMenuBar"></div>

@@ -8,31 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f967e622-14cf-4c15-8069-4b14c8d1db88" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/ContactsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/ContactsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/dao/OrganizationDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/entity/CallsInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/kl/proj/services/DatasetFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kl/proj/services/DatasetFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/AccountMainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/AccountMainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/ContactsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/ContactsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/EndlineTemplatesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/EndlineTemplatesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/KeywordsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/KeywordsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SettingsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SmsTemplatesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/controllers/SmsTemplatesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/services/DatasetFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/services/DatasetFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/AccountMainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/AccountMainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/ContactsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/ContactsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/EndlineTemplatesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/EndlineTemplatesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/KeywordsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/KeywordsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/RootController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SettingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SettingsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SmsTemplatesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SmsTemplatesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/services/DatasetFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/services/DatasetFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/ContactsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/ContactsDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/OrganizationDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/kl/proj/dao/OrganizationDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/controllers/SimpleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/ContactsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/ContactsDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/OrganizationDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proj/WEB-INF/classes/ru/kl/proj/dao/OrganizationDaoImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +73,16 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="calls_info: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -383,7 +376,8 @@
       <workItem from="1585758690063" duration="7320000" />
       <workItem from="1585836467247" duration="14832000" />
       <workItem from="1585976710241" duration="14219000" />
-      <workItem from="1585997828496" duration="14933000" />
+      <workItem from="1585997828496" duration="15871000" />
+      <workItem from="1586084389494" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="some warning fix">
       <created>1583762084232</created>
@@ -602,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586081427409</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix dataset factory test mod">
+      <created>1586082414399</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1586082414399</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +623,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="accountMainPage - include other pages style. fix login error page." />
     <MESSAGE value="fix logout links. change accountMainPage information tab link. add dynamic generated menubar index.jsp..." />
     <MESSAGE value="massive style changes" />
     <MESSAGE value="style changes" />
@@ -647,6 +647,7 @@
     <MESSAGE value="fix registration with dataset factory in text mod" />
     <MESSAGE value="create custom OrganizationExistException" />
     <MESSAGE value="delete all souts" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete all souts" />
+    <MESSAGE value="fix dataset factory test mod" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dataset factory test mod" />
   </component>
 </project>

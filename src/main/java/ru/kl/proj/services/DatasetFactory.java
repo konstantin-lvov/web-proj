@@ -114,8 +114,9 @@ public class DatasetFactory {
         String parsedSms = "Здравстуйте Константин рады вам сообщить что" +
                 "мы обновили цены на ншу продукцию и готовы предложить вам" +
                 "олово по 20 рублей за киллограмм аллюминий 12 рублей за киллограмм...";
-        callsInfo = new CallsInfo(oid, date, "85555555555", parsedSms);
+        callsInfo = new CallsInfo(oid, 1, date, "85555555555", parsedSms);
         callsInfoDao.create(callsInfo);
+        callsInfo = new CallsInfo(oid, 2, date, "85555555555", parsedSms);
         callsInfoDao.create(callsInfo);
     }
 

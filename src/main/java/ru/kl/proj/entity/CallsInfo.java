@@ -15,9 +15,10 @@ public class CallsInfo extends Entity {
 
     }
 
-    public CallsInfo(int oid, Date date,
+    public CallsInfo(int oid, int convId, Date date,
                      String phoneNumber, String parsedSms) {
         this.oid = oid;
+        this.convId = convId;
         this.date = date;
         this.phoneNumber = phoneNumber;
         this.parsedSms = parsedSms;
