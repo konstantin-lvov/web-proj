@@ -71,7 +71,7 @@ create table calls_info
 			references organizations,
 	conv_id serial not null 
 	conversation_date date not null,
-	phone_number varchar(50) not null
+	phone_number varchar(50) not null,
 		constraint calls_info_contacts_phone_number_fk
 			references contacts,
 	parsed_conv varchar(50) not null
@@ -85,11 +85,15 @@ create table contacts
 	oid int not null
 		constraint contacts_organizations_oid_fk
 			references organizations,
+	cid serial not null,
 	name varchar(20) not null,
 	second_name varchar(20),
 	third_name varchar(20),
 	phone_number varchar(50) not null
 );
+
+create unique index contacts_info_cid_uindex
+	on contacts (cid);
 
 
 
