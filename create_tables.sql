@@ -74,7 +74,7 @@ create table calls_info
 	phone_number varchar(50) not null,
 		constraint calls_info_contacts_phone_number_fk
 			references contacts,
-	parsed_sms varchar(50) not null
+	parsed_sms varchar(5000) not null
 );
 
 create unique index calls_info_conv_id_uindex
