@@ -78,7 +78,7 @@ create table calls_info
 );
 
 create unique index calls_info_conv_id_uindex
-	on calls_info (conv_id);
+	on calls_info (convid);
 
 create table contacts
 (
