@@ -69,7 +69,7 @@ create table calls_info
 	oid int not null
 		constraint calls_info_organizations_oid_fk
 			references organizations,
-	conv_id serial not null 
+	convid serial not null 
 	conversation_date date not null,
 	phone_number varchar(50) not null,
 		constraint calls_info_contacts_phone_number_fk
