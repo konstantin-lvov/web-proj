@@ -70,7 +70,7 @@
             </tr>
             <tr>
                 <td>
-                    Количество смс:
+                    Интервал:
                 </td>
                 <td>
                     <input type="text" name="interval" value="${settings.interval}"/>
