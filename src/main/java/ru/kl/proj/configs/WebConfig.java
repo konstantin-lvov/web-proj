@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan("ru.kl.proj.controllers")
+@ComponentScan({"ru.kl.proj.controllers","ru.kl.proj.mobileControllers"})
 public class WebConfig implements WebMvcConfigurer {
 
 

@@ -28,6 +28,10 @@ public class SpringConfig {
         return dataSource;
     }
 
+    /*
+    Entity classes
+     */
+
     @Bean
     public Contacts getContacts () {
         return new Contacts();
@@ -55,6 +59,13 @@ public class SpringConfig {
     public Settings getSettings(){
         return new Settings();
     }
+
+    @Bean
+    public AuthToken getAuthToken() { return new AuthToken();}
+
+    /*
+    DaoImplementation classes
+     */
 
     @Bean
     public OrganizationDaoImpl getOrganizationDao(){
@@ -92,7 +103,16 @@ public class SpringConfig {
     }
 
     @Bean
+    public AuthTokenDaoImpl getAuthTokenDaoImpl(){ return new AuthTokenDaoImpl();}
+
+    /*
+    other
+     */
+
+    @Bean
     public DatasetFactory getDatasetFactory(){
         return new DatasetFactory();
     }
+
+
 }
