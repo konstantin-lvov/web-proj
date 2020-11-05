@@ -97,12 +97,10 @@ create unique index contacts_info_cid_uindex
 
 create table auth_tokens
 (
-    oid int not null
-        constraint contacts_organizations_oid_fk
-			references organizations,
+    oid int not null constraint contacts_organizations_oid_fk references organizations,
 	tokenId serial not null,
 	token varchar(32)
-);
+    );
 
 
 

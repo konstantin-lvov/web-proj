@@ -28,15 +28,20 @@ public class MobileLoginController {
                         @RequestParam(value = "password", required = true) String organizationPassword){
 
         TokenGenerator tokenGenerator = new TokenGenerator();
+        AuthToken authToken = new AuthToken();
+        String existingToken = "";
 
         try{
+            //если организации не существует то процесс авторизации прекращается по исключению
             Organization organization = organizationDao.readByName(organizationName);
-            String existingToken = authTokenDao.read(organization.getOid()).getToken();
+            if(authToken.isExist(organization.getOid())){
+                existingToken = authTokenDao.read(organization.getOid()).getToken();
+            }
 
             /*
             Если токен существует и пароль совпал то возвращаем текущий токен
              */
-            if(existingToken != null
+            if( authToken.isExist(organization.getOid())
                     && organizationPassword.equals(organization.getPassword())){
                 return existingToken;
             }
@@ -47,7 +52,7 @@ public class MobileLoginController {
             if (organization != null
                     && organizationPassword.equals(organization.getPassword())){
                 String newToken = tokenGenerator.generateNewToken();
-                AuthToken authToken = new AuthToken(organization.getOid(), newToken);
+                authToken = new AuthToken(organization.getOid(), newToken);
                 authTokenDao.create(authToken);
                 return newToken;
             }
