@@ -20,6 +20,9 @@ public class MobileLoginController {
     @Autowired
     AuthTokenDaoImpl authTokenDao;
 
+    @Autowired
+    AuthToken authToken;
+
     /*
     Входящий запрос имеет поля - имя и пароль
      */
@@ -28,20 +31,24 @@ public class MobileLoginController {
                         @RequestParam(value = "password", required = true) String organizationPassword){
 
         TokenGenerator tokenGenerator = new TokenGenerator();
-        AuthToken authToken = new AuthToken();
         String existingToken = "";
+        int oid;
+        boolean tokenExisting = false;
 
         try{
             //если организации не существует то процесс авторизации прекращается по исключению
             Organization organization = organizationDao.readByName(organizationName);
-            if(authToken.isExist(organization.getOid())){
+            oid = organization.getOid();
+            tokenExisting = authToken.isExist(oid);
+
+            if(tokenExisting){
                 existingToken = authTokenDao.read(organization.getOid()).getToken();
             }
 
             /*
             Если токен существует и пароль совпал то возвращаем текущий токен
              */
-            if( authToken.isExist(organization.getOid())
+            if(tokenExisting
                     && organizationPassword.equals(organization.getPassword())){
                 return existingToken;
             }
@@ -49,10 +56,12 @@ public class MobileLoginController {
             /*
             Если организация существует и пароль совпал то генерируем токен и возвращаем новый
              */
-            if (organization != null
+            if (!tokenExisting
+                    && organization != null
                     && organizationPassword.equals(organization.getPassword())){
                 String newToken = tokenGenerator.generateNewToken();
-                authToken = new AuthToken(organization.getOid(), newToken);
+                authToken.setOid(organization.getOid());
+                authToken.setToken(newToken);
                 authTokenDao.create(authToken);
                 return newToken;
             }

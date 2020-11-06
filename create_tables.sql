@@ -95,7 +95,7 @@ create table contacts
 create unique index contacts_info_cid_uindex
 	on contacts (cid);
 
-create table auth_tokens
+create table auth_token
 (
     oid int not null constraint contacts_organizations_oid_fk references organizations,
 	tokenId serial not null,

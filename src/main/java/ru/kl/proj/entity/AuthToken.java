@@ -1,12 +1,18 @@
 package ru.kl.proj.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
 import ru.kl.proj.dao.AuthTokenDaoImpl;
 
 public class AuthToken extends Entity{
 
     @Autowired
-    AuthTokenDaoImpl authTokenDao;
+    private AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    private ApplicationContext applicationContext;
+
 
     public int getOid() {
         return oid;
@@ -49,7 +55,9 @@ public class AuthToken extends Entity{
     public boolean isExist(int oid){
 
         try{
-            if(authTokenDao.read(oid).getToken() != null){
+        String token = authTokenDao.read(oid).getToken();
+
+            if(token != null){
                 return true;
             }
         } catch (Exception e){

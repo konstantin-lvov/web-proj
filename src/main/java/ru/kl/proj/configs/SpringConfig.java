@@ -1,6 +1,7 @@
 package ru.kl.proj.configs;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -11,6 +12,7 @@ import ru.kl.proj.services.DatasetFactory;
 import javax.sql.DataSource;
 
 @Configuration
+@ComponentScan({"ru.kl.proj.entity"})
 public class SpringConfig {
 
     @Bean
