@@ -5,15 +5,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.kl.proj.dao.AuthTokenDaoImpl;
 import ru.kl.proj.dao.OrganizationDaoImpl;
 import ru.kl.proj.entity.AuthToken;
 import ru.kl.proj.entity.Organization;
 import ru.kl.proj.services.TokenGenerator;
-
-import java.lang.reflect.Field;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
@@ -71,6 +68,10 @@ public class MobileLoginController {
             if (tokenExisting
                     && organizationPassword.equals(organization.getPassword())) {
                 try {
+//                    AuthToken newAuthToken = authTokenDao.read(oid);
+//                    authToken.setOid(newAuthToken.getOid());
+//                    authToken.setToken(newAuthToken.getToken());
+//                    authToken.setTokenId(newAuthToken.getTokenId());
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
                     resultJSON = "AuthToken = " + json;
@@ -91,6 +92,10 @@ public class MobileLoginController {
                 authToken.setToken(newToken);
                 authTokenDao.create(authToken);
                 try {
+//                    AuthToken newAuthToken = authTokenDao.read(oid);
+//                    authToken.setOid(newAuthToken.getOid());
+//                    authToken.setToken(newAuthToken.getToken());
+//                    authToken.setTokenId(newAuthToken.getTokenId());
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
                     resultJSON = "AuthToken = " + json;

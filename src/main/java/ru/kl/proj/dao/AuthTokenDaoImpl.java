@@ -13,6 +13,9 @@ public class AuthTokenDaoImpl implements Dao<AuthToken>{
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    AuthToken authToken;
+
     @Override
     public List<AuthToken> getAll() {
         String sql = "select * from public.auth_token;";
@@ -33,9 +36,13 @@ public class AuthTokenDaoImpl implements Dao<AuthToken>{
     @Override
     public AuthToken read(int oid) {
         String sql = "select * from public.auth_token where oid = ?;";
-        return jdbcTemplate.queryForObject(sql,
+        AuthToken newAuthToken = jdbcTemplate.queryForObject(sql,
                 new AuthTokenMapper(),
                 oid);
+        authToken.setOid(newAuthToken.getOid());
+        authToken.setToken(newAuthToken.getToken());
+        authToken.setTokenId(newAuthToken.getTokenId());
+        return authToken;
     }
 
     @Override
