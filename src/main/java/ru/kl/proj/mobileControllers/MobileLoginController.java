@@ -1,5 +1,7 @@
 package ru.kl.proj.mobileControllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,32 +34,50 @@ public class MobileLoginController {
     /*
     Входящий запрос имеет поля - имя и пароль
      */
-    @RequestMapping(value="/mobileLogin", method=GET)
+    @RequestMapping(value = "/mobileLogin", method = GET)
     public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
-                        @RequestParam(value = "password", required = true) String organizationPassword){
+                              @RequestParam(value = "password", required = true) String organizationPassword) {
 
         TokenGenerator tokenGenerator = new TokenGenerator();
-        String existingToken = "";
+        ObjectMapper mapper = new ObjectMapper();
+
+        String resultJSON;
         int oid;
         boolean tokenExisting = false;
 
-        try{
+        try {
             //если организации не существует то процесс авторизации прекращается по исключению
             Organization organization = organizationDao.readByName(organizationName);
 
+
+//            try {
+//                String json = mapper.writeValueAsString(organization);
+//                System.out.println("ResultingJSONstring = " + json);
+//                //System.out.println(json);
+//            } catch (JsonProcessingException e) {
+//                e.printStackTrace();
+//            }
+
             oid = organization.getOid();
             tokenExisting = authToken.isExist(oid);
-
-            if(tokenExisting){
-                existingToken = authTokenDao.read(organization.getOid()).getToken();
-            }
+//
+//            if(tokenExisting){
+//                existingToken = authTokenDao.read(organization.getOid()).getToken();
+//            }
 
             /*
-            Если токен существует и пароль совпал то возвращаем текущий токен
+            Если токен существует и пароль совпал то возвращаем json объекта AuthToken
              */
-            if(tokenExisting
-                    && organizationPassword.equals(organization.getPassword())){
-                return existingToken;
+            if (tokenExisting
+                    && organizationPassword.equals(organization.getPassword())) {
+                try {
+                    authToken = authTokenDao.read(oid);
+                    String json = mapper.writeValueAsString(authToken);
+                    resultJSON = "AuthToken = " + json;
+                    return resultJSON;
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
             }
 
             /*
@@ -65,14 +85,21 @@ public class MobileLoginController {
              */
             if (!tokenExisting
                     && organization != null
-                    && organizationPassword.equals(organization.getPassword())){
+                    && organizationPassword.equals(organization.getPassword())) {
                 String newToken = tokenGenerator.generateNewToken();
                 authToken.setOid(organization.getOid());
                 authToken.setToken(newToken);
                 authTokenDao.create(authToken);
-                return newToken;
+                try {
+                    authToken = authTokenDao.read(oid);
+                    String json = mapper.writeValueAsString(authToken);
+                    resultJSON = "AuthToken = " + json;
+                    return resultJSON;
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
