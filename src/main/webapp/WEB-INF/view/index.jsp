@@ -10,7 +10,7 @@
 <html lang="ru">
 	<head>
 		<title>Summary</title>
-		<link href='<spring:url value="/resource/styles.css"/>' rel="stylesheet" />
+		<link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	</head>
 	<body>

@@ -27,7 +27,7 @@ public class MobileLoginController {
     @Autowired
     AuthToken authToken;
 
-    private static Logger logger = LogManager.getLogger(MobileLoginController.class);
+    private static Logger logger = LogManager.getLogger(MobileLoginController.class.getName());
 
     /*
     Входящий запрос имеет поля - имя и пароль
@@ -35,8 +35,6 @@ public class MobileLoginController {
     @RequestMapping(value="/mobileLogin", method=GET)
     public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
                         @RequestParam(value = "password", required = true) String organizationPassword){
-
-        logger.info("Info log message");
 
         TokenGenerator tokenGenerator = new TokenGenerator();
         String existingToken = "";

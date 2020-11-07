@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link href='<spring:url value="/resource/styles.css"/>' rel="stylesheet" />
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
 </head>
 <body>
 <jsp:include page="menuBar.jsp" />

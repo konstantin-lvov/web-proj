@@ -7,7 +7,7 @@
 <head>
     <title>Sign Up</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href='<spring:url value="/resource/styles.css"/>' rel="stylesheet" />
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
     <script>
         function check(e){
             var organization = document.getElementById("organizationName");
