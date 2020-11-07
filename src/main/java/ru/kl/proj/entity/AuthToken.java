@@ -10,10 +10,6 @@ public class AuthToken extends Entity{
     @Autowired
     private AuthTokenDaoImpl authTokenDao;
 
-    @Autowired
-    private ApplicationContext applicationContext;
-
-
     public int getOid() {
         return oid;
     }
