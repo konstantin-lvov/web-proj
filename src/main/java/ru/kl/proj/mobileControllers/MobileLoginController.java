@@ -35,6 +35,8 @@ public class MobileLoginController {
     public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
                               @RequestParam(value = "password", required = true) String organizationPassword) {
 
+        logger.info("Organization " + organizationName + " trying to login.");
+
         TokenGenerator tokenGenerator = new TokenGenerator();
         ObjectMapper mapper = new ObjectMapper();
 
@@ -45,22 +47,8 @@ public class MobileLoginController {
         try {
             //если организации не существует то процесс авторизации прекращается по исключению
             Organization organization = organizationDao.readByName(organizationName);
-
-
-//            try {
-//                String json = mapper.writeValueAsString(organization);
-//                System.out.println("ResultingJSONstring = " + json);
-//                //System.out.println(json);
-//            } catch (JsonProcessingException e) {
-//                e.printStackTrace();
-//            }
-
             oid = organization.getOid();
             tokenExisting = authToken.isExist(oid);
-//
-//            if(tokenExisting){
-//                existingToken = authTokenDao.read(organization.getOid()).getToken();
-//            }
 
             /*
             Если токен существует и пароль совпал то возвращаем json объекта AuthToken
@@ -68,10 +56,6 @@ public class MobileLoginController {
             if (tokenExisting
                     && organizationPassword.equals(organization.getPassword())) {
                 try {
-//                    AuthToken newAuthToken = authTokenDao.read(oid);
-//                    authToken.setOid(newAuthToken.getOid());
-//                    authToken.setToken(newAuthToken.getToken());
-//                    authToken.setTokenId(newAuthToken.getTokenId());
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
                     resultJSON = "AuthToken = " + json;
@@ -92,10 +76,6 @@ public class MobileLoginController {
                 authToken.setToken(newToken);
                 authTokenDao.create(authToken);
                 try {
-//                    AuthToken newAuthToken = authTokenDao.read(oid);
-//                    authToken.setOid(newAuthToken.getOid());
-//                    authToken.setToken(newAuthToken.getToken());
-//                    authToken.setTokenId(newAuthToken.getTokenId());
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
                     resultJSON = "AuthToken = " + json;
