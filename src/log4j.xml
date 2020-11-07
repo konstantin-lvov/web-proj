@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" name="summary" packages="">
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+        </Console>
+        <File name="fileOut" fileName="summary.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%nw</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Root level="INFO">
+        <AppenderRef ref="stdout" />
+        <AppenderRef ref="fileOut"/>
+    </Root>
+</Configuration>
+
