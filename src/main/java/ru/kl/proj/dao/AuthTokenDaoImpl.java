@@ -45,6 +45,17 @@ public class AuthTokenDaoImpl implements Dao<AuthToken>{
         return authToken;
     }
 
+    public AuthToken readByToken(String token) {
+        String sql = "select * from public.auth_token where token = ?;";
+        AuthToken newAuthToken = jdbcTemplate.queryForObject(sql,
+                new AuthTokenMapper(),
+                token);
+        authToken.setOid(newAuthToken.getOid());
+        authToken.setToken(newAuthToken.getToken());
+        authToken.setTokenId(newAuthToken.getTokenId());
+        return authToken;
+    }
+
     @Override
     public void update(AuthToken entity) {
         String sql = "update public.auth_token set token = ? where tokenId = ?;";

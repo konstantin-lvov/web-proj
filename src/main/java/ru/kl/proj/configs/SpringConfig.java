@@ -33,9 +33,13 @@ public class SpringConfig {
     /*
     Entity classes
      */
+    @Bean
+    public CallsInfo getCallsInfo() {
+        return new CallsInfo();
+    }
 
     @Bean
-    public Contacts getContacts () {
+    public Contacts getContacts() {
         return new Contacts();
     }
 

@@ -27,11 +27,13 @@ public class MobileLoginController {
     AuthToken authToken;
 
     private static Logger logger = LogManager.getLogger(MobileLoginController.class.getName());
+    private final String OK = "OK";
+    private final String NO_MATCHING = "NO MATCHING";
 
     /*
     Входящий запрос имеет поля - имя и пароль
      */
-    @RequestMapping(value = "/mobileLogin", method = GET)
+    @RequestMapping(value = "/mobileLogin", method = GET, produces = "text/plain;charset=UTF-8")
     public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
                               @RequestParam(value = "password", required = true) String organizationPassword) {
 
@@ -58,8 +60,7 @@ public class MobileLoginController {
                 try {
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
-                    resultJSON = "AuthToken = " + json;
-                    return resultJSON;
+                    return json;
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }
@@ -78,8 +79,7 @@ public class MobileLoginController {
                 try {
                     authToken = authTokenDao.read(oid);
                     String json = mapper.writeValueAsString(authToken);
-                    resultJSON = "AuthToken = " + json;
-                    return resultJSON;
+                    return json;
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }
@@ -89,5 +89,18 @@ public class MobileLoginController {
         }
 
         return "401";
+    }
+
+    @RequestMapping(value="/mobileTokenLogin", method = GET, produces = "text/plain;charset=UTF-8")
+    public String mobileTokenLogin(@RequestParam(value = "token", required = true) String token){
+        try {
+            authToken = authTokenDao.readByToken(token);
+            if (authToken.getToken().equals(token)){
+                return OK;
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return NO_MATCHING;
     }
 }
