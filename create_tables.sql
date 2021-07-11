@@ -64,22 +64,6 @@ create table endline_template
 create unique index endline_template_etid_uindex
 	on endline_template (etid);
 
-create table calls_info
-(
-	oid int not null
-		constraint calls_info_organizations_oid_fk
-			references organizations,
-	convid serial not null 
-	conversation_date date not null,
-	phone_number varchar(50) not null,
-		constraint calls_info_contacts_phone_number_fk
-			references contacts,
-	parsed_sms varchar(5000) not null
-);
-
-create unique index calls_info_conv_id_uindex
-	on calls_info (convid);
-
 create table contacts
 (
 	oid int not null
@@ -94,6 +78,20 @@ create table contacts
 
 create unique index contacts_info_cid_uindex
 	on contacts (cid);
+	
+create table calls_info
+(
+        oid int not null
+                constraint calls_info_organizations_oid_fk
+                        references organizations,
+        convid serial not null,
+        conversation_date date not null,
+        phone_number varchar(50) not null,
+        parsed_sms varchar(5000) not null
+);
+
+create unique index calls_info_conv_id_uindex
+        on calls_info (convid);
 
 create table auth_token
 (
