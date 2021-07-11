@@ -6,19 +6,20 @@ services:
   image: tomcat:9.0
   container_name: apache
   restart: always
-  ports:
-   - "8080:8080"
+    #ports:
+    #- "8080:8080"
   volumes:
    - /home/user/tomcat_home:/usr/local/tomcat:z
+   #- [server-xml-path]:/usr/local/tomcat/conf/server.xml
   network_mode: "host"
 
  summary_db:
   image: postgres
   container_name: summary_db
   restart: always
-  ports:
-   - "5432:5432"
+    #ports:
+    #- "5432:5432"
   environment:
-   - POSTGRES_PASSWORD=summary-db
+   - POSTGRES_PASSWORD=postgres
   network_mode: "host"
 ...
