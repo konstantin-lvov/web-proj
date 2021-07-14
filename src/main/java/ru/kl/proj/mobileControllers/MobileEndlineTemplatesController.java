@@ -34,7 +34,7 @@ public class MobileEndlineTemplatesController {
     private final String NO_MATCHING = "NO MATCHING";
 
     @RequestMapping(value = "/mobileEndlineTemplates", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
-    public String getKeywords(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+    public String getEndlineTemplates(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
         authToken = authTokenDao.readByToken(token);
         if (authToken != null) {
             List <EndlineTemplates> listOfEndlineTemplates = endlineTemplatesDao.readAllByOid(authToken.getOid());

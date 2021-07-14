@@ -34,7 +34,7 @@ public class MobileCallsInfoController {
     private final String NO_MATCHING = "NO MATCHING";
 
     @RequestMapping(value = "/mobileCallsInfo", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
-    public String getKeywords(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+    public String getCallsInfo(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
         authToken = authTokenDao.readByToken(token);
         if (authToken != null) {
             List <CallsInfo> listOfCallsInfo = callsInfoDao.readAllByOid(authToken.getOid());
