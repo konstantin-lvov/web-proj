@@ -1,5 +1,15 @@
 #!/bin/bash
 
+export DOCKER_MY_NET=$(docker network ls | grep my-net | awk '{ print $2 }')
+if [[ $DOCKER_MY_NET == 'my-net' ]]
+then
+	echo "NETWORK MY-NET EXIST"
+else
+	echo "NETWORK DOES NOT EXIST. CREATING NETWORK..."
+	docker network create my-net
+fi
+
+
 rm docker-compose.yml
 cp docker-compose.yml.bkp docker-compose.yml
 docker-compose up -d --force-recreate summary_db

@@ -1,0 +1,47 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="proj:war exploded">
+    <output-path>$PROJECT_DIR$/target/proj</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>proj</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="proj" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.11.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.13.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.13.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/proj/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="proj/web/Web" />
+    </root>
+  </artifact>
+</component>
