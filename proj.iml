@@ -8,12 +8,21 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping>
+          <factory-entry name="proj" />
+        </datasource-mapping>
+        <naming-strategy-map />
+      </configuration>
+    </facet>
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java</file>
           <file>file://$MODULE_DIR$/src/main/java/ru/kl/proj/configs/WebConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ru/kl/proj/configs/SpringSecurity.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ru/kl/proj/configs/SpringConfig.java</file>
         </fileset>
       </configuration>
     </facet>
