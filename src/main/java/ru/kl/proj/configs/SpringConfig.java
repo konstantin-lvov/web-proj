@@ -69,6 +69,9 @@ public class SpringConfig {
     @Bean
     public AuthToken getAuthToken() { return new AuthToken();}
 
+    @Bean
+    public Record getRecord() { return new Record();}
+
     /*
     DaoImplementation classes
      */
@@ -110,6 +113,9 @@ public class SpringConfig {
 
     @Bean
     public AuthTokenDaoImpl getAuthTokenDaoImpl(){ return new AuthTokenDaoImpl();}
+
+    @Bean
+    public RecordDaoImpl getRecordDaoImpl(){ return new RecordDaoImpl();}
 
     /*
     other

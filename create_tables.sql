@@ -100,5 +100,10 @@ create table auth_token
 	token varchar(32)
     );
 
-
+create table records
+(
+    oid int not null constraint contacts_organizations_oid_fk references organizations,
+	rid serial not null,
+	record_file_name varchar(32)
+    );
 

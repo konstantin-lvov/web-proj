@@ -31,3 +31,6 @@ docker exec -u root apache /bin/sh -c "cat /database_ip >> /etc/hosts"
 echo "installing packages..."
 #docker exec -u root apache /bin/sh -c "apt update > /dev/null 2>&1 && apt install net-tools telnet > /dev/null 2>&1"
 #docker exec -u root summary_db /bin/sh -c "apt update > /dev/null 2>&1 && apt install net-tools telnet > /dev/null 2>&1"
+
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/fch/Documents/silver-aurora-294418-d77aac96179e.json
+echo $GOOGLE_APPLICATION_CREDENTIALS
