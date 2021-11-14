@@ -21,13 +21,11 @@ public class CallsInfoDaoImpl implements Dao<CallsInfo> {
     @Override
     public void create(CallsInfo entity) {
         String sql = "insert into public.calls_info " +
-                "(oid, convid, conversation_date, phone_number, parsed_sms) " +
-                "values(?, ?, ?, ?, ?);";
+                "(oid, conversation_date, parsed_sms) " +
+                "values(?, ?, ?, ?);";
         jdbcTemplate.update(sql,
                 entity.getOid(),
-                entity.getConvId(),
                 entity.getDate(),
-                entity.getPhoneNumber(),
                 entity.getParsedSms());
     }
 

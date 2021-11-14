@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import javax.sound.sampled.AudioFormat;
@@ -38,16 +39,24 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.DataLine.Info;
 import javax.sound.sampled.TargetDataLine;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.threeten.bp.Duration;
+import ru.kl.proj.dao.CallsInfoDaoImpl;
+import ru.kl.proj.entity.CallsInfo;
 
 public class RecognizeRequestHandler {
+
+    private static CallsInfo callsInfo;
+    @Autowired
+    private static CallsInfoDaoImpl callsInfoDao;
 
     /**
      * Performs non-blocking speech recognition on remote FLAC file and prints the transcription.
      *
      * @param gcsUri the path to the remote LINEAR16 audio file to transcribe.
      */
-    public static void asyncRecognizeGcs(String gcsUri) throws Exception {
+    public static void asyncRecognizeGcs(String gcsUri, int oid) throws Exception {
         // Configure polling algorithm
         SpeechSettings.Builder speechSettings = SpeechSettings.newBuilder();
         TimedRetryAlgorithm timedRetryAlgorithm =
@@ -90,7 +99,13 @@ public class RecognizeRequestHandler {
                 // first (most likely) one here.
                 SpeechRecognitionAlternative alternative = result.getAlternativesList().get(0);
                 System.out.printf("Transcription: %s\n", alternative.getTranscript());
+
+                Date date = new Date(System.currentTimeMillis());
+                String text = alternative.getTranscript();
+                callsInfo = new CallsInfo(oid, date, text);
+                callsInfoDao.create(callsInfo);
             }
+
         }
     }
 }
