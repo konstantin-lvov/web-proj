@@ -28,7 +28,7 @@ public class RecordController {
     @Autowired
     RecordDaoImpl recordDao;
 
-    private final String NO_MATCHING = "NO MATCHING";
+    private String RESULT = "NO MATCHING";
 
     @PostMapping(value = "/newAudioRecord", consumes = "application/json",
             produces = "text/plain;charset=UTF-8")
@@ -39,12 +39,12 @@ public class RecordController {
         if (authToken != null) {
             record.setOid(authToken.getOid());
             recordDao.create(record);
-            Record resultRecord = recordDao.readByName(authToken.getOid(), record.getRecordFileName());
-                    ObjectMapper mapper = new ObjectMapper();
-            String json = mapper.writeValueAsString(resultRecord);
-            return json;
-        } else {
-            return NO_MATCHING;
+            Record resultRecord = recordDao.readByName(authToken.getOid(),
+                    record.getRecordFileName());
+            ObjectMapper mapper = new ObjectMapper();
+            RESULT = mapper.writeValueAsString(resultRecord);
+            //тут вызвать запрос в гугл для распознавания
         }
+        return RESULT;
     }
 }
