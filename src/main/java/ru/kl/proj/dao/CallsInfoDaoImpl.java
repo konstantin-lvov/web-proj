@@ -22,7 +22,7 @@ public class CallsInfoDaoImpl implements Dao<CallsInfo> {
     public void create(CallsInfo entity) {
         String sql = "insert into public.calls_info " +
                 "(oid, conversation_date, parsed_sms) " +
-                "values(?, ?, ?, ?);";
+                "values(?, ?, ?);";
         jdbcTemplate.update(sql,
                 entity.getOid(),
                 entity.getDate(),

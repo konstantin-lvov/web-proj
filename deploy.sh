@@ -1,5 +1,11 @@
 #!/bin/bash
 
+mvn package
+
+COMPILE_STATUS=$?
+
+echo $COMPILE_STATUS
+
 export DOCKER_MY_NET=$(docker network ls | grep my-net | awk '{ print $2 }')
 if [[ $DOCKER_MY_NET == 'my-net' ]]
 then
@@ -20,6 +26,7 @@ export LOCAL_PROJ_PATH=$LOCAL_PROJ_PATH/proj
 echo $LOCAL_PROJ_PATH
 sed -i '' "s|#\[local-proj-path\]|- $LOCAL_PROJ_PATH|" docker-compose.yml
 sed -i '' "s|#volumes|volumes|" docker-compose.yml
+sed -i '' "s|#-|-|g" docker-compose.yml
 docker-compose up -d --force-recreate apache
 export DATABASE_IP=$(docker exec summary_db hostname -i)
 echo $DATABASE_IP
@@ -29,6 +36,6 @@ docker cp database_ip apache:/
 docker exec -u root apache /bin/sh -c "cat /database_ip >> /etc/hosts" 
 
 echo "installing packages..."
-#docker exec -u root apache /bin/sh -c "apt update > /dev/null 2>&1 && apt install net-tools telnet > /dev/null 2>&1"
+#docker exec -u root apache /bin/sh -c "apt update > /dev/null 2>&1 && apt install net-tools telnet ll  > /dev/null 2>&1"
 #docker exec -u root summary_db /bin/sh -c "apt update > /dev/null 2>&1 && apt install net-tools telnet > /dev/null 2>&1"
 

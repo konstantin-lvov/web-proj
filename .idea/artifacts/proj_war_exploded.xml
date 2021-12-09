@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>proj</module>
         <packaging>war</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -81,6 +80,9 @@
           <element id="library" level="project" name="Maven: com.google.android:annotations:4.1.1.4" />
           <element id="library" level="project" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.20" />
           <element id="library" level="project" name="Maven: org.threeten:threetenbp:1.5.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
         </element>
       </element>
       <element id="directory" name="META-INF">

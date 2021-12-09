@@ -6,12 +6,17 @@ services:
   image: tomcat:9.0
   container_name: apache
   restart: always
+  environment:
+    - GOOGLE_APPLICATION_CREDENTIALS=/usr/local/tomcat/silver-aurora-294418-eaf4b915b45e.json
   ports:
     - "8080:8080"
   #volumes:
- #  - /home/user/tomcat_home:/usr/local/tomcat:z
-   #[server-xml-path]:/usr/local/tomcat/conf/server.xml
-   #[local-proj-path]:/usr/local/tomcat/webapps/ROOT
+    ##- /Users/fch/IdeaProjects/web-proj/web.xml:/usr/local/tomcat/conf/web.xml
+    #- /Users/fch/IdeaProjects/web-proj/silver-aurora-294418-eaf4b915b45e.json:/usr/local/tomcat/silver-aurora-294418-eaf4b915b45e.json
+    #- /Users/fch/IdeaProjects/web-proj/apache_conf/web.xml:/usr/local/tomcat/conf/web.xml
+    #- /Users/fch/IdeaProjects/web-proj/apache_conf/server.xml:/usr/local/tomcat/conf/server.xml
+    #[server-xml-path]:/usr/local/tomcat/conf/server.xml
+    #[local-proj-path]:/usr/local/tomcat/webapps/ROOT
 #  network_mode: "host"
 
  summary_db:

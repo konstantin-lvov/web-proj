@@ -1,5 +1,7 @@
 package ru.kl.proj.configs;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -38,7 +40,10 @@ public class MainWebAppInitializer implements WebApplicationInitializer {
         filterRegistration.setInitParameter("encoding", "UTF-8");
         filterRegistration.setInitParameter("forceEncoding", "true");
         //make sure encodingFilter is matched first
-        filterRegistration.addMappingForUrlPatterns(null, false, "/*");
+        filterRegistration.addMappingForUrlPatterns(null, false, "/");
+
+        Logger logger = LoggerFactory.getLogger(MainWebAppInitializer.class);
+        logger.info("STARTUP");
 //
 //        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
 //        characterEncodingFilter.setEncoding("UTF-8");

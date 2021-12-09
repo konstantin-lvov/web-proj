@@ -86,7 +86,7 @@ create table calls_info
                         references organizations,
         convid serial not null,
         conversation_date date not null,
-        phone_number varchar(50) DEFAULT '---',
+        phone_number varchar(50) DEFAULT 'not specified',
         parsed_sms varchar(5000) not null
 );
 

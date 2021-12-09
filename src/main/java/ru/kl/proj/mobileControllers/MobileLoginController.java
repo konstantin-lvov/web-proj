@@ -2,8 +2,6 @@ package ru.kl.proj.mobileControllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.kl.proj.dao.AuthTokenDaoImpl;
@@ -26,7 +24,6 @@ public class MobileLoginController {
     @Autowired
     AuthToken authToken;
 
-    private static Logger logger = LogManager.getLogger(MobileLoginController.class.getName());
     private final String OK = "OK";
     private final String NO_MATCHING = "NO MATCHING";
 
@@ -36,8 +33,6 @@ public class MobileLoginController {
     @RequestMapping(value = "/mobileLogin", method = GET, produces = "text/plain;charset=UTF-8")
     public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
                               @RequestParam(value = "password", required = true) String organizationPassword) {
-
-        logger.info("Organization " + organizationName + " trying to login.");
 
         TokenGenerator tokenGenerator = new TokenGenerator();
         ObjectMapper mapper = new ObjectMapper();

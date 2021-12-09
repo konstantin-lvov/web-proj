@@ -1,13 +1,13 @@
 package ru.kl.proj.entity;
 
-public class Record {
+public class AudioRecord extends Entity{
 
     private int oid;
     private int rid;
     private String recordFileName;
 
-    public Record (){}
-    public Record(int oid, int rid, String recordFileName) {
+    public AudioRecord(){}
+    public AudioRecord(int oid, int rid, String recordFileName) {
         this.oid = oid;
         this.rid = rid;
         this.recordFileName = recordFileName;

@@ -70,7 +70,7 @@ public class SpringConfig {
     public AuthToken getAuthToken() { return new AuthToken();}
 
     @Bean
-    public Record getRecord() { return new Record();}
+    public AudioRecord getRecord() { return new AudioRecord();}
 
     /*
     DaoImplementation classes

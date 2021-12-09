@@ -3,23 +3,23 @@ package ru.kl.proj.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import ru.kl.proj.Mappers.RecordMapper;
-import ru.kl.proj.entity.Record;
+import ru.kl.proj.entity.AudioRecord;
 
 import java.util.List;
 
-public class RecordDaoImpl implements Dao<Record> {
+public class RecordDaoImpl implements Dao<AudioRecord> {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
-    public List<Record> getAll() {
+    public List<AudioRecord> getAll() {
         String sql = "select * from public.records;";
         return jdbcTemplate.query(sql,
                 new RecordMapper());
     }
 
     @Override
-    public void create(Record entity) {
+    public void create(AudioRecord entity) {
         String sql = "insert into public.records (oid, record_file_name) " +
                 "values(?, ?);";
         jdbcTemplate.update(sql,
@@ -27,7 +27,7 @@ public class RecordDaoImpl implements Dao<Record> {
                 entity.getRecordFileName());
     }
 
-    public Record readByName(int oid, String recordFileName) {
+    public AudioRecord readByName(int oid, String recordFileName) {
         String sql = "select * from public.records where oid = ? and record_file_name = ?";
         return jdbcTemplate.queryForObject(sql,
                 new RecordMapper(),
@@ -35,12 +35,12 @@ public class RecordDaoImpl implements Dao<Record> {
                 recordFileName);
     }
 
-    public Record read(int oid) {
+    public AudioRecord read(int oid) {
         return null;
     }
 
     @Override
-    public void update(Record entity) {}
+    public void update(AudioRecord entity) {}
 
     @Override
     public void delete(int oid) {

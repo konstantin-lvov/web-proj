@@ -16,6 +16,8 @@ import java.util.List;
 @Scope("request")
 public class DatasetFactory {
 
+
+
     private Organization organization;
     @Autowired
     private OrganizationDaoImpl organizationDao;
@@ -54,16 +56,16 @@ public class DatasetFactory {
         this.oid = oid;
     }
 
-    public void createDataset(Organization organization){
+    public void createDataset(Organization organization) {
 
         boolean organizationExist = checkOrgExistByName(organization.getOrganizationName());
-        if(organizationExist){
+        if (organizationExist) {
             throw new OrganizationExistException("Organization "
                     + organization.getOrganizationName() + " already exist");
         }
 
 
-        if(organization.getAuthority()==null){
+        if (organization.getAuthority() == null) {
             organization.setAuthority("ROLE_ORGANIZATION");
         }
         organization.setEnabled(true);
@@ -95,7 +97,7 @@ public class DatasetFactory {
         endlineTemplatesDao.create(endlineTemplates);
     }
 
-    public void testCreateDataset(Organization organization){
+    public void testCreateDataset(Organization organization) {
         createDataset(organization);
 
         String keyword = "олово";
@@ -104,27 +106,29 @@ public class DatasetFactory {
         keywords = new Keywords(oid, 2, keyword);
         keywordsDao.create(keywords);
 
-        contacts = new Contacts(oid, 1, "Василий Васильков Васильевич 85555555555");
+        contacts = new Contacts(oid, 1, "Васили Васильков Васильевич 85555555555");
         contactsDao.create(contacts);
         contacts = new Contacts(oid, 2, "Василий Васильков Васильевич 85555555555");
         contactsDao.create(contacts);
-
 
         Date date = new Date(System.currentTimeMillis());
         String parsedSms = "Здравстуйте Константин рады вам сообщить что" +
                 "мы обновили цены на ншу продукцию и готовы предложить вам" +
                 "олово по 20 рублей за киллограмм аллюминий 12 рублей за киллограмм...";
-        callsInfo = new CallsInfo(oid, 1, date, "85555555555", parsedSms);
+        callsInfo = new CallsInfo(oid, date, parsedSms);
         callsInfoDao.create(callsInfo);
-        callsInfo = new CallsInfo(oid, 2, date, "85555555555", parsedSms);
+        callsInfo = new CallsInfo(oid, date, parsedSms);
         callsInfoDao.create(callsInfo);
+
+
     }
 
     public boolean checkOrgExistByName(String name) {
         Organization checkedOrganization = null;
-        try{
+        try {
             checkedOrganization = organizationDao.readByName(name);
-        } catch (Exception e){}
+        } catch (Exception e) {
+        }
         if (checkedOrganization != null) {
             return true;
         } else {
