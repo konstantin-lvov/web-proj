@@ -1,5 +1,6 @@
 package ru.kl.proj.services;
 
+import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.dao.DuplicateKeyException;
@@ -45,6 +46,10 @@ public class DatasetFactory {
     private CallsInfo callsInfo;
     @Autowired
     private CallsInfoDaoImpl callsInfoDao;
+
+    private AudioRecord audioRecord;
+    @Autowired
+    private RecordDaoImpl recordDao;
 
     private int oid;
 
@@ -119,6 +124,9 @@ public class DatasetFactory {
         callsInfoDao.create(callsInfo);
         callsInfo = new CallsInfo(oid, date, parsedSms);
         callsInfoDao.create(callsInfo);
+
+        audioRecord = new AudioRecord(1, "record-123123.awb");
+        recordDao.create(audioRecord);
 
 
     }

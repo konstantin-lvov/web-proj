@@ -49,3 +49,10 @@
 <%}%>
     Информация о звонках
 </div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("audioRecord")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=audioRecord';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=audioRecord';">
+<%}%>
+    Аудио записи
+</div>

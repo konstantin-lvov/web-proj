@@ -2,8 +2,10 @@ package ru.kl.proj.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import ru.kl.proj.Mappers.CallsInfoMapper;
 import ru.kl.proj.Mappers.RecordMapper;
 import ru.kl.proj.entity.AudioRecord;
+import ru.kl.proj.entity.CallsInfo;
 
 import java.util.List;
 
@@ -33,6 +35,13 @@ public class RecordDaoImpl implements Dao<AudioRecord> {
                 new RecordMapper(),
                 oid,
                 recordFileName);
+    }
+
+    public List <AudioRecord> readAllByOid(int oid) {
+        String sql = "select * from public.records where oid = ? order by rid;";
+        return jdbcTemplate.query(sql,
+                new RecordMapper(),
+                oid);
     }
 
     public AudioRecord read(int oid) {

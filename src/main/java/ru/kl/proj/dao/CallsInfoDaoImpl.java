@@ -30,11 +30,11 @@ public class CallsInfoDaoImpl implements Dao<CallsInfo> {
     }
 
     @Override
-    public CallsInfo read(int conv_id) {
+    public CallsInfo read(int convid) {
         String sql = "select * from public.calls_info where convid = ?;";
         return jdbcTemplate.queryForObject(sql,
                 new CallsInfoMapper(),
-                conv_id);
+                convid);
     }
 
     public List <CallsInfo> readAllByOid(int oid) {

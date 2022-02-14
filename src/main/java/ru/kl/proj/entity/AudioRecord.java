@@ -7,9 +7,15 @@ public class AudioRecord extends Entity{
     private String recordFileName;
 
     public AudioRecord(){}
+
     public AudioRecord(int oid, int rid, String recordFileName) {
         this.oid = oid;
         this.rid = rid;
+        this.recordFileName = recordFileName;
+    }
+
+    public AudioRecord(int oid, String recordFileName) {
+        this.oid = oid;
         this.recordFileName = recordFileName;
     }
 

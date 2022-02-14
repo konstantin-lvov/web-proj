@@ -33,6 +33,8 @@
                     <jsp:include page="contacts.jsp" />
                     <%} else if (request.getParameter("pageMarker").equals("callsInfo")) {%>
                     <jsp:include page="callsInfo.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("audioRecord")) {%>
+                    <jsp:include page="records.jsp" />
                     <%}%>
                 </div>
             </td>
