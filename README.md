@@ -1,1 +1,1 @@
-![View](someview)
+![View](someview.png)
