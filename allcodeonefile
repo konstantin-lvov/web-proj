@@ -1,0 +1,3827 @@
+body{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	align-content: center;
+	background-color: #1A191E;
+}
+html {
+	font-family: sans-serif;
+}
+p {
+	color: #FFFFFF;
+}
+h1 {
+	color: #FFFFFF;
+}
+h2 {
+	color: #FFFFFF;}
+h3 {
+	color: #FFFFFF;
+}
+h4 {
+	color: #FFFFFF;
+}
+h5 {
+	color: #FFFFFF;
+}
+table {
+	margin: 0 auto;
+	vertical-align: center;
+}
+td {
+	vertical-align: center;
+	color: #FFFFFF;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 5px;
+}
+.button {
+    background-color:  darkslategray; /* Green */
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+	float: right;
+	margin: 5px 0px 5px 5px;
+}
+
+h5.DTransparentText{
+	opacity: 1.0;
+	color: green;
+	float: right;
+	animation: transparentText forwards 4s;
+}
+
+@keyframes transparentText {
+	0%   { opacity: 0; }
+	50%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+div.menuBar {
+	position: absolute;
+    vert-align: middle;
+	width: 99%;
+	top: 5px;
+	left: 5px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	background-color:  darkslategray;
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
+    display: table;
+}
+
+div.footer {
+	position: relative;
+	bottom: 20px;
+	vert-align: middle;
+	width: 99%;
+	left: 5px;
+	height: 40px;
+	padding: 0;
+	margin: 50px 0 0 0;
+	background-color:  darkslategray;
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
+	display: table;
+}
+
+div.logoText {
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+	cursor: pointer;
+	text-decoration-color: darkolivegreen;
+	text-shadow: #1A191E;
+	height: 30px;
+	font-family: Cand, serif;
+	font-size: 30px;
+    display: inline-block;
+}
+
+div.logoText {
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+	0% {
+		text-shadow: 0 0 10px rgba(255,255,255,.8),
+		0 0 20px rgba(255,255,255,.8),
+		0 0 22px  rgba(255,255,255,.8),
+		0 0 40px  rgba(66,220,219,.8),
+		0 0 60px  rgba(66,220,219,.8),
+		0 0 80px  rgba(66,220,219,.5),
+		0 0 100px rgba(66,220,219,.5),
+		0 0 140px rgba(66,220,219,.5),
+		0 0 200px rgba(66,220,219,.5);
+	}
+	100% {
+		text-shadow: 0 0 2px rgba(255,255,255,.8),
+		0 0 8px rgba(255,255,255,.8),
+		0 0 10px rgba(255,255,255,.8),
+		0 0 20px rgba(66,220,219,.8),
+		0 0 30px rgba(66,220,219,.8),
+		0 0 40px rgba(66,220,219,.8),
+		0 0 50px rgba(66,220,219,.5),
+		0 0 80px rgba(66,220,219,.5);
+	}
+}
+div.freeSpaceMenuBar {
+    width: available;
+    float: right;
+}
+div.rightSideMenuBarCommonSpace{
+    float: right;
+}
+div.signIn {
+    position: relative;
+	cursor: pointer;
+    height: available;
+    font-size: 20px;
+    display: inline-block;
+	padding: 7px 15px 9px 15px;
+	float: left;
+}
+
+div.signIn:hover {
+	background-color: lightslategrey;
+	TEXT-DECORATION: none;
+}
+
+div.signUp {
+    position: relative;
+	padding: 7px 15px 9px 15px;
+	cursor: pointer;
+	height: available;
+	font-size: 20px;
+    display: inline-block;
+    float: left;
+}
+
+div.signUp:hover {
+	background-color: lightslategrey;
+	TEXT-DECORATION: none;
+}
+
+div.commonSpace {
+	position: relative;
+	width: 80%;
+	margin: 100px auto 0;
+	padding: 1%;
+}
+div.text {
+}
+div.template {
+	float: left;
+	width: 49%;
+	border-width: thin;
+	border-style: dashed;
+	border-color: white;
+	margin-bottom: 50px;
+}
+div.result {
+	float: right;
+	width: 49%;
+	border-width: thin;
+	border-style: dashed;
+	border-color: white;
+	margin-bottom: 50px;
+}
+
+div.leftSideBarSpace {
+    position: sticky;
+    left: 100px;
+	width: 300px;
+}
+div.leftSideBarElement {
+	cursor: pointer;
+	height: 40px;
+	width: 300px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+    margin-bottom: 25px;
+    padding-left: 5px;
+	padding-top: 13px;
+    background-color:  darkslategray;
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
+}
+div.leftSideBarElement_picked {
+	cursor: pointer;
+	height: 40px;
+	width: 300px;
+	font-size: 20px;
+	font-weight: normal;
+	color: #000000;
+	margin-bottom: 25px;
+	padding-left: 5px;
+	padding-top: 10px;
+	background-color:  cornflowerblue;
+	opacity: 1.0;
+	box-shadow: -7px 15px 3px rgba(0,0,0,0.5);
+
+}
+div.leftSideBarElement:hover {
+	background-color: lightslategrey;
+	TEXT-DECORATION: none;
+}
+div.rightSideCommonSpace {
+    top: 50px;
+    left: 500px;
+	width: available;
+    align-content: center;
+}
+div.rightSideContentSpace {
+	position: relative;
+    margin-left: auto;
+    margin-right: auto;
+	align-content: center;
+	width: available;
+}
+
+input.customDisabledField {
+	text-decoration-color: gray;
+	color: gray;
+}<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogToFile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="debugLogger" level="debug" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="errorLogger" level="error" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="rootLogger">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration># Root logger option
+log4j.rootLogger=DEBUG, stdout, file
+
+# Redirect log messages to console
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+# Redirect log messages to a log file
+log4j.appender.file=org.apache.log4j.RollingFileAppender
+#outputs to Tomcat home
+log4j.appender.file.File=${catalina.home}/logs/summary.log
+log4j.appender.file.MaxFileSize=5MB
+log4j.appender.file.MaxBackupIndex=10
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Информация о звонках</h2>
+<div class="rightSideContentSpace">
+    <form id="callsInfo" name="callsInfo" action="/callsInfo" method="post">
+        <table>
+            <%
+                List <CallsInfo> listOfCalls = (List <CallsInfo>) request.getAttribute("callsInfo");
+                for (CallsInfo t: listOfCalls) {
+            %>
+            <tr>
+                <td>
+                    <%= t.getConvId() %>:
+                    <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
+                    <input type='text' name='convId' value='<%= t.getConvId() %>' hidden/>
+                </td>
+                <td>
+                    <textarea rows="1" cols="25" name="phoneNumber" disabled><%=t.getPhoneNumber()%></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <textarea rows="1" cols="25" name="date" disabled><%=t.getDate()%></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <textarea rows="4" cols="50" name="info" disabled><%=t.getParsedSms()%></textarea>
+                </td>
+            </tr>
+            <%
+                }
+            %>
+        </table>
+    </form>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    Organization organization = null;
+    if(request.getRemoteUser() != null) {
+        organization = (Organization) request.getAttribute("organization");
+    }
+%>
+<div class="menuBar">
+    <div class="logoText" onclick="window.location='/';">SUMMARY</div>
+    <div class="freeSpaceMenuBar"></div>
+    <% if ( request.getRemoteUser() == null ) {%>
+    <div class="rightSideMenuBarCommonSpace">
+        <div class="signIn" onclick="window.location='/login';">Войти</div>
+        <div class="signUp" onclick="window.location='/registration';">Создать аккаунт</div>
+    </div>
+    <%} else {%>
+    <div class="rightSideMenuBarCommonSpace">
+        <div class="signIn" onclick="window.location='/accountMainPage';">Личный кабинет</div>
+        <div class="signUp" onclick="window.location='/logout';">Выйти</div>
+    </div>
+    <%}%>
+</div>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
+</head>
+<body>
+<jsp:include page="menuBar.jsp" />
+<div class="commonSpace">
+    <h2>Доступ запрещен</h2>
+    <h4>${message}</h4>
+</div>
+</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">СМС шаблоны</h2>
+<div class="rightSideContentSpace">
+    <form id="templatesForm" name="smsTemplates" action="/smsTemplates" method="post">
+        <table>
+        <%
+            List <SmsTemplates> listOfTemplates = (List <SmsTemplates>) request.getAttribute("smsTemplates");
+            for (SmsTemplates t: listOfTemplates) {
+        %>
+            <tr>
+                <td>
+                    <input type="text" name="oid" value="<%= t.getOid() %>" hidden/>
+                    <input type="text" name="deleteField<%= t.getTid() %>" hidden/>
+                    <h4>Шаблон №<%= t.getTid() %>:</h4>
+                </td>
+                <td>
+                    <input type='text' name='tid' value='<%= t.getTid() %>' hidden/>
+                    <textarea inputmode="true" rows="5" cols="50" name='template' ><%=t.getTemplate()%></textarea>
+                </td>
+                <td>
+                    <input name="deleteTemplate"  class="button" type="button" value="Удалить" onclick="{document.smsTemplates.deleteField<%= t.getTid() %>.value=this.value;document.smsTemplates.submit();}"/>
+                </td>
+                <p> </p>
+            </tr>
+        <%
+            }
+        %>
+            <tr>
+                <td>
+                    <input type="hidden" name="hiddenField" />
+                </td>
+                <td>
+                    <input name="addForm"  class="button" type="button" value="Добавить шаблон" onclick="{document.smsTemplates.hiddenField.value=this.value;document.smsTemplates.submit();}"/>
+                </td>
+                <td>
+                    <input name="submitFrom" class="button" type="submit" value="Отправить" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Контакты</h2>
+<div class="rightSideContentSpace">
+    <h5>Формат записи (через пробелы): <font color="yellow">#Имя# #Фамилия# #Отчество# #Номер телефона(без +)#</font></h5>
+    <form id="contacts" name="contacts" action="/contacts" method="post">
+        <table>
+            <%
+                List <Contacts> listOfContacts = (List <Contacts>) request.getAttribute("contacts");
+                for (Contacts t: listOfContacts) {
+            %>
+            <tr>
+                <td>
+                    <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
+                    <input type="text" name="deleteField<%= t.getCid() %>" hidden/>
+                    <%= t.getCid() %>:
+                </td>
+                <td>
+                    <input type='text' name='cid' value='<%= t.getCid() %>' hidden/>
+                    <textarea inputmode="true" rows="1" cols="50" name='contact' ><%=t.getContact()%></textarea>
+                </td>
+                <td>
+
+                    <input name="deleteField"  class="button" type="button" value="Удалить" onclick="{document.contacts.deleteField<%= t.getCid() %>.value=this.value;document.contacts.submit();}"/>
+                </td>
+                <p> </p>
+            </tr>
+            <%
+                }
+            %>
+            <tr>
+                <td>
+                    <input type="hidden" name="hiddenField" />
+                </td>
+                <td>
+                    <input name="addForm"  class="button" type="button" value="Добавить контакт" onclick="{document.contacts.hiddenField.value=this.value;document.contacts.submit();}"/>
+                </td>
+                <td>
+                    <input name="submitFrom" class="button" type="submit" value="Сохранить" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div><%--
+  Created by IntelliJ IDEA.
+  User: fch
+  Date: 22.03.2020
+  Time: 22:23
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<% if (request.getParameter("pageMarker") == null){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage';">
+<%}%>
+    Информация
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("orgSettings")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=orgSettings';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=orgSettings';">
+<%}%>
+    Настройки
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("smsTemplates")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=smsTemplates';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=smsTemplates';">
+<%}%>
+    Смс шаблоны
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("keywords")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=keywords';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=keywords';">
+<%}%>
+    Ключевые слова
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("endlines")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=endlines';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=endlines';">
+<%}%>
+    Шаблоны окончания строк
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("contacts")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=contacts';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=contacts';">
+<%}%>
+    Контакты
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("callsInfo")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=callsInfo';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=callsInfo';">
+<%}%>
+    Информация о звонках
+</div>
+<% if(request.getParameter("pageMarker") != null && request.getParameter("pageMarker").equals("audioRecord")){%>
+<div class="leftSideBarElement_picked" onclick="window.location='/accountMainPage?pageMarker=audioRecord';">
+<%} else {%>
+<div class="leftSideBarElement" onclick="window.location='/accountMainPage?pageMarker=audioRecord';">
+<%}%>
+    Аудио записи
+</div><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<html>
+<head>
+    <title>Sign Up</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
+    <script>
+        function check(e){
+            var organization = document.getElementById("organizationName");
+            var pas1 = document.getElementById("password");
+            var pas2 = document.getElementById("repeatPassword");
+            var email = document.getElementById("email");
+            if (pas1.value === pas2.value && validateCred(organization, pas1)
+            && validateEmail(email)) {
+                document.forms['organization'].submit();
+            }
+            else {
+                e.preventDefault();
+                alert("Некорректные данные - допускаются английские символы, и цифры (не менее 3 символов)")
+            }
+        }
+        function validateEmail(email) {
+            var pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+            if(email.value.match(pattern)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function validateCred(organization, pas){
+            var pattern = /^[A-Za-z]\w{2,14}$/;
+            if(pas.value.match(pattern) && organization.value.match(pattern)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function showPas(){
+            var pas1 = document.getElementById("password");
+            var pas2 = document.getElementById("repeatPassword");
+            if (pas1.type === "password") {
+                pas1.type = "text";
+                pas2.type = "text";
+            } else {
+                pas1.type = "password";
+                pas2.type = "password";
+            }
+        }
+    </script>
+</head>
+<body onload='document.registration.organizationName.focus();'>
+<div class="menuBar">
+<div class="logoText" onclick="window.location='/';">SUMMARY</div>
+<div class="freeSpaceMenuBar"></div>
+<div class="rightSideMenuBarCommonSpace"></div>
+</div>
+<div class="commonSpace" align="center">
+    <h1>Регистрация</h1>
+    <%
+        String errorMessage = request.getParameter("errorMessage");
+    if (errorMessage != null){
+    %>
+    <font color="red"><%=errorMessage%></font>
+    <%}%>
+    <form:form action="/registration" method="POST" modelAttribute="organization">
+        <table>
+            <tr>
+                <td>Название организации:</td>
+                <td><form:input path="organizationName" required="" /></td>
+            </tr>
+            <tr>
+                <td>Почта:</td>
+                <td><form:input path="email" required="" /></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td><form:input path="password" type="password" required="" /></td>
+            </tr>
+            <tr>
+                <td>Повторите пароль:</td>
+                <td><input id="repeatPassword" type="password" required="" /></td>
+            </tr>
+            <tr>
+                <td>Показать пароль:</td>
+                <td><input type="checkbox" onclick="showPas()" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" class="button" value="Отправить" onclick="check(event)"/>
+                </td>
+            </tr>
+        </table>
+    </form:form>
+</div>
+</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Ключевые слова</h2>
+<div class="rightSideContentSpace">
+    <form id="keywordsForm" name="keywords" action="/keywords" method="post">
+        <table>
+            <%
+                List <Keywords> listOfKeywords = (List <Keywords>) request.getAttribute("keywords");
+                for (Keywords t: listOfKeywords) {
+            %>
+            <tr>
+                <td>
+                    <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
+                    <input type="text" name="deleteField<%= t.getKid() %>" hidden/>
+                    Слово №<%= t.getKid() %>:
+                </td>
+                <td>
+                    <input type='text' name='kid' value='<%= t.getKid() %>' hidden/>
+                    <textarea inputmode="true" rows="1" cols="20" name='keyword' ><%=t.getKeyword()%></textarea>
+                </td>
+                <td>
+
+                    <input name="deleteField"  class="button" type="button" value="Удалить" onclick="{document.keywords.deleteField<%= t.getKid() %>.value=this.value;document.keywords.submit();}"/>
+                </td>
+                <p> </p>
+            </tr>
+            <%
+                }
+            %>
+            <tr>
+                <td>
+                    <input type="hidden" name="hiddenField" />
+                </td>
+                <td>
+                    <input name="addForm"  class="button" type="button" value="Добавить слово" onclick="{document.keywords.hiddenField.value=this.value;document.keywords.submit();}"/>
+                </td>
+                <td>
+                    <input name="submitFrom" class="button" type="submit" value="Отправить" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<script>
+    function submitForm() {
+        document.forms['organization','settings'].submit();
+    }
+</script>
+<h2 align="center">Основные настройки профиля</h2>
+<div class="rightSideContentSpace">
+    <form name="orgSettings" action="/settings" method="post">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="oid" value="${organization.oid}" hidden/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="enabled" value="${organization.enabled}" hidden/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="authority" value="${organization.authority}" hidden/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Название:
+                </td>
+                <td>
+                    <input type="text" name="organizationName" value="${organization.organizationName}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Емейл:
+                </td>
+                <td>
+                    <input type="text" name="email" value="${organization.email}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Пароль:
+                </td>
+                <td>
+                    <input type="text" name="password" value="${organization.password}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Отложенная смс:
+                </td>
+                <td>
+                    <input type="text" name="deferred" value="${settings.deferred}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Количество смс:
+                </td>
+                <td>
+                    <input type="text" name="quantity" value="${settings.quantity}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Интервал:
+                </td>
+                <td>
+                    <input type="text" name="interval" value="${settings.interval}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                    <input name="submit" class="button" type="submit" value="Отправить" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h5><font color="red">ВНИМАНИЕ!</font> При изменении названия организации Вам потребуется произвести повторную авторизацию.</h5>
+</div><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+    <title>Account</title>
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
+</head>
+<body>
+<jsp:include page="menuBar.jsp" />
+<div class="commonSpace">
+    <table>
+        <tr>
+            <td valign="top" width="350px">
+                <div class="leftSideBarSpace">
+                    <jsp:include page="leftSideBar.jsp" />
+                </div>
+            </td>
+            <td width="5%"></td>
+            <td valign="top" width="100%">
+                <div class="rightSideCommonSpace">
+                    <% if (request.getParameter("pageMarker") == null) {%>
+                    <jsp:include page="organizationInfo.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("orgSettings")) {%>
+                    <jsp:include page="organizationSettings.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("smsTemplates")) {%>
+                    <jsp:include page="smsTemplates.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("keywords")) {%>
+                    <jsp:include page="keywords.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("endlines")) {%>
+                    <jsp:include page="endlineTemplates.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("contacts")) {%>
+                    <jsp:include page="contacts.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("callsInfo")) {%>
+                    <jsp:include page="callsInfo.jsp" />
+                    <%} else if (request.getParameter("pageMarker").equals("audioRecord")) {%>
+                    <jsp:include page="records.jsp" />
+                    <%}%>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Общая информация</h2>
+<div class="rightSideContentSpace">
+    <table>
+        <tr>
+            <td>
+                <p>Идентификационный номер: ${organization.oid}</p>
+                <p>Название организации: ${organization.organizationName}</p>
+                <p>Почта: ${organization.email}</p>
+                <p>Включен:
+                    <c:if test="${organization.enabled == true}">
+                        <input type="checkbox" size="10px" disabled checked>
+                    </c:if>
+                    <c:if test="${organization.enabled == false}">
+                        <input type="checkbox" size="10px" disabled>
+                    </c:if></p>
+                </p>
+                <p>Аккаунт-роль: ${organization.authority}</p>
+            </td>
+        </tr>
+    </table>
+</div><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+<head>
+    <title>Login</title>
+    <link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
+</head>
+<body onload='document.organization.organizationName.focus();'>
+<div class="menuBar">
+    <div class="logoText" onclick="window.location='/';">SUMMARY</div>
+    <div class="freeSpaceMenuBar"></div>
+    <div class="rightSideMenuBarCommonSpace"></div>
+</div>
+<div class="commonSpace" align="center">
+    <div class="rightSideCommonSpace">
+        <h1>Авторизация</h1>
+
+        <c:if test="${not empty errorMessge}"><div style="color:red; font-weight: bold; margin: 30px 0px;">${errorMessge}</div></c:if>
+
+        <form name='organization' action="/login" method='POST'>
+            <table>
+                <tr>
+                    <td>Название организации:</td>
+                    <td><input type='text' name='organizationName' value='' /></td>
+                </tr>
+                <tr>
+                    <td>Пароль:</td>
+                    <td><input type='password' name='password' /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan='2'><input name="submit" class="button" type="submit" value="Войти" /></td>
+                </tr>
+            </table>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	<?xml version="1.0" encoding="UTF-8"?>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	response.setCharacterEncoding("UTF-8");
+%>
+<html lang="ru">
+	<head>
+		<title>Summary</title>
+		<link href='<spring:url value="/resources/styles.css"/>' rel="stylesheet" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+        <jsp:include page="menuBar.jsp" />
+		<div class="commonSpace">
+			<div class="text">
+			<p>Summary - это программный продукт представляющий вам возможность доставить важную информацию до ваших клентов не задумываясь каждый раз о том что, как и кому сообщить. Система summary позволяет автоматизировать процесс повторного информирования клиентов о важной информации полученой ими в процессе телефонного разговора.</p>
+			<p>Как это работает:</p>
+			<p>Основной инструмент который вам понадобится - это мобилное приложение Summary на вашем смартфоне. В нем вы можете зарегистрироваться и настроить свой личный кабинет. После простого процесса настройки, вы просто совершаете телефонный звонок клиенту, и разговариваете с ним как обычно, после разговора, запись разговора разбирается и из нее выделаются те ключевые слова, которые вы указали в своем личном кабинете, и согласно вашим пожеланиям отправляются СМС этому клиенту с информацией из разговора без вашего участия, все что вам нужно - совершить звонок лиенту, Summary позаботится об остальном.</p>
+			<p>Например:</p>
+			<p>Вы занимаетесь реализацией металла, продаете его слитками, разный металл стоит по разному, олово имеет свою цену, аллюминий свою. Эти цены переодически меняются от "настроения" рынка. В своем личном кабинете вы указываете ключевые слова олово и аллюминий. А так же слова которые должны заканчивать строку с наименованием товара, например ключевое слово "олово", а завершающая фраза "рублей за киллограмм" и так далее. Следующим шагом вы создаете СМС шаблон который будет отправляться клиентам в котором указываются обязательные слова и оставляются места для подстановки ключевых слов и завершающих фраз.</p>
+			</div>
+			<div class="template">
+			<p>Пример СМС шаблона:</p>
+			<p>--------------------------------------------</p>
+			<p>Здравствуйте, #Имя_клиента#!</p>
+			<p>Вот информация по интересующим вас позициям:</p>
+			<p>#Ключевое_слово# #завершающая_фраза#</p>
+			<p>...</p>
+			<p>Звоните по телефону: 555-55-55</p>
+			<p>Всего наилучшего!</p>
+			<p>--------------------------------------------</p>
+			</div>
+			<div class="result">
+			<p>Пример получившейся СМС:</p>
+			<p>--------------------------------------------</p>
+			<p>Зравствуйте, Константин!</p>
+			<p>Вот информация по интересующим вас позициям:</p>
+			<p>Олово 12 рублей за киллограмм,</p>
+			<p>Аллюминий 16 рублей за киллограмм.</p>
+			<p>Звоните по телефону: 555-55-55</p>
+			<p>Всего наилучшего!</p>
+			<p>--------------------------------------------</p>
+			</div>
+		</div>
+	</body>
+</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Шаблоны окончания строк</h2>
+<div class="rightSideContentSpace">
+    <form id="endlines" name="endlines" action="/endlines" method="post">
+        <table>
+            <%
+                List <EndlineTemplates> listOfEndline = (List <EndlineTemplates>) request.getAttribute("endlines");
+                for (EndlineTemplates t: listOfEndline) {
+            %>
+            <tr>
+                <td>
+                    <input type="text" name="oid" value='<%= t.getOid() %>' hidden/>
+                    <input type="text" name="deleteField<%= t.getEtid() %>" hidden/>
+                    Шаблон №<%= t.getEtid() %>:
+                </td>
+                <td>
+                    <input type='text' name='etid' value='<%= t.getEtid() %>' hidden/>
+                    <textarea inputmode="true" rows="1" cols="20" name='endline' ><%=t.getEndlineTemplate()%></textarea>
+                </td>
+                <td>
+
+                    <input name="deleteField"  class="button" type="button" value="Удалить" onclick="{document.endlines.deleteField<%= t.getEtid() %>.value=this.value;document.endlines.submit();}"/>
+                </td>
+                <p> </p>
+            </tr>
+            <%
+                }
+            %>
+            <tr>
+                <td>
+                    <input type="hidden" name="hiddenField" />
+                </td>
+                <td>
+                    <input name="addForm"  class="button" type="button" value="Добавить слово" onclick="{document.endlines.hiddenField.value=this.value;document.endlines.submit();}"/>
+                </td>
+                <td>
+                    <input name="submitFrom" class="button" type="submit" value="Отправить" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <%if (request.getAttribute("apply") != null && request.getAttribute("apply").equals("true")){%>
+                    <h5 id="transparentText" class="DTransparentText">
+                        Изменения применены :)
+                    </h5>
+                    <%}%>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<h2 align="center">Информация о звонках</h2>
+<div class="rightSideContentSpace">
+    <form id="audioRecord" name="audioRecord" action="/audioRecord" method="post">
+        <table>
+            <%
+                List <AudioRecord> listOfRecords = (List <AudioRecord>) request.getAttribute("audioRecord");
+                for (AudioRecord a: listOfRecords) {
+            %>
+            <tr>
+                <td>
+                    <%= a.getRid() %>:
+                    <input type="text" name="oid" value='<%= a.getOid() %>' hidden/>
+                </td>
+                <td>
+                    <textarea rows="1" cols="25" name="name" disabled><%=a.getRecordFileName()%></textarea>
+                </td>
+            </tr>
+            <%
+                }
+            %>
+        </table>
+    </form>
+</div>package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileContactsController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    Contacts contacts;
+
+    @Autowired
+    ContactsDaoImpl contactsDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileContacts", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+    public String getContacts(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            List<Contacts> listOfContacts = contactsDao.readAllContacts(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(listOfContacts);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileKeywordsController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    Keywords keywords;
+
+    @Autowired
+    KeywordsDaoImpl keywordsDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileKeywords", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+    public String getKeywords(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            List <Keywords> listOfKeywords = keywordsDao.readAllKeywords(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(listOfKeywords);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileSmsTemplatesController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    SmsTemplates smsTemplates;
+
+    @Autowired
+    SmsTemplatesDaoImpl smsTemplatesDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileSmsTemplates", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+    public String getSmsTemplates(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            List <SmsTemplates> listOfTemplates = smsTemplatesDao.readAllTemplates(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(listOfTemplates);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class RecordController {
+
+    public static Logger logger = LoggerFactory.getLogger(RecordController.class);
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    AudioRecord audioRecord;
+
+    @Autowired
+    RecordDaoImpl recordDao;
+
+    Thread t;
+
+    private String RESULT = "NO MATCHING";
+    private String GCS_URL = "gs://summaryapp/";
+    private String RECORD_FILE_NAME = "";
+
+    @PostMapping(value = "/newAudioRecord", consumes = "application/json",
+            produces = "text/plain;charset=UTF-8")
+    public String postNewRecord(@RequestParam(value = "token", required = true) String token,
+                                @RequestBody AudioRecord audioRecord) throws JsonProcessingException {
+        System.out.println(audioRecord.getOid() + " " + audioRecord.getRecordFileName());
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            RECORD_FILE_NAME = audioRecord.getRecordFileName();
+            audioRecord.setOid(authToken.getOid());
+            recordDao.create(audioRecord);
+            AudioRecord resultAudioRecord = recordDao.readByName(audioRecord.getOid(),
+                    audioRecord.getRecordFileName());
+            ObjectMapper mapper = new ObjectMapper();
+            RESULT = mapper.writeValueAsString(resultAudioRecord);
+
+            t = new Thread() {
+                public void run() {
+                    try {
+                        RecognizeRequestHandler.asyncRecognizeGcs(GCS_URL + RECORD_FILE_NAME, audioRecord.getOid());
+                    } catch (Exception e) {
+                        logger.info(e.getMessage());
+                    }
+                    while (t != null) {
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                        }
+                    }
+                }
+
+            };
+            t.start();
+            this.stopThread();
+        }
+        return RESULT;
+    }
+
+    public void stopThread(){
+        t = null;
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileEndlineTemplatesController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    EndlineTemplates endlineTemplates;
+
+    @Autowired
+    EndlineTemplatesDaoImpl endlineTemplatesDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileEndlineTemplates", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+    public String getEndlineTemplates(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            List <EndlineTemplates> listOfEndlineTemplates = endlineTemplatesDao.readAllByOid(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(listOfEndlineTemplates);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileSettingsController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    Settings settings;
+
+    @Autowired
+    SettingsDaoImpl settingsDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileSettings", method = GET, produces = "text/plain;charset=UTF-8")
+    public String getSettings(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null){
+            settings = settingsDao.read(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(settings);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileCallsInfoController {
+
+    @Autowired
+    AuthToken authToken;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    CallsInfo callsInfo;
+
+    @Autowired
+    CallsInfoDaoImpl callsInfoDao;
+
+    private final String NO_MATCHING = "NO MATCHING";
+
+    @RequestMapping(value = "/mobileCallsInfo", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
+    public String getCallsInfo(@RequestParam(value = "token", required = true) String token) throws JsonProcessingException {
+        authToken = authTokenDao.readByToken(token);
+        if (authToken != null) {
+            List <CallsInfo> listOfCallsInfo = callsInfoDao.readAllByOid(authToken.getOid());
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(listOfCallsInfo);
+            return json;
+        } else {
+            return NO_MATCHING;
+        }
+    }
+}
+package ru.kl.proj.mobileControllers;
+
+
+
+@RestController
+public class MobileLoginController {
+
+    @Autowired
+    OrganizationDaoImpl organizationDao;
+
+    @Autowired
+    AuthTokenDaoImpl authTokenDao;
+
+    @Autowired
+    AuthToken authToken;
+
+    private final String OK = "OK";
+    private final String NO_MATCHING = "NO MATCHING";
+
+    /*
+    Входящий запрос имеет поля - имя и пароль
+     */
+    @RequestMapping(value = "/mobileLogin", method = GET, produces = "text/plain;charset=UTF-8")
+    public String mobileLogin(@RequestParam(value = "organization", required = true) String organizationName,
+                              @RequestParam(value = "password", required = true) String organizationPassword) {
+
+        TokenGenerator tokenGenerator = new TokenGenerator();
+        ObjectMapper mapper = new ObjectMapper();
+
+        String resultJSON;
+        int oid;
+        boolean tokenExisting = false;
+
+        try {
+            //если организации не существует то процесс авторизации прекращается по исключению
+            Organization organization = organizationDao.readByName(organizationName);
+            oid = organization.getOid();
+            tokenExisting = authToken.isExist(oid);
+
+            /*
+            Если токен существует и пароль совпал то возвращаем json объекта AuthToken
+             */
+            if (tokenExisting
+                    && organizationPassword.equals(organization.getPassword())) {
+                try {
+                    authToken = authTokenDao.read(oid);
+                    String json = mapper.writeValueAsString(authToken);
+                    return json;
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            /*
+            Если организация существует и пароль совпал то генерируем токен и возвращаем новый
+             */
+            if (!tokenExisting
+                    && organization != null
+                    && organizationPassword.equals(organization.getPassword())) {
+                String newToken = tokenGenerator.generateNewToken();
+                authToken.setOid(organization.getOid());
+                authToken.setToken(newToken);
+                authTokenDao.create(authToken);
+                try {
+                    authToken = authTokenDao.read(oid);
+                    String json = mapper.writeValueAsString(authToken);
+                    return json;
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "401";
+    }
+
+    @RequestMapping(value="/mobileTokenLogin", method = GET, produces = "text/plain;charset=UTF-8")
+    public String mobileTokenLogin(@RequestParam(value = "token", required = true) String token){
+        try {
+            authToken = authTokenDao.readByToken(token);
+            if (authToken.getToken().equals(token)){
+                return OK;
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return NO_MATCHING;
+    }
+}
+package ru.kl.proj.entity;
+
+
+@Scope("prototype")
+public class Contacts extends Entity {
+
+    private int oid;
+    private int cid;
+    private String name;
+    private String secondName;
+    private String thirdName;
+    private String phoneNumber;
+    private String contact;
+
+    public Contacts(){
+
+    }
+
+    public Contacts(int oid, int cid, String contact) {
+        this.oid = oid;
+        this.cid = cid;
+        this.contact = contact;
+
+    }
+
+    public int getOid() {
+        return oid;
+    }
+/*
+Если пустые строки не присвоить то создастся дубликат
+ */
+    public void parseContact(String contact){
+        if(contact.equals("")){
+            this.name = "";
+            this.secondName = "";
+            this.thirdName = "";
+            this.phoneNumber = "";
+        } else {
+            String [] parsedTmpStr = contact.split("\\s");
+            for (int i = 0; i < parsedTmpStr.length; i++) {
+                switch (i) {
+                    case 0:
+                        name = parsedTmpStr[i];
+                        break;
+                    case 1:
+                        secondName = parsedTmpStr[i];
+                        break;
+                    case 2:
+                        thirdName = parsedTmpStr[i];
+                        break;
+                    case 3:
+                        phoneNumber = parsedTmpStr[i];
+                        break;
+                }
+
+            }
+        }
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public String getThirdName() {
+        return thirdName;
+    }
+
+    public void setThirdName(String thirdName) {
+        this.thirdName = thirdName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+}
+package ru.kl.proj.entity;
+
+public class Keywords extends Entity {
+
+    private int oid;
+    private int kid;
+    private String keyword;
+
+    public Keywords(int oid, int kid, String keyword) {
+        this.oid = oid;
+        this.kid = kid;
+        this.keyword = keyword;
+    }
+
+    public Keywords(){
+    }
+
+    public int getKid() {
+        return kid;
+    }
+
+    public void setKid(int kid) {
+        this.kid = kid;
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+}
+package ru.kl.proj.entity;
+
+public class EndlineTemplates extends Entity {
+
+    private int oid;
+    private int etid;
+    private String endlineTemplate;
+
+    public EndlineTemplates (){
+
+    }
+
+    public EndlineTemplates(int oid, int etid, String endlineTemplate) {
+        this.oid = oid;
+        this.etid = etid;
+        this.endlineTemplate = endlineTemplate;
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getEtid() {
+        return etid;
+    }
+
+    public void setEtid(int etid) {
+        this.etid = etid;
+    }
+
+    public String getEndlineTemplate() {
+        return endlineTemplate;
+    }
+
+    public void setEndlineTemplate(String endlineTemplate) {
+        this.endlineTemplate = endlineTemplate;
+    }
+}
+package ru.kl.proj.entity;
+
+public class AudioRecord extends Entity{
+
+    private int oid;
+    private int rid;
+    private String recordFileName;
+
+    public AudioRecord(){}
+
+    public AudioRecord(int oid, int rid, String recordFileName) {
+        this.oid = oid;
+        this.rid = rid;
+        this.recordFileName = recordFileName;
+    }
+
+    public AudioRecord(int oid, String recordFileName) {
+        this.oid = oid;
+        this.recordFileName = recordFileName;
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getRid() {
+        return rid;
+    }
+
+    public void setRid(int rid) {
+        this.rid = rid;
+    }
+
+    public String getRecordFileName() {
+        return recordFileName;
+    }
+
+    public void setRecordFileName(String recordFileName) {
+        this.recordFileName = recordFileName;
+    }
+}
+package ru.kl.proj.entity;
+
+
+public class CallsInfo extends Entity {
+
+    private int oid;
+    private int convId;
+    private Date date;
+    private String phoneNumber;
+    private String parsedSms;
+
+    public CallsInfo (){
+
+    }
+
+    public CallsInfo(int oid, int convId, Date date, String phoneNumber, String parsedSms) {
+        this.oid = oid;
+        this.convId = convId;
+        this.date = date;
+        this.phoneNumber = phoneNumber;
+        this.parsedSms = parsedSms;
+    }
+
+    public CallsInfo(int oid, Date date, String parsedSms) {
+        this.oid = oid;
+        this.date = date;
+        this.parsedSms = parsedSms;
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getConvId() {
+        return convId;
+    }
+
+    public void setConvId(int convId) {
+        this.convId = convId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getParsedSms() {
+        return parsedSms;
+    }
+
+    public void setParsedSms(String parsedSms) {
+        this.parsedSms = parsedSms;
+    }
+}
+package ru.kl.proj.entity;
+
+public class Organization extends Entity{
+
+    private int oid;
+    private String organizationName;
+    private String email;
+    private String password;
+    private boolean enabled;
+    private String authority;
+
+
+    public Organization() {
+    }
+
+    public Organization(String organizationName, String email, String password, String authority) {
+        this.organizationName = organizationName;
+        this.email = email;
+        this.password = password;
+        this.authority = authority;
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public String getOrganizationName() {
+        return organizationName;
+    }
+
+    public void setOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(String authority) {
+        this.authority = authority;
+    }
+}
+package ru.kl.proj.entity;
+
+
+public class AuthToken extends Entity{
+
+    @Autowired
+    private AuthTokenDaoImpl authTokenDao;
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    private int oid;
+
+    public int getTokenId() {
+        return tokenId;
+    }
+
+    public void setTokenId(int tokenId) {
+        this.tokenId = tokenId;
+    }
+
+    private int tokenId;
+    private String token;
+
+    public AuthToken (int oid, String token){
+        this.oid = oid;
+        this.token = token;
+    }
+
+    public AuthToken (){
+
+    }
+
+    public boolean isExist(int oid){
+
+        try{
+        String token = authTokenDao.read(oid).getToken();
+
+            if(token != null){
+                return true;
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return false;
+
+    }
+}
+package ru.kl.proj.entity;
+
+public class SmsTemplates extends Entity {
+
+    private int oid;
+    private int tid;
+    private String template;
+
+    public SmsTemplates(int oid, int tid, String template) {
+        this.oid = oid;
+        this.tid = tid;
+        this.template = template;
+    }
+
+    public SmsTemplates(){
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getTid() {
+        return tid;
+    }
+
+    public void setTid(int tid) {
+        this.tid = tid;
+    }
+
+    public String getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(String template) {
+        this.template = template;
+    }
+}
+package ru.kl.proj.entity;
+
+public class Settings extends Entity{
+
+    private int oid;
+    private int deferred;
+    private int quantity;
+    private int interval;
+
+    public Settings(int oid, int deferred, int quantity, int interval) {
+        this.oid = oid;
+        this.deferred = deferred;
+        this.quantity = quantity;
+        this.interval = interval;
+    }
+
+    public Settings() {
+    }
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public int getDeferred() {
+        return deferred;
+    }
+
+    public void setDeferred(int deferred) {
+        this.deferred = deferred;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getInterval() {
+        return interval;
+    }
+
+    public void setInterval(int interval) {
+        this.interval = interval;
+    }
+}
+package ru.kl.proj.entity;
+
+abstract public class Entity <T> {
+}
+package ru.kl.proj.dao;
+
+
+
+public class CallsInfoDaoImpl implements Dao<CallsInfo> {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<CallsInfo> getAll() {
+        String sql = "select * from public.calls_info;";
+        return jdbcTemplate.query(sql,
+                new CallsInfoMapper());
+    }
+
+    @Override
+    public void create(CallsInfo entity) {
+        String sql = "insert into public.calls_info " +
+                "(oid, conversation_date, parsed_sms) " +
+                "values(?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getDate(),
+                entity.getParsedSms());
+    }
+
+    @Override
+    public CallsInfo read(int convid) {
+        String sql = "select * from public.calls_info where convid = ?;";
+        return jdbcTemplate.queryForObject(sql,
+                new CallsInfoMapper(),
+                convid);
+    }
+
+    public List <CallsInfo> readAllByOid(int oid) {
+        String sql = "select * from public.calls_info where oid = ? order by convid;";
+        return jdbcTemplate.query(sql,
+                new CallsInfoMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(CallsInfo entity) {
+        String sql = "update public.calls_info set conversation_date = ?, " +
+                "phone_number = ?, parsed_sms = ? where convid = ?;";
+        jdbcTemplate.update(sql,
+                entity.getDate(),
+                entity.getPhoneNumber(),
+                entity.getParsedSms(),
+                entity.getConvId());
+    }
+
+    @Override
+    public void delete(int conv_id) {
+        String sql = "delete from public.calls_info where convid = ?;";
+        jdbcTemplate.update(sql,
+                conv_id);
+    }
+
+    public void deleteByConvid(int oid, int convId) {
+        String sql = "delete from public.calls_info where oid = ? and convid = ?;";
+        jdbcTemplate.update(sql, oid, convId);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class EndlineTemplatesDaoImpl implements Dao<EndlineTemplates> {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<EndlineTemplates> getAll() {
+        String sql = "select * from public.endline_template;";
+        return jdbcTemplate.query(sql, new EndlineTemplatesMapper());
+    }
+
+    @Override
+    public void create(EndlineTemplates entity) {
+        String sql = "insert into public.endline_template " +
+                "(oid, etid, endline_template) values(?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getEtid(),
+                entity.getEndlineTemplate());
+    }
+
+    @Override
+    public EndlineTemplates read(int oid) {
+        String sql = "select * from public.endline_template " +
+                "where oid = ?;";
+        return jdbcTemplate.queryForObject(sql,
+                new EndlineTemplatesMapper(),
+                oid);
+    }
+
+    public List <EndlineTemplates> readAllByOid(int oid) {
+        String sql = "select * from public.endline_template " +
+                "where oid = ? order by etid;";
+        return jdbcTemplate.query(sql,
+                new EndlineTemplatesMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(EndlineTemplates entity) {
+        String sql = "update public.endline_template " +
+                "set endline_template = ? where oid = ? and etid = ?;";
+        jdbcTemplate.update(sql,
+                entity.getEndlineTemplate(),
+                entity.getOid(),
+                entity.getEtid());
+    }
+
+    @Override
+    public void delete(int etid) {
+        String sql = "delete from public.endline_template where etid = ?;";
+        jdbcTemplate.update(sql,
+                etid);
+    }
+
+    public void deleteByEtid(int oid, int etid) {
+        String sql = "delete from public.endline_template where oid = ? and etid = ?;";
+        jdbcTemplate.update(sql, oid, etid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class RecordDaoImpl implements Dao<AudioRecord> {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<AudioRecord> getAll() {
+        String sql = "select * from public.records;";
+        return jdbcTemplate.query(sql,
+                new RecordMapper());
+    }
+
+    @Override
+    public void create(AudioRecord entity) {
+        String sql = "insert into public.records (oid, record_file_name) " +
+                "values(?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getRecordFileName());
+    }
+
+    public AudioRecord readByName(int oid, String recordFileName) {
+        String sql = "select * from public.records where oid = ? and record_file_name = ?";
+        return jdbcTemplate.queryForObject(sql,
+                new RecordMapper(),
+                oid,
+                recordFileName);
+    }
+
+    public List <AudioRecord> readAllByOid(int oid) {
+        String sql = "select * from public.records where oid = ? order by rid;";
+        return jdbcTemplate.query(sql,
+                new RecordMapper(),
+                oid);
+    }
+
+    public AudioRecord read(int oid) {
+        return null;
+    }
+
+    @Override
+    public void update(AudioRecord entity) {}
+
+    @Override
+    public void delete(int oid) {
+        String sql = "delete from public.records where oid = ?;";
+        jdbcTemplate.update(sql,
+                oid);
+    }
+
+    public void deleteByRid(int oid, int rid) {
+        String sql = "delete from public.records where oid = ? and rid = ?;";
+        jdbcTemplate.update(sql, oid, rid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class OrganizationDaoImpl implements Dao<Organization> {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Organization> getAll() {
+        String sql = "select * from public.organizations";
+        return jdbcTemplate.query(sql, new OrganizationMapper());
+    }
+
+    @Override
+    public void create(Organization organization) {
+        String sql = "insert into public.organizations (organization, email, password, enabled, authority) " +
+                "values(?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql,
+                organization.getOrganizationName(),
+                organization.getEmail(),
+                organization.getPassword(),
+                organization.isEnabled(),
+                organization.getAuthority());
+
+    }
+
+    @Override
+    public Organization read(int oid) {
+        String sql = "select * from public.organizations where oid = ? ";
+        return jdbcTemplate.queryForObject(sql,
+                new OrganizationMapper(),
+                oid);
+    }
+
+    public Organization readByName(String name) {
+        String sql = "select * from public.organizations where organization = ? ";
+        return jdbcTemplate.queryForObject(sql,
+                new OrganizationMapper(),
+                name);
+    }
+
+    @Override
+    public void update(Organization organization) {
+        String sql = "update public.organizations set organization = ?, password = ?, email = ?" +
+                " where oid = ?";
+        jdbcTemplate.update(sql,
+                organization.getOrganizationName(),
+                organization.getPassword(),
+                organization.getEmail(),
+                organization.getOid());
+    }
+
+    @Override
+    public void delete(int oid) {
+        String sql = "delete from public.organizations where oid = ?";
+        jdbcTemplate.update(sql, oid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class KeywordsDaoImpl implements Dao<Keywords> {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Keywords> getAll() {
+        String sql = "select * from public.keywords;";
+        return jdbcTemplate.query(sql,
+                new KeywordsMapper());
+    }
+
+    @Override
+    public void create(Keywords entity) {
+        String sql = "insert into public.keywords (oid, kid, keyword) " +
+                "values(?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getKid(),
+                entity.getKeyword());
+    }
+
+    @Override
+    public Keywords read(int oid) {
+        return null;
+    }
+
+    public List<Keywords> readAllKeywords(int oid) {
+        String sql = "select * from public.keywords where oid = ? order by kid";
+        return jdbcTemplate.query(sql,
+                new KeywordsMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(Keywords entity) {
+        String sql = "update public.keywords " +
+                "set keyword = ? where oid = ? and kid = ?;";
+        jdbcTemplate.update(sql,
+                entity.getKeyword(),
+                entity.getOid(),
+                entity.getKid());
+    }
+
+    @Override
+    public void delete(int oid) {
+        String sql = "delete from public.keywords where oid = ?;";
+        jdbcTemplate.update(sql,
+                oid);
+    }
+
+    public void deleteByKid(int oid, int kid) {
+        String sql = "delete from public.keywords where oid = ? and kid = ?;";
+        jdbcTemplate.update(sql, oid, kid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public interface Dao<T> {
+
+    List<T> getAll();
+    void create(T entity);
+    T read(int entityProp);
+    void update(T entity);
+    void delete(int entityProp);
+}
+package ru.kl.proj.dao;
+
+
+
+@Scope("request")
+public class ContactsDaoImpl implements Dao<Contacts> {
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Contacts> getAll() {
+        String sql = "select * from public.contacts;";
+        return jdbcTemplate.query(sql, new ContactsMapper());
+    }
+
+    @Override
+    public void create(Contacts entity) {
+        Contacts contact = applicationContext.getBean(Contacts.class);
+        contact.setOid(entity.getOid());
+        contact.setCid(entity.getCid());
+        contact.parseContact(entity.getContact());
+
+        String sql = "insert into public.contacts " +
+                "(oid, cid, name, second_name, third_name, phone_number) " +
+                "values(?, ?, ?, ?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getCid(),
+                contact.getName(),
+                contact.getSecondName(),
+                contact.getThirdName(),
+                contact.getPhoneNumber());
+    }
+
+    @Override
+    public Contacts read(int oid) {
+        String sql = "select * from public.contacts where oid = ?;";
+        return jdbcTemplate.queryForObject(sql,
+                new ContactsMapper(),
+                oid);
+    }
+
+    public List <Contacts> readAllContacts(int oid) {
+        String sql = "select * from public.contacts where oid = ? order by cid;";
+        return jdbcTemplate.query(sql,
+                new ContactsMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(Contacts entity) {
+        Contacts contact = applicationContext.getBean(Contacts.class);
+        contact.setOid(entity.getOid());
+        contact.setCid(entity.getCid());
+        contact.parseContact(entity.getContact());
+        String sql = "update public.contacts set name = ?, " +
+                "second_name = ?, third_name = ?, phone_number = ? " +
+                "where oid = ? and cid = ?;";
+        jdbcTemplate.update(sql,
+                contact.getName(),
+                contact.getSecondName(),
+                contact.getThirdName(),
+                contact.getPhoneNumber(),
+                entity.getOid(),
+                entity.getCid());
+    }
+
+    @Override
+    public void delete(int oid) {
+        String sql = "delete from public.contacts where oid = ?;";
+        jdbcTemplate.update(sql,
+                oid);
+    }
+
+    public void deleteByCid(int oid, int cid) {
+        String sql = "delete from public.contacts where oid = ? and cid = ?;";
+        jdbcTemplate.update(sql, oid, cid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class SettingsDaoImpl implements Dao<Settings>{
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Settings> getAll() {
+        String sql = "select * from public.settings;";
+        return jdbcTemplate.query(sql, new SettingsMapper());
+    }
+
+    @Override
+    public void create(Settings entity) {
+        String sql = "insert into public.settings (oid, deferred_sms, quantity_sms, interval)" +
+                "values(?, ?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getDeferred(),
+                entity.getQuantity(),
+                entity.getInterval());
+    }
+
+    @Override
+    public Settings read(int oid) {
+        String sql = "select * from public.settings where oid = ?;";
+        return jdbcTemplate.queryForObject(sql,
+                new SettingsMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(Settings entity) {
+        String sql = "update public.settings set deferred_sms = ?," +
+                " quantity_sms = ?, interval = ? where oid = ?;";
+        jdbcTemplate.update(sql,
+                entity.getDeferred(),
+                entity.getQuantity(),
+                entity.getInterval(),
+                entity.getOid());
+    }
+
+    @Override
+    public void delete(int oid) {
+        String sql = "delete from public.settings where oid = ?;";
+        jdbcTemplate.update(sql,
+                oid);
+
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class SmsTemplatesDaoImpl implements Dao<SmsTemplates> {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<SmsTemplates> getAll() {
+        String sql = "select * from public.sms_templates;";
+        return jdbcTemplate.query(sql, new SmsTemplatesMapper());
+    }
+
+    @Override
+    public void create(SmsTemplates entity) {
+        String sql = "insert into public.sms_templates " +
+                "(oid, tid, template) values(?, ?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getTid(),
+                entity.getTemplate());
+    }
+
+    @Override
+    public SmsTemplates read(int entityProp) {
+        return null;
+    }
+
+
+    public List<SmsTemplates> readAllTemplates(int oid) {
+        String sql = "select * from public.sms_templates where oid = ? order by tid;";
+        return jdbcTemplate.query(sql,
+                new SmsTemplatesMapper(),
+                oid);
+    }
+
+    @Override
+    public void update(SmsTemplates entity) {
+        String sql = "update public.sms_templates set " +
+                "template = ? where oid = ? and tid = ?;";
+        jdbcTemplate.update(sql,
+                entity.getTemplate(),
+                entity.getOid(),
+                entity.getTid());
+    }
+
+    @Override
+    public void delete(int entityProp) {
+
+    }
+
+    public void deleteByTid(int oid, int tid) {
+        String sql = "delete from public.sms_templates where oid = ? and tid = ?;";
+        jdbcTemplate.update(sql, oid, tid);
+    }
+}
+package ru.kl.proj.dao;
+
+
+
+public class AuthTokenDaoImpl implements Dao<AuthToken>{
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    AuthToken authToken;
+
+    @Override
+    public List<AuthToken> getAll() {
+        String sql = "select * from public.auth_token;";
+        return jdbcTemplate.query(sql,
+                new AuthTokenMapper());
+    }
+
+    @Override
+    public void create(AuthToken entity) {
+        String sql = "insert into public.auth_token " +
+                "(oid, token) " +
+                "values(?, ?);";
+        jdbcTemplate.update(sql,
+                entity.getOid(),
+                entity.getToken());
+    }
+
+    @Override
+    public AuthToken read(int oid) {
+        String sql = "select * from public.auth_token where oid = ?;";
+        AuthToken newAuthToken = jdbcTemplate.queryForObject(sql,
+                new AuthTokenMapper(),
+                oid);
+        authToken.setOid(newAuthToken.getOid());
+        authToken.setToken(newAuthToken.getToken());
+        authToken.setTokenId(newAuthToken.getTokenId());
+        return authToken;
+    }
+
+    public AuthToken readByToken(String token) {
+        String sql = "select * from public.auth_token where token = ?;";
+        AuthToken newAuthToken = jdbcTemplate.queryForObject(sql,
+                new AuthTokenMapper(),
+                token);
+        authToken.setOid(newAuthToken.getOid());
+        authToken.setToken(newAuthToken.getToken());
+        authToken.setTokenId(newAuthToken.getTokenId());
+        return authToken;
+    }
+
+    @Override
+    public void update(AuthToken entity) {
+        String sql = "update public.auth_token set token = ? where tokenId = ?;";
+        jdbcTemplate.update(sql,
+                entity.getToken(),
+                entity.getTokenId());
+    }
+
+
+    @Override
+    public void delete(int tokenId) {
+        String sql = "delete from public.auth_token where tokenId = ?;";
+        jdbcTemplate.update(sql,
+                tokenId);
+    }
+
+//    public AuthToken readByOid(int oid) {
+//        String sql = "select * from public.auth_token where oid = ?;";
+//        return jdbcTemplate.queryForObject(sql,
+//                new AuthTokenMapper(),
+//                oid);
+//    }
+
+    public void deleteByTokenId(int oid, int tokenId) {
+        String sql = "delete from public.auth_token where oid = ? and tokenId = ?;";
+        jdbcTemplate.update(sql, oid, tokenId);
+    }
+}
+package ru.kl.proj.customExceptions;
+
+public class OrganizationExistException extends RuntimeException {
+    public OrganizationExistException (String errorMessage) {
+        super(errorMessage);
+    }
+}
+package ru.kl.proj.configs;
+
+
+
+@Configuration
+@ComponentScan({"ru.kl.proj.entity"})
+public class SpringConfig {
+
+    @Bean
+    public JdbcTemplate getJdbcTemplate(){
+        return new JdbcTemplate(getDataSource());
+    }
+
+    @Bean
+    public DataSource getDataSource(){
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://summary-db:5432/postgres?organizationSll=false");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("postgres");
+        return dataSource;
+    }
+
+    /*
+    Entity classes
+     */
+    @Bean
+    public CallsInfo getCallsInfo() {
+        return new CallsInfo();
+    }
+
+    @Bean
+    public Contacts getContacts() {
+        return new Contacts();
+    }
+
+    @Bean
+    public EndlineTemplates getEndline(){return  new EndlineTemplates();}
+
+    @Bean
+    public Keywords getKeywords() {
+        return new Keywords();
+    }
+
+    @Bean
+    public SmsTemplates getSmsTemplates(){
+        return new SmsTemplates();
+    }
+
+    @Bean
+    public Organization getOrganization(){
+        return new Organization();
+    }
+
+    @Bean
+    public Settings getSettings(){
+        return new Settings();
+    }
+
+    @Bean
+    public AuthToken getAuthToken() { return new AuthToken();}
+
+    @Bean
+    public AudioRecord getRecord() { return new AudioRecord();}
+
+    /*
+    DaoImplementation classes
+     */
+
+    @Bean
+    public OrganizationDaoImpl getOrganizationDao(){
+        return new OrganizationDaoImpl();
+    }
+
+    @Bean
+    public SettingsDaoImpl getSettingsDaoImpl(){
+        return new SettingsDaoImpl();
+    }
+
+    @Bean
+    public SmsTemplatesDaoImpl getSmsTemplatesDaoImpl(){
+        return new SmsTemplatesDaoImpl();
+    }
+
+    @Bean
+    public KeywordsDaoImpl getKeywordsDaoImpl(){
+        return new KeywordsDaoImpl();
+    }
+
+    @Bean
+    public EndlineTemplatesDaoImpl getEndlineTemplatesDaoImpl(){
+        return new EndlineTemplatesDaoImpl();
+    }
+
+    @Bean
+    public ContactsDaoImpl getContactsDaoImpl(){
+        return new ContactsDaoImpl();
+    }
+
+    @Bean
+    public CallsInfoDaoImpl getCallsInfoDaoImpl(){
+        return new CallsInfoDaoImpl();
+    }
+
+    @Bean
+    public AuthTokenDaoImpl getAuthTokenDaoImpl(){ return new AuthTokenDaoImpl();}
+
+    @Bean
+    public RecordDaoImpl getRecordDaoImpl(){ return new RecordDaoImpl();}
+
+    /*
+    other
+     */
+
+    @Bean
+    public DatasetFactory getDatasetFactory(){
+        return new DatasetFactory();
+    }
+
+
+}
+package ru.kl.proj.configs;
+
+
+public class SecurityInit extends AbstractSecurityWebApplicationInitializer {
+}package ru.kl.proj.configs;
+
+
+
+@EnableWebSecurity
+@Configuration
+@ComponentScan({"ru.kl.proj.configs"})
+public class SpringSecurity extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private AccessDeniedHandler customAccessDeniedHandler;
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.jdbcAuthentication().dataSource(dataSource)
+                .usersByUsernameQuery("select organization, password, enabled"
+                        + " from public.organizations where organization=?")
+                .authoritiesByUsernameQuery("select organization, authority "
+                        + "from public.organizations where organization=?")
+                .passwordEncoder(NoOpPasswordEncoder.getInstance());
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+//        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+//        filter.setEncoding("UTF-8");
+//        filter.setForceEncoding(true);
+//
+//        http.authorizeRequests()
+//                .antMatchers("/accountMainPage/**").access("hasRole('ROLE_organization')")
+//                .antMatchers("/confidential/**").access("hasRole('ROLE_SUPERADMIN')")
+//                .and().formLogin().defaultSuccessUrl("/accountMainPage", false);
+//        http.addFilterBefore(filter, CsrfFilter.class);
+
+        http.authorizeRequests()
+                .antMatchers("/login")
+                .permitAll()
+                .antMatchers("/accountMainPage/**")
+                .hasAnyRole("ADMIN", "ORGANIZATION")
+                .antMatchers("/admin")
+                .hasRole("ADMIN")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
+                .and()
+                .csrf()
+                .disable()
+                .exceptionHandling().accessDeniedHandler(customAccessDeniedHandler)
+                .and().sessionManagement()
+                .invalidSessionUrl("/")
+                .and().sessionManagement()
+                .maximumSessions(1).expiredUrl("/someTrouble?kindOfTrouble=expired");
+
+//                .formLogin()
+//                .loginPage("/login")
+//                .defaultSuccessUrl("/accountMainPage")
+//                .failureUrl("/login?error=true")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutSuccessUrl("/login?logout=true")
+//                .invalidateHttpSession(true)
+//                .permitAll()
+//                .and()
+
+
+    }
+}package ru.kl.proj.configs;
+
+
+
+@EnableWebMvc
+@Configuration
+@ComponentScan({"ru.kl.proj.controllers","ru.kl.proj.mobileControllers"})
+public class WebConfig implements WebMvcConfigurer {
+
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+        // Register resource handler for CSS and JS
+        registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/")
+                .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
+//
+//        // Register resource handler for images
+//        registry.addResourceHandler("/images/**").addResourceLocations("/WEB-INF/images/")
+//                .setCacheControl(CacheControl.maxAge(2, TimeUnit.HOURS).cachePublic());
+    }
+
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler(){
+        return new CustomAccessDeniedHandler();
+    }
+
+    @Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver bean = new InternalResourceViewResolver();
+
+        bean.setViewClass(JstlView.class);
+        bean.setPrefix("/WEB-INF/view/");
+        bean.setSuffix(".jsp");
+        bean.setContentType("text/html; charset-utf-8");
+        bean.setExposeContextBeansAsAttributes(true);
+
+        return bean;
+    }
+
+}
+package ru.kl.proj.configs;
+
+
+public class MainWebAppInitializer implements WebApplicationInitializer {
+    public void onStartup(final ServletContext servletContext){
+        // Creates context object
+        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+
+        // Registers annotated configurations class
+        ctx.register(WebConfig.class, SpringSecurity.class, SpringConfig.class);
+
+        // Sets ContextLoaderListener to servletContext
+        servletContext.addListener(new ContextLoaderListener(ctx));
+
+        // Passes servlet context to context instance
+        ctx.setServletContext(servletContext);
+
+        DispatcherServlet dispatcherServlet = new DispatcherServlet(ctx);
+
+        //Registers dispatch servlet and passes context instance
+        ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", dispatcherServlet);
+
+        //Maps URL pattern
+        servlet.addMapping("/");
+
+        //Sets creation priority
+        servlet.setLoadOnStartup(1);
+
+        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("endcodingFilter", new CharacterEncodingFilter());
+        filterRegistration.setInitParameter("encoding", "UTF-8");
+        filterRegistration.setInitParameter("forceEncoding", "true");
+        //make sure encodingFilter is matched first
+        filterRegistration.addMappingForUrlPatterns(null, false, "/");
+
+        Logger logger = LoggerFactory.getLogger(MainWebAppInitializer.class);
+        logger.info("STARTUP");
+//
+//        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+//        characterEncodingFilter.setEncoding("UTF-8");
+//        characterEncodingFilter.setForceEncoding(true);
+//
+//        FilterRegistration.Dynamic characterEncoding = servletContext.addFilter("characterEncoding", characterEncodingFilter);
+//
+//        FilterRegistration.Dynamic security = servletContext.addFilter("springSecurityFilterChain", new DelegatingFilterProxy());
+
+        //Registers security filters
+//        FilterRegistration.Dynamic security = servletContext.addFilter("springSecurityFilterChain", new DelegatingFilterProxy());
+
+        // Sets dispatcher types a security filters to be applied
+//        EnumSet<DispatcherType> dispatcherTypes = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD);
+//        security.addMappingForUrlPatterns(dispatcherTypes, true, "/*");
+    }
+}package ru.kl.proj.Mappers;
+
+
+
+
+public class SmsTemplatesMapper implements RowMapper<SmsTemplates> {
+
+    @Override
+    public SmsTemplates mapRow(ResultSet resultSet, int i) throws SQLException {
+        SmsTemplates smsTemplates = new SmsTemplates();
+        smsTemplates.setOid(resultSet.getInt("oid"));
+        smsTemplates.setTid(resultSet.getInt("tid"));
+        smsTemplates.setTemplate(resultSet.getString("template"));
+        return smsTemplates;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class OrganizationMapper implements RowMapper<Organization> {
+
+    @Override
+    public Organization mapRow(ResultSet resultSet, int i) throws SQLException {
+        Organization organization = new Organization();
+        organization.setOid(resultSet.getInt("oid"));
+        organization.setOrganizationName(resultSet.getString("organization"));
+        organization.setEmail(resultSet.getString("email"));
+        organization.setPassword(resultSet.getString("password"));
+        organization.setEnabled(resultSet.getBoolean("enabled"));
+        organization.setAuthority(resultSet.getString("authority"));
+        return organization;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class ContactsMapper implements RowMapper<Contacts> {
+    @Override
+    public Contacts mapRow(ResultSet resultSet, int i) throws SQLException {
+        Contacts contacts = new Contacts();
+        contacts.setOid(resultSet.getInt("oid"));
+        contacts.setCid(resultSet.getInt("cid"));
+        String contact = resultSet.getString("name") + " " +
+                resultSet.getString("second_name") + " " +
+                resultSet.getString("third_name") + " " +
+                resultSet.getString("phone_number");
+        String expression = "\\w+\\s\\w+\\s\\w+\\s\\w+";
+        Pattern pattern = Pattern.compile(expression, Pattern.UNICODE_CHARACTER_CLASS);
+        Matcher matcher = pattern.matcher(contact);
+        if(matcher.matches()){
+            contacts.setContact(contact);
+        } else {
+            contacts.setContact("");
+        }
+        return contacts;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+
+public class SettingsMapper implements RowMapper<Settings> {
+
+    @Override
+    public Settings mapRow(ResultSet resultSet, int i) throws SQLException {
+        Settings settings = new Settings();
+        settings.setOid(resultSet.getInt("oid"));
+        settings.setDeferred(resultSet.getInt("deferred_sms"));
+        settings.setQuantity(resultSet.getInt("quantity_sms"));
+        settings.setInterval(resultSet.getInt("interval"));
+        return settings;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class AuthTokenMapper implements RowMapper<AuthToken> {
+    @Override
+    public AuthToken mapRow(ResultSet resultSet, int i) throws SQLException {
+        AuthToken authToken = new AuthToken();
+        authToken.setOid(resultSet.getInt("oid"));
+        authToken.setTokenId(resultSet.getInt("tokenId"));
+        authToken.setToken(resultSet.getString("token"));
+        return authToken;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+
+public class RecordMapper implements RowMapper<AudioRecord> {
+
+    @Override
+    public AudioRecord mapRow(ResultSet resultSet, int i) throws SQLException {
+        AudioRecord audioRecord = new AudioRecord();
+        audioRecord.setOid(resultSet.getInt("oid"));
+        audioRecord.setRid(resultSet.getInt("rid"));
+        audioRecord.setRecordFileName(resultSet.getString("record_file_name"));
+        return audioRecord;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class CallsInfoMapper implements RowMapper<CallsInfo> {
+    @Override
+    public CallsInfo mapRow(ResultSet resultSet, int i) throws SQLException {
+        CallsInfo callsInfo = new CallsInfo();
+        callsInfo.setOid(resultSet.getInt("oid"));
+        callsInfo.setConvId(resultSet.getInt("convid"));
+        callsInfo.setDate(resultSet.getDate("conversation_date"));
+        callsInfo.setPhoneNumber(resultSet.getString("phone_number"));
+        callsInfo.setParsedSms(resultSet.getString("parsed_sms"));
+        return callsInfo;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class KeywordsMapper implements RowMapper<Keywords> {
+    @Override
+    public Keywords mapRow(ResultSet resultSet, int i) throws SQLException {
+        Keywords keywords = new Keywords();
+        keywords.setOid(resultSet.getInt("oid"));
+        keywords.setKid(resultSet.getInt("kid"));
+        keywords.setKeyword(resultSet.getString("keyword"));
+        return keywords;
+    }
+}
+package ru.kl.proj.Mappers;
+
+
+
+public class EndlineTemplatesMapper implements RowMapper<EndlineTemplates> {
+    @Override
+    public EndlineTemplates mapRow(ResultSet resultSet, int i) throws SQLException {
+        EndlineTemplates endlineTemplates = new EndlineTemplates();
+        endlineTemplates.setOid(resultSet.getInt("oid"));
+        endlineTemplates.setEtid(resultSet.getInt("etid"));
+        endlineTemplates.setEndlineTemplate(resultSet.getString("endline_template"));
+        return endlineTemplates;
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class SmsTemplatesController {
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @PostMapping("/smsTemplates")
+    public String changeSmsTemplates(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        SmsTemplatesDaoImpl smsTemplatesDao = applicationContext.getBean(SmsTemplatesDaoImpl.class);
+        String addForm = request.getParameter("hiddenField");
+
+//        request.setCharacterEncoding("UTF-8");
+
+        String [] oids = request.getParameterValues("oid");
+        String [] tids = request.getParameterValues("tid");
+        String [] templates = request.getParameterValues("template");
+
+        /*
+        Если в параменте находтся символ "-" то надо удалить соответствующий шаблон
+         */
+        int deleteTemplate = 0  ;
+        for (int i = 0; i < tids.length; i++) {
+            String deleteTemplateVar = "deleteField" + tids;
+            String tmp = request.getParameter(deleteTemplateVar);
+            if (tmp != null && tmp.equals("Удалить")) {
+                deleteTemplate = i + 1;
+
+            }
+        }
+        if (deleteTemplate > 0) {
+            int oid = Integer.parseInt(oids[0]);
+            smsTemplatesDao.deleteByTid(oid, deleteTemplate);
+            return "redirect:/accountMainPage?pageMarker=smsTemplates&apply=true";
+        }
+        /*
+        Если есть разниза между количеством шаблонов в БД и тем сколько пришло из веб то выставляю флаг
+        и в дальнейшем этот флаг будет сигнализировать, что нужно обработать последний (новый) шаблон
+        не так как остальные
+         */
+        List listOfSmsTemplates = smsTemplatesDao.readAllTemplates(Integer.parseInt(oids[0]));
+        boolean differenceBtwDbAndWeb = false;
+        if(listOfSmsTemplates.size() < oids.length){
+            differenceBtwDbAndWeb = true;
+        }
+//        String addForm = request.getParameter("addForm");
+
+        /*
+        Если была добавлена новая форма для шаблона - то нужно эту новую форму не update а create
+         */
+        int iterations;
+        if(differenceBtwDbAndWeb){
+            iterations = tids.length - 1;
+            SmsTemplates smsTemplates = applicationContext.getBean(SmsTemplates.class);
+            smsTemplates.setOid(Integer.parseInt(oids[iterations]));
+            smsTemplates.setTid(Integer.parseInt(tids[iterations]));
+            smsTemplates.setTemplate(templates[iterations]);
+            smsTemplatesDao.create(smsTemplates);
+        } else {
+            iterations = tids.length;
+        }
+        for(int i = 0; i < iterations; i++){
+            SmsTemplates smsTemplates = applicationContext.getBean(SmsTemplates.class);
+            smsTemplates.setOid(Integer.parseInt(oids[i]));
+            smsTemplates.setTid(Integer.parseInt(tids[i]));
+            smsTemplates.setTemplate(templates [i]);
+            smsTemplatesDao.update(smsTemplates);
+        }
+
+        if(addForm != null && addForm.equals("Добавить шаблон")){
+            return "redirect:/accountMainPage?pageMarker=smsTemplates&apply=true&addForm=true";
+        } else {
+            return "redirect:/accountMainPage?pageMarker=smsTemplates&apply=true";
+        }
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class EndlineTemplatesController {
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @PostMapping("/endlines")
+    public String changeEndlines(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        EndlineTemplatesDaoImpl endlineTemplatesDao = applicationContext.getBean(EndlineTemplatesDaoImpl.class);
+        String addForm = request.getParameter("hiddenField");
+
+        String [] oids = request.getParameterValues("oid");
+        String [] etids = request.getParameterValues("etid");
+        String [] endlines = request.getParameterValues("endline");
+
+        /*
+        Если в параменте находтся символ "-" то надо удалить соответствующее слово
+         */
+        int deleteKeyword = 0  ;
+        for (int i = 0; i < etids.length; i++) {
+            String deleteEndlineVar = "deleteField" + etids[i];
+            String tmp = request.getParameter(deleteEndlineVar);
+            if (tmp != null && tmp.equals("Удалить")) {
+                deleteKeyword = i + 1;
+
+            }
+        }
+        if (deleteKeyword > 0) {
+            int oid = Integer.parseInt(oids[0]);
+            endlineTemplatesDao.deleteByEtid(oid, deleteKeyword);
+            return "redirect:/accountMainPage?pageMarker=endlines&apply=true";
+        }
+        /*
+        Если есть разниза между количеством шаблонов в БД и тем сколько пришло из веб то выставляю флаг
+        и в дальнейшем этот флаг будет сигнализировать, что нужно обработать последний (новый) шаблон
+        не так как остальные
+         */
+        List listOfEndlines = endlineTemplatesDao.readAllByOid(Integer.parseInt(oids[0]));
+        boolean differenceBtwDbAndWeb = false;
+        if(listOfEndlines.size() < oids.length){
+            differenceBtwDbAndWeb = true;
+        }
+//        String addForm = request.getParameter("addForm");
+
+        /*
+        Если была добавлено новое слово - то нужно этэто новое слово не update а create
+         */
+        int iterations;
+        if(differenceBtwDbAndWeb){
+            iterations = etids.length - 1;
+            EndlineTemplates endlineTemplates = applicationContext.getBean(EndlineTemplates.class);
+            endlineTemplates.setOid(Integer.parseInt(oids[iterations]));
+            endlineTemplates.setEtid(Integer.parseInt(etids[iterations]));
+            endlineTemplates.setEndlineTemplate(endlines[iterations]);
+            endlineTemplatesDao.create(endlineTemplates);
+        } else {
+            iterations = etids.length;
+        }
+        for(int i = 0; i < iterations; i++){
+            EndlineTemplates endlineTemplates = applicationContext.getBean(EndlineTemplates.class);
+            endlineTemplates.setOid(Integer.parseInt(oids[i]));
+            endlineTemplates.setEtid(Integer.parseInt(etids[i]));
+            endlineTemplates.setEndlineTemplate(endlines [i]);
+            endlineTemplatesDao.update(endlineTemplates);
+        }
+
+        if(addForm != null && addForm.equals("Добавить слово")){
+            return "redirect:/accountMainPage?pageMarker=endlines&apply=true&addForm=true";
+        } else {
+            return "redirect:/accountMainPage?pageMarker=endlines&apply=true";
+        }
+    }
+
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class ContactsController {
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @PostMapping("/contacts")
+    public String changeKeywords(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        ContactsDaoImpl contactsDao = applicationContext.getBean(ContactsDaoImpl.class);
+        Contacts contact = applicationContext.getBean(Contacts.class);
+        String addForm = request.getParameter("hiddenField");
+
+//        request.setCharacterEncoding("UTF-8");
+
+        String [] oids = request.getParameterValues("oid");
+        String [] cids = request.getParameterValues("cid");
+        String [] contacts = request.getParameterValues("contact");
+
+        /*
+        Если в параменте находтся символ "-" то надо удалить соответствующее слово
+         */
+        int contactId = 0  ;
+        for (int i = 0; i < cids.length; i++) {
+            String deleteContactVar = "deleteField" + cids[i];
+            String tmp = request.getParameter(deleteContactVar);
+            if (tmp != null && tmp.equals("Удалить")) {
+                contactId = Integer.parseInt(cids [i]);
+            }
+        }
+        if (contactId > 0) {
+            int oid = Integer.parseInt(oids[0]);
+            contactsDao.deleteByCid(oid, contactId);
+            return "redirect:/accountMainPage?pageMarker=contacts&apply=true";
+        }
+        /*
+        Если есть разниза между количеством шаблонов в БД и тем сколько пришло из веб то выставляю флаг
+        и в дальнейшем этот флаг будет сигнализировать, что нужно обработать последний (новый) шаблон
+        не так как остальные
+         */
+        List listOfContacts = contactsDao.readAllContacts(Integer.parseInt(oids[0]));
+        boolean differenceBtwDbAndWeb = false;
+        if(listOfContacts.size() < oids.length){
+            differenceBtwDbAndWeb = true;
+        }
+//        String addForm = request.getParameter("addForm");
+
+        /*
+        Если была добавлено новое слово - то нужно этэто новое слово не update а create
+         */
+        int iterations;
+        if(differenceBtwDbAndWeb){
+            iterations = cids.length - 1;
+            contact.setOid(Integer.parseInt(oids[iterations]));
+            contact.setCid(Integer.parseInt(cids[iterations]));
+            contact.setContact(contacts[iterations]);
+            contactsDao.create(contact);
+        } else {
+            iterations = cids.length;
+        }
+        for(int i = 0; i < iterations; i++){
+            contact.setOid(Integer.parseInt(oids[i]));
+            contact.setCid(Integer.parseInt(cids[i]));
+            contact.setContact(contacts [i]);
+            contactsDao.update(contact);
+        }
+
+        if(addForm != null && addForm.equals("Добавить контакт")){
+            return "redirect:/accountMainPage?pageMarker=contacts&apply=true&addForm=true";
+        } else {
+            return "redirect:/accountMainPage?pageMarker=contacts&apply=true";
+        }
+    }
+}
+package ru.kl.proj.controllers;
+
+
+@Controller
+@RequestMapping("/")
+public class SimpleController {
+
+    @GetMapping("/admin")
+    public String getAdminPage(){
+        return "admin";
+    }
+
+    @GetMapping("/someTrouble")
+    public String getAccessDenied(@RequestParam(value = "kindOfTrouble", required = true) String kindOfTrouble,
+    Model model){
+        String message = "Упс!";
+        if(kindOfTrouble.equals("accessDenied")){
+            message = "Недостаточно прав для доступа к запрашиваемой странице.";
+        }
+        if (kindOfTrouble.equals("expired")){
+            message = "Сессия была закрыта, пожалуйста войдите снова.";
+        }
+        model.addAttribute("message", message);
+        return "someTrouble";
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class KeywordsController {
+
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @PostMapping("/keywords")
+    public String changeKeywords(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+
+        KeywordsDaoImpl keywordsDao = applicationContext.getBean(KeywordsDaoImpl.class);
+        String addForm = request.getParameter("hiddenField");
+
+//        request.setCharacterEncoding("UTF-8");
+
+        String [] oids = request.getParameterValues("oid");
+        String [] kids = request.getParameterValues("kid");
+        String [] keywords = request.getParameterValues("keyword");
+
+        /*
+        Если в параменте находтся символ "-" то надо удалить соответствующее слово
+         */
+        int deleteKeyword = 0  ;
+        for (int i = 0; i < kids.length; i++) {
+            String deleteKeywordVar = "deleteField" + kids[i];
+            String tmp = request.getParameter(deleteKeywordVar);
+            if (tmp != null && tmp.equals("Удалить")) {
+                deleteKeyword = i + 1;
+
+            }
+        }
+        if (deleteKeyword > 0) {
+            int oid = Integer.parseInt(oids[0]);
+            keywordsDao.deleteByKid(oid, deleteKeyword);
+            return "redirect:/accountMainPage?pageMarker=keywords&apply=true";
+        }
+        /*
+        Если есть разниза между количеством шаблонов в БД и тем сколько пришло из веб то выставляю флаг
+        и в дальнейшем этот флаг будет сигнализировать, что нужно обработать последний (новый) шаблон
+        не так как остальные
+         */
+        List listOfKeywords = keywordsDao.readAllKeywords(Integer.parseInt(oids[0]));
+        boolean differenceBtwDbAndWeb = false;
+        if(listOfKeywords.size() < oids.length){
+            differenceBtwDbAndWeb = true;
+        }
+//        String addForm = request.getParameter("addForm");
+
+        /*
+        Если была добавлено новое слово - то нужно этэто новое слово не update а create
+         */
+        int iterations;
+        if(differenceBtwDbAndWeb){
+            iterations = kids.length - 1;
+            Keywords keyword = applicationContext.getBean(Keywords.class);
+            keyword.setOid(Integer.parseInt(oids[iterations]));
+            keyword.setKid(Integer.parseInt(kids[iterations]));
+            keyword.setKeyword(keywords[iterations]);
+            keywordsDao.create(keyword);
+        } else {
+            iterations = kids.length;
+        }
+        for(int i = 0; i < iterations; i++){
+            Keywords keyword = applicationContext.getBean(Keywords.class);
+            keyword.setOid(Integer.parseInt(oids[i]));
+            keyword.setKid(Integer.parseInt(kids[i]));
+            keyword.setKeyword(keywords [i]);
+            keywordsDao.update(keyword);
+        }
+
+        if(addForm != null && addForm.equals("Добавить слово")){
+            return "redirect:/accountMainPage?pageMarker=keywords&apply=true&addForm=true";
+        } else {
+            return "redirect:/accountMainPage?pageMarker=keywords&apply=true";
+        }
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class RegistrationController {
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @Autowired
+    private OrganizationDaoImpl organizationDao;
+
+    @GetMapping("/registration")
+    public String showForm(Model model) {
+        model.addAttribute("organization", new Organization()); //what if organization do not create. garbage collector?
+        return "registration";
+    }
+
+    @PostMapping("/registration")
+    public ModelAndView addOrganization(@ModelAttribute("organization") Organization organization,
+                                        HttpServletRequest request){
+        DatasetFactory datasetFactory = applicationContext.getBean(DatasetFactory.class);
+
+        try{
+            datasetFactory.testCreateDataset(organization);
+        } catch (OrganizationExistException e) {
+            return new ModelAndView("redirect:/registration?errorMessage=" + e.getMessage());
+        }
+        try {
+            request.login(organization.getOrganizationName(), organization.getPassword());
+        } catch (ServletException e) {
+            System.out.println("exception <---" + e.getMessage());
+        }
+        return new ModelAndView("redirect:" + "/");
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+
+
+@Controller
+public class RootController {
+
+    Logger log = LoggerFactory.getLogger(RootController.class);
+
+    @Autowired
+    private OrganizationDaoImpl organizationDao;
+
+    @GetMapping("/")
+    public String showHome(HttpServletRequest request, Model model){
+
+        log.info("infoAAAAAAAAAAAAAA <-----------------");
+
+        String remoteAddr;
+
+        if (request != null) {
+            remoteAddr = request.getHeader("X-FORWARDED-FOR");
+            if (remoteAddr == null || "".equals(remoteAddr)) {
+                remoteAddr = request.getRemoteAddr();
+            }
+            if (request.getRemoteUser() != null){
+                Organization organization = organizationDao.readByName(request.getRemoteUser());
+                model.addAttribute("organization", organization);
+            }
+            System.out.println(remoteAddr);
+        }
+
+        return "index";
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class SettingsController {
+
+    @Autowired
+    ApplicationContext applicationContext;
+
+
+    @PostMapping("/settings")
+    public String changeSettings(HttpServletRequest request, HttpServletResponse response) {
+
+        Organization organization = applicationContext.getBean(Organization.class);
+        Settings settings = applicationContext.getBean(Settings.class);
+        OrganizationDaoImpl organizationDao = applicationContext.getBean(OrganizationDaoImpl.class);
+        SettingsDaoImpl settingsDao = applicationContext.getBean(SettingsDaoImpl.class);
+
+        organization.setOid(Integer.parseInt(request.getParameter("oid")));
+        organization.setOrganizationName(request.getParameter("organizationName"));
+        organization.setEmail(request.getParameter("email"));
+        organization.setPassword(request.getParameter("password"));
+        organization.setEnabled(Boolean.parseBoolean(request.getParameter("enabled")));
+        organization.setAuthority(request.getParameter("authority"));
+
+        organizationDao.update(organization);
+
+        settings.setOid(Integer.parseInt(request.getParameter("oid")));
+        settings.setDeferred(Integer.parseInt(request.getParameter("deferred")));
+        settings.setQuantity(Integer.parseInt(request.getParameter("quantity")));
+        settings.setInterval(Integer.parseInt(request.getParameter("interval")));
+
+        settingsDao.update(settings);
+
+        if (!request.getRemoteUser().equals(organization.getOrganizationName())) {
+            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            if (auth != null){
+                new SecurityContextLogoutHandler().logout(request, response, auth);
+                return "index";
+            }
+        }
+
+        return "redirect:/accountMainPage?pageMarker=orgSettings&apply=true";
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class AccountMainPageController {
+
+    Logger logger = LoggerFactory.getLogger(AccountMainPageController.class);
+
+    @Autowired
+    ApplicationContext applicationContext;
+
+    @Autowired
+    private OrganizationDaoImpl organizationDao;
+
+    @Autowired
+    private SettingsDaoImpl settingsDao;
+
+    @GetMapping("/accountMainPage")
+    public String getAccountMP(HttpServletRequest request, Model model,
+                               @RequestParam(value = "addForm", required = false) String addForm,
+                               @RequestParam(value = "pageMarker", required = false) String pageMarker,
+                               @RequestParam(value = "apply", required = false) String apply){
+
+        Organization organization = organizationDao.readByName(request.getRemoteUser());
+        int oid = organization.getOid();
+
+        try {
+            if (pageMarker == null) {
+                model.addAttribute("organization", organization);
+            } else if (pageMarker.equals("orgSettings")) {
+                Settings settings = settingsDao.read(oid);
+                model.addAttribute("organization", organization);
+                model.addAttribute("settings", settings);
+            } else if (pageMarker.equals("smsTemplates")) {
+                SmsTemplatesDaoImpl smsTemplatesDao = applicationContext.getBean(SmsTemplatesDaoImpl.class);
+                List<SmsTemplates> listOfSmsTemplates = smsTemplatesDao.readAllTemplates(oid);
+                if (addForm != null && addForm.equals("true")) {
+                    SmsTemplates smsTemplate = applicationContext.getBean(SmsTemplates.class);
+                    smsTemplate.setOid(listOfSmsTemplates.get(0).getOid());
+                    smsTemplate.setTid(listOfSmsTemplates.size() + 1);
+                    smsTemplate.setTemplate("");
+                    listOfSmsTemplates.add(smsTemplate);
+                }
+                model.addAttribute("smsTemplates", listOfSmsTemplates);
+            } else if (pageMarker.equals("keywords")) {
+                KeywordsDaoImpl keywordsDao = applicationContext.getBean(KeywordsDaoImpl.class);
+                List<Keywords> listOfKeywords = keywordsDao.readAllKeywords(oid);
+                if (addForm != null && addForm.equals("true")) {
+                    Keywords keywords = applicationContext.getBean(Keywords.class);
+                    keywords.setOid(listOfKeywords.get(0).getOid());
+                    keywords.setKid(listOfKeywords.size() + 1);
+                    keywords.setKeyword("");
+                    listOfKeywords.add(keywords);
+                }
+                model.addAttribute("keywords", listOfKeywords);
+            } else if (pageMarker.equals("endlines")) {
+                EndlineTemplatesDaoImpl endlineTemplatesDao = applicationContext.getBean(EndlineTemplatesDaoImpl.class);
+                List<EndlineTemplates> listOfEndlines = endlineTemplatesDao.readAllByOid(oid);
+                if (addForm != null && addForm.equals("true")) {
+                    EndlineTemplates endlineTemplates = applicationContext.getBean(EndlineTemplates.class);
+                    endlineTemplates.setOid(listOfEndlines.get(0).getOid());
+                    endlineTemplates.setEtid(listOfEndlines.size() + 1);
+                    endlineTemplates.setEndlineTemplate("");
+                    listOfEndlines.add(endlineTemplates);
+                }
+                model.addAttribute("endlines", listOfEndlines);
+            } else if (pageMarker.equals("contacts")) {
+                ContactsDaoImpl contactsDao = applicationContext.getBean(ContactsDaoImpl.class);
+                List<Contacts> listOfContacts = contactsDao.readAllContacts(oid);
+                if (addForm != null && addForm.equals("true")) {
+                    Contacts contacts = applicationContext.getBean(Contacts.class);
+                    contacts.setOid(listOfContacts.get(0).getOid());
+                /*
+                что бы создать новую сущность определяем какой номер у последнего в списке
+                (он же имеет самый большой номер, т.к. из бд получаются в отсортированном виде)
+                 */
+                    contacts.setCid(listOfContacts.get(listOfContacts.size() - 1).getCid() + 1);
+                    contacts.setContact("");
+                    listOfContacts.add(contacts);
+                }
+                model.addAttribute("contacts", listOfContacts);
+            } else if (pageMarker.equals("callsInfo")) {
+                CallsInfoDaoImpl callsInfoDao = applicationContext.getBean(CallsInfoDaoImpl.class);
+                List<CallsInfo> listOfCallsInfo = callsInfoDao.readAllByOid(oid);
+                model.addAttribute("callsInfo", listOfCallsInfo);
+
+            } else if (pageMarker.equals("audioRecord")) {
+                RecordDaoImpl recordDao = applicationContext.getBean(RecordDaoImpl.class);
+                List<AudioRecord> listOfAudioRecords = recordDao.readAllByOid(oid);
+                int size = listOfAudioRecords.size();
+                logger.info(String.valueOf(listOfAudioRecords.get(size-1).getOid() + " " +
+                        listOfAudioRecords.get(size-1).getRid() + " " +
+                        listOfAudioRecords.get(size-1).getRecordFileName()));
+                model.addAttribute("audioRecord", listOfAudioRecords);
+            }
+        } catch (Exception e){
+            logger.info(e.getMessage());
+        }
+
+        model.addAttribute("pageMarker", pageMarker);
+        model.addAttribute("apply", apply);
+
+        return "accountMainPage";
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+public class CustomAccessDeniedHandler implements AccessDeniedHandler {
+
+    @Override
+    public void handle(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            AccessDeniedException exc) throws IOException, ServletException {
+
+        Authentication auth
+                = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null) {
+            System.out.println("User: " + auth.getName()
+                    + " attempted to access the protected URL: "
+                    + request.getRequestURI());
+        }
+
+        response.sendRedirect(request.getContextPath() + "/someTrouble?kindOfTrouble=accessDenied");
+    }
+}
+package ru.kl.proj.controllers;
+
+
+
+@Controller
+public class LoginController {
+
+    @GetMapping("/login")
+    public String loginPage(@RequestParam(value = "error", required = false) String error,
+                            Model model) {
+        String errorMessge = null;
+        if(error != null) {
+            errorMessge = "Authentication failed! --> " + error;
+        }
+        model.addAttribute("errorMessge", errorMessge);
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public ModelAndView logining(@ModelAttribute("organization") Organization organization, Model model,
+                                 HttpServletRequest request){
+
+        try {
+            request.login(organization.getOrganizationName(), organization.getPassword());
+        } catch (ServletException e) {
+            String error = e.getMessage();
+            System.out.println("exception <---" + error);
+            return new ModelAndView("redirect:" + "login", "error",
+                    error);
+        }
+
+        return new ModelAndView("redirect:" + "/");
+    }
+}
+package ru.kl.proj.services;
+
+
+
+@Component
+@Scope("request")
+public class DatasetFactory {
+
+
+
+    private Organization organization;
+    @Autowired
+    private OrganizationDaoImpl organizationDao;
+
+    private Settings settings;
+    @Autowired
+    private SettingsDaoImpl settingsDao;
+
+    private SmsTemplates smsTemplates;
+    @Autowired
+    private SmsTemplatesDaoImpl smsTemplatesDao;
+
+    private Keywords keywords;
+    @Autowired
+    private KeywordsDaoImpl keywordsDao;
+
+    private EndlineTemplates endlineTemplates;
+    @Autowired
+    private EndlineTemplatesDaoImpl endlineTemplatesDao;
+
+    private Contacts contacts;
+    @Autowired
+    ContactsDaoImpl contactsDao;
+
+    private CallsInfo callsInfo;
+    @Autowired
+    private CallsInfoDaoImpl callsInfoDao;
+
+    private AudioRecord audioRecord;
+    @Autowired
+    private RecordDaoImpl recordDao;
+
+    private int oid;
+
+    public int getOid() {
+        return oid;
+    }
+
+    public void setOid(int oid) {
+        this.oid = oid;
+    }
+
+    public void createDataset(Organization organization) {
+
+        boolean organizationExist = checkOrgExistByName(organization.getOrganizationName());
+        if (organizationExist) {
+            throw new OrganizationExistException("Organization "
+                    + organization.getOrganizationName() + " already exist");
+        }
+
+
+        if (organization.getAuthority() == null) {
+            organization.setAuthority("ROLE_ORGANIZATION");
+        }
+        organization.setEnabled(true);
+        organizationDao.create(organization);
+        organization = organizationDao.readByName(organization.getOrganizationName());
+        this.oid = organization.getOid();
+
+        settings = new Settings(oid, 0, 0, 0);
+        settingsDao.create(settings);
+
+        String templateSms = "Здравствуйте, #Имя_клиента#!\n" +
+                "Напоминаем Вам о прошлом разговоре:\n" +
+                "#Ключевое_слово##Найденое_совпадение##Окончание_строки#\n" +
+                "Обратится к нам вы можете по телефону:";
+        smsTemplates = new SmsTemplates(oid, 1, templateSms);
+        smsTemplatesDao.create(smsTemplates);
+        templateSms = "Здравствуйте, #Имя_клиента#!\n" +
+                "Напоминаем Вам о прошлом разговоре:\n" +
+                "#Ключевое_слово##Найденое_совпадение##Окончание_строки#\n" +
+                "Обратится к нам вы можете по телефону:";
+        smsTemplates = new SmsTemplates(oid, 2, templateSms);
+        smsTemplatesDao.create(smsTemplates);
+
+
+        String templateEndline = ".";
+        endlineTemplates = new EndlineTemplates(oid, 1, templateEndline);
+        endlineTemplatesDao.create(endlineTemplates);
+        endlineTemplates = new EndlineTemplates(oid, 2, templateEndline);
+        endlineTemplatesDao.create(endlineTemplates);
+    }
+
+    public void testCreateDataset(Organization organization) {
+        createDataset(organization);
+
+        String keyword = "олово";
+        keywords = new Keywords(oid, 1, keyword);
+        keywordsDao.create(keywords);
+        keywords = new Keywords(oid, 2, keyword);
+        keywordsDao.create(keywords);
+
+        contacts = new Contacts(oid, 1, "Васили Васильков Васильевич 85555555555");
+        contactsDao.create(contacts);
+        contacts = new Contacts(oid, 2, "Василий Васильков Васильевич 85555555555");
+        contactsDao.create(contacts);
+
+        Date date = new Date(System.currentTimeMillis());
+        String parsedSms = "Здравстуйте Константин рады вам сообщить что" +
+                "мы обновили цены на ншу продукцию и готовы предложить вам" +
+                "олово по 20 рублей за киллограмм аллюминий 12 рублей за киллограмм...";
+        callsInfo = new CallsInfo(oid, date, parsedSms);
+        callsInfoDao.create(callsInfo);
+        callsInfo = new CallsInfo(oid, date, parsedSms);
+        callsInfoDao.create(callsInfo);
+
+        audioRecord = new AudioRecord(1, "record-123123.awb");
+        recordDao.create(audioRecord);
+
+
+    }
+
+    public boolean checkOrgExistByName(String name) {
+        Organization checkedOrganization = null;
+        try {
+            checkedOrganization = organizationDao.readByName(name);
+        } catch (Exception e) {
+        }
+        if (checkedOrganization != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+package ru.kl.proj.services;
+
+
+public class TokenGenerator {
+    private static final SecureRandom secureRandom = new SecureRandom(); //threadsafe
+    private static final Base64.Encoder base64Encoder = Base64.getUrlEncoder(); //threadsafe
+
+    public String generateNewToken() {
+        byte[] randomBytes = new byte[24];
+        secureRandom.nextBytes(randomBytes);
+        return base64Encoder.encodeToString(randomBytes);
+    }
+}
+package ru.kl.proj.services;
+
+
+
+
+public class RecognizeRequestHandler {
+
+    private static Logger logger = LoggerFactory.getLogger(RecognizeRequestHandler.class);
+
+
+    private static CallsInfo callsInfo;
+    @Autowired
+    private static CallsInfoDaoImpl callsInfoDao;
+
+    public static void asyncRecognizeGcs(String gcsUri, int oid) throws Exception {
+        // Configure polling algorithm
+        logger.info("Begin of recognize class <-----------------");
+        SpeechSettings.Builder speechSettings = SpeechSettings.newBuilder();
+        TimedRetryAlgorithm timedRetryAlgorithm =
+                OperationTimedPollAlgorithm.create(
+                        RetrySettings.newBuilder()
+                                .setInitialRetryDelay(Duration.ofMillis(500L))
+                                .setRetryDelayMultiplier(1.5)
+                                .setMaxRetryDelay(Duration.ofMillis(5000L))
+                                .setInitialRpcTimeout(Duration.ZERO) // ignored
+                                .setRpcTimeoutMultiplier(1.0) // ignored
+                                .setMaxRpcTimeout(Duration.ZERO) // ignored
+                                .setTotalTimeout(Duration.ofHours(24L)) // set polling timeout to 24 hours
+                                .build());
+        speechSettings.longRunningRecognizeOperationSettings().setPollingAlgorithm(timedRetryAlgorithm);
+
+        // Instantiates a client with GOOGLE_APPLICATION_CREDENTIALS
+        try (SpeechClient speech = SpeechClient.create(speechSettings.build())) {
+
+            // Configure remote file request for FLAC
+            RecognitionConfig config =
+                    RecognitionConfig.newBuilder()
+                            .setEncoding(AudioEncoding.LINEAR16)
+                            .setLanguageCode("ru-RU")
+                            .setSampleRateHertz(16000)
+                            .setAudioChannelCount(1)
+                            .build();
+            RecognitionAudio audio = RecognitionAudio.newBuilder().setUri(gcsUri).build();
+
+            logger.info("Config contain: " + config.getLanguageCode() +
+                    " " + config.getAudioChannelCount() +
+                    " " + config.getEncoding() +
+                    " " + config.getSampleRateHertz());
+
+            // Use non-blocking call for getting file transcription
+            OperationFuture<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
+                    speech.longRunningRecognizeAsync(config, audio);
+
+            logger.info("After request <------------");
+
+            while (!response.isDone()) {
+                logger.info("--------> Waiting for response...");
+                Thread.sleep(10000);
+                logger.info("--------> Still waiting...");
+            }
+            logger.info("--------> Response status: " + response.isDone());
+            List<SpeechRecognitionResult> results = response.get().getResultsList();
+            logger.info("--------> Result list size: " + results.size());
+
+            for (SpeechRecognitionResult result : results) {
+                // There can be several alternative transcripts for a given chunk of speech. Just use the
+                // first (most likely) one here.
+                SpeechRecognitionAlternative alternative = result.getAlternativesList().get(0);
+                String transcription = alternative.getTranscript();
+                System.out.printf("Transcription: %s\n", transcription);
+                logger.info(transcription + "<-----------------");
+
+                //Trying to write response to database
+                try{
+                    Date date = new Date(System.currentTimeMillis());
+                    callsInfo = new CallsInfo(oid, date, transcription);
+                    callsInfoDao.create(callsInfo);
+                } catch (Exception e){
+                    logger.info(e.getMessage());
+                }
+
+            }
+
+        }
+    }
+}
